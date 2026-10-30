@@ -8,7 +8,7 @@ const vm = require("vm");
 const projectDirectory = path.resolve(__dirname, "..");
 const questionBankPath = path.join(projectDirectory, "data", "questions.js");
 const outputPath = path.join(projectDirectory, "data", "gk-study-notes.js");
-const generatedOn = "2026-10-12";
+const generatedOn = "2026-10-30";
 
 const topicDefinitions = [
   {

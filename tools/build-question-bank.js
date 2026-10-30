@@ -3,6 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const vm = require("vm");
 const { isNoneOfTheseAnswer } = require("./answer-text-corrections");
 const { SOURCE_FILE: currentAffairsSourceFile, OCTOBER_SOURCE_FILES, validateSupplement } = require("./current-affairs-common");
 const {
@@ -30,6 +31,13 @@ const workspaceDirectory = path.resolve(projectDirectory, "..");
 const workDirectory = path.join(projectDirectory, "work");
 const outputFile = path.join(projectDirectory, "data", "questions.js");
 const releaseRepeatEvidencePath = path.join(projectDirectory, "data", "release-repeat-evidence.json");
+const newQuestionManifestPath = path.join(projectDirectory, "data", "new-question-ids.js");
+const frozenReleaseCount = 11952;
+const frozenTopicExpansionCount = 11972;
+const frozenTopicExpansionSha256 = "a2b9b2a6c0a592c3b788970bd5eecf0aeaa762efa46a991fd9c9a4b42d0cb7c5";
+// Register reviewed files explicitly. Files matching the naming convention are
+// not loaded merely because they exist in work/.
+const registeredFutureBatchFiles = [];
 
 const categories = [
   { id: "general-knowledge", name: "General Knowledge", shortLabel: "GK", description: "World facts, organizations, personalities and important events." },
@@ -123,7 +131,25 @@ function loadBatches() {
     if (!Array.isArray(value)) fail(`${name} must contain a JSON array.`);
     return value;
   });
-  return questionsWithWgi.concat(customQuestions, supplement, octoberQuestions);
+  const topicExpansion = require(path.join(workDirectory, "topic-expansion-20261030.js"));
+  if (!Array.isArray(topicExpansion)) fail("topic-expansion-20261030.js must export an array.");
+  if (new Set(registeredFutureBatchFiles).size !== registeredFutureBatchFiles.length) {
+    fail("Future MCQ batch registration contains a duplicate filename.");
+  }
+  const futureQuestions = [...registeredFutureBatchFiles].sort().flatMap((name) => {
+    const match = /^new-mcqs-(20\d{6})-[a-z0-9]+(?:-[a-z0-9]+)*\.json$/.exec(name);
+    if (!match) fail(`${name} must use the new-mcqs-YYYYMMDD-topic.json filename convention.`);
+    const stamp = match[1];
+    const date = `${stamp.slice(0, 4)}-${stamp.slice(4, 6)}-${stamp.slice(6, 8)}`;
+    const parsed = Date.parse(`${date}T00:00:00Z`);
+    if (Number.isNaN(parsed) || new Date(parsed).toISOString().slice(0, 10) !== date) {
+      fail(`${name} contains an invalid calendar date.`);
+    }
+    const value = JSON.parse(fs.readFileSync(path.join(workDirectory, name), "utf8"));
+    if (!Array.isArray(value)) fail(`${name} must contain a JSON array.`);
+    return value;
+  });
+  return questionsWithWgi.concat(customQuestions, supplement, octoberQuestions, topicExpansion, futureQuestions);
 }
 
 function canonicalRepeatTargetId(duplicateOf) {
@@ -135,6 +161,47 @@ function canonicalRepeatTargetId(duplicateOf) {
 
 function sha256Json(value) {
   return crypto.createHash("sha256").update(JSON.stringify(value)).digest("hex");
+}
+
+function normalizeQuestion(text) {
+  return String(text).normalize("NFKC").toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, " ").replace(/\s+/g, " ").trim();
+}
+
+function validateNewQuestionWording(questions) {
+  const seen = new Set(questions.slice(0, frozenReleaseCount).map((item) => normalizeQuestion(item.question)));
+  for (const item of questions.slice(frozenReleaseCount)) {
+    const key = normalizeQuestion(item.question);
+    if (seen.has(key)) fail(`${item.id} duplicates existing question wording.`);
+    seen.add(key);
+  }
+}
+
+function syncNewQuestionManifest(questions, checkOnly) {
+  const ids = questions.slice(frozenReleaseCount).map((item) => item.id);
+  const context = { window: {} };
+  if (fs.existsSync(newQuestionManifestPath)) {
+    vm.runInNewContext(fs.readFileSync(newQuestionManifestPath, "utf8"), context, { filename: newQuestionManifestPath });
+  }
+  const current = Array.from(context.window.PPSC_NEW_QUESTION_IDS || []);
+  if (current.some((id, index) => id !== ids[index])) {
+    fail("data/new-question-ids.js must retain the generated append-only ID order.");
+  }
+  if (current.length === ids.length) return;
+  if (checkOnly) fail("data/new-question-ids.js is missing new IDs; run the normal question-bank build.");
+  const lines = [
+    "// Cumulative IDs introduced after the 11,952-question baseline release.",
+    "// Keep IDs here after they are read: each user's seen state is stored separately.",
+    "window.PPSC_NEW_QUESTION_IDS = Object.freeze([",
+    ...ids.reduce((parts, id, index) => {
+      if (index % 2 === 0) parts.push(`  ${JSON.stringify(id)},`);
+      else parts[parts.length - 1] += ` ${JSON.stringify(id)}${index === ids.length - 1 ? "" : ","}`;
+      return parts;
+    }, []),
+    "]);",
+    ""
+  ];
+  fs.writeFileSync(newQuestionManifestPath, lines.join("\n"), "utf8");
 }
 
 function loadRepeatEvidence() {
@@ -682,6 +749,7 @@ function writeMarkdown(questions) {
 
 const questions = rebalanceSimilarOptions(loadBatches());
 validate(questions);
+validateNewQuestionWording(questions);
 const repeatEvidence = loadRepeatEvidence();
 validateRepeatEvidence(questions, repeatEvidence);
 const translations = loadQuestionTranslations(questions);
@@ -694,8 +762,14 @@ const { javascript: generatedJavaScript, releaseData } = buildJavaScript(
 );
 const releaseRepeatEvidence = buildReleaseRepeatEvidence(releaseData, repeatEvidence);
 validateSupplement(releaseData);
+const topicExpansionSha256 = sha256Json(releaseData.questions.slice(0, frozenTopicExpansionCount));
+if (releaseData.questions.length < frozenTopicExpansionCount
+    || topicExpansionSha256 !== frozenTopicExpansionSha256) {
+  fail(`The published ${frozenTopicExpansionCount}-question prefix changed (SHA-256 ${topicExpansionSha256}); future batches must append after it.`);
+}
 const validateOnly = process.argv.includes("--validate-only");
 const checkOnly = process.argv.includes("--check");
+syncNewQuestionManifest(releaseData.questions, validateOnly || checkOnly);
 if (checkOnly) {
   if (fs.readFileSync(outputFile, "utf8").replace(/\r\n/g, "\n") !== generatedJavaScript) {
     fail("data/questions.js is stale; run node tools/build-question-bank.js --site-only");

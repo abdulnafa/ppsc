@@ -1,7 +1,7 @@
 "use strict";
 
-// Categories -> Math Learn/Quiz -> exact source/similar bank order. A previously
-// saved shuffled Math Quiz must still Continue in its frozen order and position.
+// Categories -> Math Learn/Quiz -> topic-grouped source/similar order. A
+// previously saved shuffled Math Quiz must still Continue in its frozen order.
 // Browser plugin is unavailable; reuse the repository's Chrome/CDP e2e harness.
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
@@ -20,15 +20,16 @@ const pause = milliseconds => new Promise(resolve => setTimeout(resolve, millise
 function readBank() {
   const context = { window: {} };
   vm.runInNewContext(fs.readFileSync(path.join(root, "data/questions.js"), "utf8"), context);
-  return context.window.PPSC_QUIZ_DATA.questions;
+  vm.runInNewContext(fs.readFileSync(path.join(root, "data/topic-taxonomy.js"), "utf8"), context);
+  return { questions: context.window.PPSC_QUIZ_DATA.questions, topics: context.window.PPSC_TOPIC_DATA };
 }
 
 async function main() {
-  const bank = Array.from(readBank());
-  const math = bank.filter(question => question.categoryId === "basic-mathematics");
-  const general = bank.filter(question => question.categoryId === "general-knowledge");
+  const { questions: bank, topics } = readBank();
+  const math = Array.from(topics.sortQuestions(bank.filter(question => question.categoryId === "basic-mathematics")));
+  const general = Array.from(topics.sortQuestions(bank.filter(question => question.categoryId === "general-knowledge")));
   assert(math.length >= 12 && general.length >= 12, "Both category fixtures need at least 12 MCQs");
-  for (let index = 0; index < 12; index += 2) {
+  for (let index = 0; index < math.length; index += 2) {
     assert.equal(math[index].kind, "source", "Math source must precede its similar question");
     assert.equal(math[index + 1].kind, "similar", "Math similar must follow its source");
     assert.equal(math[index].pairId, math[index + 1].pairId, "Math source and similar pair must match");
@@ -134,7 +135,17 @@ async function main() {
     // A range is still positional: starting at item 2 deliberately starts
     // with a similar question; the app must not silently widen the range.
     await openRange("basic-mathematics", "learn");
-    assert.match(await client.evaluate('document.getElementById("question-range-help").textContent'), /original source-to-similar order/);
+    assert.match(await client.evaluate('document.getElementById("question-range-help").textContent'), /topic order/i);
+    const pickedTopicRange = await client.evaluate(`(() => {
+      const select = document.getElementById("question-range-topic-select");
+      if (select.options.length < 3) throw new Error("Math topic choices missing");
+      select.selectedIndex = 2;
+      select.dispatchEvent(new Event("change", { bubbles: true }));
+      return [Number(document.getElementById("question-range-start-input").value),
+        Number(document.getElementById("question-range-end-input").value)];
+    })()`);
+    assert(pickedTopicRange[0] > 1 && pickedTopicRange[1] >= pickedTopicRange[0],
+      "Topic selection must move the range to that topic");
     await capture("range-desktop", 1366, "#question-range-options");
     await client.evaluate(`(() => {
       document.getElementById("question-range-start-input").value = "2";
@@ -157,15 +168,25 @@ async function main() {
     assert.deepEqual(mathQuiz.questionIds, mathLearn.questionIds, "Math Quiz must match canonical Learn order");
     assert.equal(mathQuiz.mode, "quiz");
     await capture("quiz-mobile", 375, "#quiz-screen");
+    const wideMath = await start("basic-mathematics", "learn", 1, 120);
+    const jumpedIndex = await client.evaluate(`(() => {
+      const select = document.getElementById("quiz-topic-select");
+      if (select.options.length < 3) throw new Error("Quiz topic choices missing");
+      select.selectedIndex = 2;
+      select.dispatchEvent(new Event("change", { bubbles: true }));
+      return JSON.parse(localStorage.getItem(${JSON.stringify(ACTIVE)})).currentIndex;
+    })()`);
+    const secondTopicId = topics.getTopic(math[20]).id;
+    assert.equal(jumpedIndex, wideMath.questionIds.findIndex(id =>
+      topics.getTopic(bank.find(question => question.id === id)).id === secondTopicId),
+    "Active topic selection must jump without resetting the session");
 
     const generalLearn = await start("general-knowledge", "learn", 1, 12);
-    assert.deepEqual([...generalLearn.questionIds].sort(), general.slice(0, 12).map(question => question.id).sort());
-    assert.notDeepEqual(generalLearn.questionIds, general.slice(0, 12).map(question => question.id),
-      "Non-Math Learn should still shuffle");
+    assert.deepEqual(generalLearn.questionIds, general.slice(0, 12).map(question => question.id),
+      "Non-Math Learn must follow topic order");
     const generalQuiz = await start("general-knowledge", "quiz", 1, 12);
-    assert.deepEqual([...generalQuiz.questionIds].sort(), general.slice(0, 12).map(question => question.id).sort());
-    assert.notDeepEqual(generalQuiz.questionIds, general.slice(0, 12).map(question => question.id),
-      "Non-Math Quiz should still shuffle");
+    assert.deepEqual(generalQuiz.questionIds, general.slice(0, 12).map(question => question.id),
+      "Non-Math Quiz must follow the same topic order as Learn");
 
     // Simulate an older in-progress Math Quiz: its first answer and current
     // position are real, while later MCQs have a frozen noncanonical shuffle.
@@ -212,8 +233,9 @@ async function main() {
     assert.deepEqual(runtimeErrors, [], "Browser runtime/console errors");
 
     console.log(JSON.stringify({
-      ok: true, url, mathRange: [1, 12], mathLearnAndQuizCanonical: true,
-      nonMathLearnAndQuizShuffled: true, oldMathQuizResumePreserved: true,
+      ok: true, url, mathRange: [1, 12], mathLearnAndQuizTopicOrdered: true,
+      nonMathLearnAndQuizTopicOrdered: true, topicDropdownJump: true,
+      oldMathQuizResumePreserved: true,
       runtimeErrors, screenshots,
       browser: "Browser plugin unavailable; isolated native Chrome/CDP harness"
     }, null, 2));

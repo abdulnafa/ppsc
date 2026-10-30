@@ -945,6 +945,8 @@ function validateIbesBank(questions) {
 
 function validateComputerSourceScopes(questions) {
   const computerQuestions = questions.filter((question) => question.categoryId === "basic-computer-studies");
+  const appendedComputerQuestions = questions.slice(11952).filter((question) => question.categoryId === "basic-computer-studies");
+  const appendedComputerIds = new Set(appendedComputerQuestions.map((question) => question.id));
   const scopes = {
     all: computerQuestions,
     "initial-original": computerQuestions.filter((question) => (
@@ -955,11 +957,12 @@ function validateComputerSourceScopes(questions) {
     )),
     other: computerQuestions.filter((question) => !String(question.id || "").startsWith("IBES-"))
   };
+  const legacyOther = scopes.other.filter((question) => !appendedComputerIds.has(question.id));
   const expected = {
-    all: { total: 2564, important: 463 },
+    all: { total: 2564 + appendedComputerQuestions.length, important: 463 + appendedComputerQuestions.filter((question) => question.isImportant === true || Number(question.repeatCount) >= 2).length },
     "initial-original": { total: 1088, important: 399 },
     "initial-related": { total: 1088, important: 20 },
-    other: { total: 388, important: 44 }
+    other: { total: 388 + appendedComputerQuestions.length, important: 44 + appendedComputerQuestions.filter((question) => question.isImportant === true || Number(question.repeatCount) >= 2).length }
   };
   const isImportant = (question) => question.isImportant === true || Number(question.repeatCount) >= 2;
 
@@ -979,12 +982,12 @@ function validateComputerSourceScopes(questions) {
   if (scopes["initial-related"].some((question) => !/^IBES-Q\d{4}-SIM$/.test(String(question.id || "")))) {
     error("Basic Computer initial-related scope must contain only IBES generated related-practice MCQs");
   }
-  if (scopes.other.some((question) => !/^(?:P23[4-9]-Q\d{3}|ADV2E102-U\d{4}-Q\d{3}|WGI-Q\d{4})-(?:SRC|SIM)$/.test(String(question.id || "")))) {
-    error("Basic Computer other scope must contain only PPSC 110 Edition, ADV2E102, or WGI MCQs");
+  if (legacyOther.some((question) => !/^(?:P23[4-9]-Q\d{3}|ADV2E102-U\d{4}-Q\d{3}|WGI-Q\d{4})-(?:SRC|SIM)$/.test(String(question.id || "")))) {
+    error("Basic Computer legacy other scope must contain only PPSC 110 Edition, ADV2E102, or WGI MCQs");
   }
-  if (scopes.other.filter((question) => question.kind === "source").length !== 194
-        || scopes.other.filter((question) => question.kind === "similar").length !== 194) {
-    error("Basic Computer other scope must contain exactly 194 source and 194 related-practice MCQs");
+  if (legacyOther.filter((question) => question.kind === "source").length !== 194
+        || legacyOther.filter((question) => question.kind === "similar").length !== 194) {
+    error("Basic Computer legacy other scope must contain exactly 194 source and 194 related-practice MCQs");
   }
   const scopedIds = scopes["initial-original"].concat(scopes["initial-related"], scopes.other)
     .map((question) => String(question.id));

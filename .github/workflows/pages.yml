@@ -32,6 +32,9 @@ jobs:
       - name: Validate committed release
         run: |
           node --check data/detailed-learning.js
+          node --check data/new-question-ids.js
+          node --check data/topic-taxonomy.js
+          node tools/validate-topic-taxonomy.js
           node --check years-topics.js
           node tools/build-year-topics.js --check
           node tools/year-explanations-smoke.js
@@ -42,7 +45,7 @@ jobs:
           node tools/build-prime-ministers.js --check
           node tools/build-presidents.js --check
           node tools/validate-wgi.js --complete
-          node tools/validate-site-data.js --expected=11952
+          node tools/validate-site-data.js --expected=11972
           node tools/validate-world-map-data.js
           node tools/validate-world-city-data.js
           node tools/validate-world-physical-data.js
@@ -62,8 +65,10 @@ jobs:
           node --check app.js
           node tools/popup-preference-smoke.js
           node tools/wrong-quiz-smoke.js
+          node tools/new-mcqs-smoke.js
           node tools/cloud-sync-smoke.js
           node tools/category-progress-smoke.js
+          node tools/topic-order-migration-smoke.js
 
       - name: Prepare static site
         run: |
@@ -72,7 +77,7 @@ jobs:
           cp theme.js years-topics.js _site/
           cp water-topics.js _site/
           cp prime-ministers.js _site/
-          cp data/questions.js data/gk-study-notes.js data/detailed-learning.js _site/data/
+          cp data/questions.js data/new-question-ids.js data/topic-taxonomy.js data/gk-study-notes.js data/detailed-learning.js _site/data/
           cp data/year-topics.js _site/data/
           cp data/pakistan-water-topics.js _site/data/
           cp data/pakistan-articles-topics.js _site/data/

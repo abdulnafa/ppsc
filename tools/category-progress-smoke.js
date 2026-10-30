@@ -97,6 +97,35 @@ function shuffledFixture(categoryId, mode) {
   return saved;
 }
 
+// The immediately preceding 11,952-question release must also migrate as an
+// exact append-only prefix. In-progress answers, range and Queue stay frozen.
+const topicReleaseData = { ...data, questions: data.questions.slice(0, 11952) };
+const topicReleaseProbe = harness({}, topicReleaseData);
+bankSignatures.set(topicReleaseData, topicReleaseProbe.api.signature);
+assert.equal(topicReleaseProbe.api.signature, "v1:11952:b657229a");
+const topicReleaseQuiz = fixture("general-knowledge", "quiz", topicReleaseData);
+const topicReleaseQueue = plain(topicReleaseProbe.api.emptyQueue());
+topicReleaseQueue.items = [{
+  questionId: topicReleaseQuiz.questionIds[0], remaining: 9,
+  dueStep: 12, sequence: 1
+}];
+topicReleaseQueue.nextSequence = 2;
+topicReleaseQueue.queueCyclePendingByCategory = {
+  "general-knowledge": [topicReleaseQuiz.questionIds[0]]
+};
+const topicReleaseMigration = harness({
+  [SESSION]: JSON.stringify(topicReleaseQuiz),
+  [QUEUE]: JSON.stringify(topicReleaseQueue)
+});
+topicReleaseMigration.api.loadQueue();
+topicReleaseMigration.api.load();
+assert.equal(topicReleaseMigration.read(SESSION).rangePoolBankSignature,
+  topicReleaseProbe.api.signature, "Frozen old pool must record its origin");
+assert.deepEqual(topicReleaseMigration.read(SESSION).questionIds, topicReleaseQuiz.questionIds);
+assert.deepEqual(topicReleaseMigration.read(SESSION).answerHistory, topicReleaseQuiz.answerHistory);
+assert.equal(topicReleaseMigration.api.queue().items[0].remaining, 9,
+  "Append-only migration must not reset existing Queue counts");
+
 const sessions = {};
 for (const category of data.categories) {
   for (const mode of ["learn", "quiz"]) {
@@ -300,9 +329,11 @@ assert.deepEqual(plain(recentMigration.api.queue()), expectedRecentQueue,
 for (let round = 0; round < 3; round++) {
   for (const [key, saved] of Object.entries(recentSessions)) {
     assert(recentMigration.api.resume(key), "11,932 session must resume: " + key);
+    const originalCount = recentData.questions.filter(question => question.categoryId === saved.categoryId).length;
+    const currentCount = appendedData.questions.filter(question => question.categoryId === saved.categoryId).length;
     equalSession(recentMigration.read(SESSION), { ...saved,
       bankSignature: recentMigration.api.signature,
-      ...(saved.categoryId === "current-affairs" ? { rangePoolBankSignature: recentProbe.api.signature } : {}) });
+      ...(currentCount > originalCount ? { rangePoolBankSignature: recentProbe.api.signature } : {}) });
     if (saved.categoryId === "current-affairs") {
       assert.equal(recentMigration.read(SESSION).rangePoolSize, 650,
         "New MCQs must not be inserted into an unfinished 650-question CA pool");

@@ -511,6 +511,8 @@ async function main() {
       const data = window.PPSC_QUIZ_DATA;
       const important = (question) => question?.isImportant === true || Number(question?.repeatCount) >= 2;
       const computerQuestions = data.questions.filter((question) => question.categoryId === "basic-computer-studies");
+      const appendedComputerQuestions = data.questions.slice(11952).filter((question) => question.categoryId === "basic-computer-studies");
+      const appendedImportantCount = appendedComputerQuestions.filter(important).length;
       const sourceFor = (question) => String(question.id).startsWith("IBES-")
         ? (question.kind === "source" ? "initial-original" : "initial-related")
         : "other";
@@ -521,10 +523,10 @@ async function main() {
         other: computerQuestions.filter((question) => sourceFor(question) === "other")
       };
       const expectedCounts = {
-        all: [2564, 463],
+        all: [2564 + appendedComputerQuestions.length, 463 + appendedImportantCount],
         "initial-original": [1088, 399],
         "initial-related": [1088, 20],
-        other: [388, 44]
+        other: [388 + appendedComputerQuestions.length, 44 + appendedImportantCount]
       };
       for (const [scope, questions] of Object.entries(scopeQuestions)) {
         if (questions.length !== expectedCounts[scope][0] || questions.filter(important).length !== expectedCounts[scope][1]) {
@@ -537,10 +539,11 @@ async function main() {
       if (scopeQuestions["initial-related"].some((question) => !/^IBES-Q\\d{4}-SIM$/.test(question.id) || question.kind !== "similar")) {
         errors.push("Initial-related fixture includes a non-IBES related-practice question.");
       }
+      const legacyOther = scopeQuestions.other.filter((question) => !appendedComputerQuestions.some((newQuestion) => newQuestion.id === question.id));
       if (scopeQuestions.other.some((question) => String(question.id).startsWith("IBES-"))
-        || scopeQuestions.other.filter((question) => question.kind === "source").length !== 194
-        || scopeQuestions.other.filter((question) => question.kind === "similar").length !== 194) {
-        errors.push("Other Papers fixture is not the expected non-IBES 194 source + 194 related partition.");
+        || legacyOther.filter((question) => question.kind === "source").length !== 194
+        || legacyOther.filter((question) => question.kind === "similar").length !== 194) {
+        errors.push("Other Papers fixture does not preserve the legacy 194 source + 194 related partition.");
       }
       if (computerQuestions.some((question) => /^IBES-Q0254-/.test(question.id))) {
         errors.push("Absent IBES Q254 was fabricated in the Basic Computer bank.");
@@ -594,10 +597,10 @@ async function main() {
       const errors = [];
       const expected = ${JSON.stringify(computerSourceFixture.scopes)};
       const definitions = [
-        ["all", "computer-source-all", "All Basic Computer", 2564, 463],
+        ["all", "computer-source-all", "All Basic Computer", expected.all.ids.length, expected.all.importantIds.length],
         ["initial-original", "computer-source-initial-original", "Initial PDF — Original MCQs", 1088, 399],
         ["initial-related", "computer-source-initial-related", "Initial PDF — Related Practice", 1088, 20],
-        ["other", "computer-source-other", "Other Papers", 388, 44]
+        ["other", "computer-source-other", "Other Papers", expected.other.ids.length, expected.other.importantIds.length]
       ];
 
       document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
@@ -629,8 +632,8 @@ async function main() {
       }
       if (!document.querySelector("#computer-source-all")?.checked
         || radios.filter((radio) => radio.checked).length !== 1
-        || !document.querySelector("#study-scope-summary")?.textContent.includes("2564")
-        || !document.querySelector("#important-count")?.textContent.startsWith("463")) {
+        || !document.querySelector("#study-scope-summary")?.textContent.includes(String(expected.all.ids.length))
+        || !document.querySelector("#important-count")?.textContent.startsWith(String(expected.all.importantIds.length))) {
         errors.push("Basic Computer did not open with the All source and its exact total/important counts.");
       }
       return { errors };
@@ -1976,7 +1979,9 @@ async function main() {
       const retryKey = "ppsc-prep:retry-queue:v1";
       const targetId = "IBES-Q0017-SRC";
       const target = data.questions.find((question) => String(question.id) === targetId);
-      const categoryQuestions = target ? data.questions.filter((question) => question.categoryId === target.categoryId) : [];
+      const categoryQuestions = target ? window.PPSC_TOPIC_DATA.sortQuestions(
+        data.questions.filter((question) => question.categoryId === target.categoryId)
+      ) : [];
       const targetIndex = categoryQuestions.findIndex((question) => String(question.id) === targetId);
       const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
       const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
@@ -2529,10 +2534,10 @@ async function main() {
       const expected = ${JSON.stringify(computerSourceFixture.scopes)};
       const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
       const definitions = [
-        ["all", "All Basic Computer", 2564, 463],
+        ["all", "All Basic Computer", expected.all.ids.length, expected.all.importantIds.length],
         ["initial-original", "Initial PDF — Original MCQs", 1088, 399],
         ["initial-related", "Initial PDF — Related Practice", 1088, 20],
-        ["other", "Other Papers", 388, 44]
+        ["other", "Other Papers", expected.other.ids.length, expected.other.importantIds.length]
       ];
       const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
       const answerText = (question) => optionText(question.options[question.correctOptionIndex]);
@@ -2592,6 +2597,11 @@ async function main() {
       for (const [scope, label, total, importantCount] of definitions) {
         const scopeFixture = expected[scope];
         const expectedQuestions = scopeFixture.ids.map((id) => questionById.get(id)).filter(Boolean);
+        const orderedScopeIds = window.PPSC_TOPIC_DATA.sortQuestions(expectedQuestions)
+          .map((question) => String(question.id));
+        const orderedImportantIds = window.PPSC_TOPIC_DATA.sortQuestions(
+          scopeFixture.importantIds.map((id) => questionById.get(id)).filter(Boolean)
+        ).map((question) => String(question.id));
         const radio = await openScope(scope);
         if (!radio?.checked || !document.querySelector("#mode-category")?.textContent.includes(label)
           || !document.querySelector("#study-scope-summary")?.textContent.includes(String(total))
@@ -2665,12 +2675,12 @@ async function main() {
 
         await startRange("#learn-mode-button", 2, 4);
         const learnSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
-        const expectedRangeIds = scopeFixture.ids.slice(1, 4);
+        const expectedRangeIds = orderedScopeIds.slice(1, 4);
         if (!learnSnapshot || learnSnapshot.version !== 8 || learnSnapshot.computerSourceScope !== scope
           || learnSnapshot.mode !== "learn" || learnSnapshot.rangePoolSize !== total
-          || JSON.stringify(learnSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(scopeFixture.ids)
+          || JSON.stringify(learnSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(orderedScopeIds)
           || JSON.stringify(learnSnapshot.rangeQuestionIds || []) !== JSON.stringify(expectedRangeIds)
-          || !sameIds(learnSnapshot.questionIds, expectedRangeIds)
+          || JSON.stringify(learnSnapshot.questionIds || []) !== JSON.stringify(expectedRangeIds)
           || document.querySelector("#question-text")?.dataset.questionId !== learnSnapshot.questionIds[0]) {
           errors.push("Basic Computer " + scope + " Learn range did not preserve the filtered source pool/membership.");
         }
@@ -2681,8 +2691,8 @@ async function main() {
         let quizSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
         if (!quizSnapshot || quizSnapshot.version !== 8 || quizSnapshot.computerSourceScope !== scope
           || quizSnapshot.mode !== "quiz" || quizSnapshot.rangePoolSize !== total
-          || JSON.stringify(quizSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(scopeFixture.ids)
-          || !sameIds(quizSnapshot.questionIds, expectedRangeIds)) {
+          || JSON.stringify(quizSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(orderedScopeIds)
+          || JSON.stringify(quizSnapshot.questionIds || []) !== JSON.stringify(expectedRangeIds)) {
           errors.push("Basic Computer " + scope + " Quiz range did not preserve the filtered source pool/membership.");
         }
         const quizQuestion = questionById.get(String(document.querySelector("#question-text")?.dataset.questionId || ""));
@@ -2708,8 +2718,8 @@ async function main() {
         const importantSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
         if (!importantSnapshot || importantSnapshot.computerSourceScope !== scope || importantSnapshot.importantOnly !== true
           || importantSnapshot.rangePoolSize !== scopeFixture.importantIds.length
-          || JSON.stringify(importantSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(scopeFixture.importantIds)
-          || !sameIds(importantSnapshot.questionIds, scopeFixture.importantIds.slice(0, importantEnd))) {
+          || JSON.stringify(importantSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(orderedImportantIds)
+          || JSON.stringify(importantSnapshot.questionIds || []) !== JSON.stringify(orderedImportantIds.slice(0, importantEnd))) {
           errors.push("Basic Computer " + scope + " Important Learn range escaped its selected source/membership.");
         }
         await backFromQuestion();
@@ -2859,7 +2869,8 @@ async function main() {
       await pause();
       const fullV8 = JSON.parse(localStorage.getItem(storageKey) || "null");
       const legacyV6 = fullV8 ? JSON.parse(JSON.stringify(fullV8)) : null;
-      if (!legacyV6 || legacyV6.computerSourceScope !== "all" || legacyV6.questionIds.length !== 2564) {
+      const fullComputerCount = window.PPSC_QUIZ_DATA.questions.filter((question) => question.categoryId === "basic-computer-studies").length;
+      if (!legacyV6 || legacyV6.computerSourceScope !== "all" || legacyV6.questionIds.length !== fullComputerCount) {
         errors.push("Could not construct a full Basic Computer v6 migration fixture.");
       } else {
         legacyV6.version = 6;
@@ -2890,10 +2901,11 @@ async function main() {
       document.querySelector("#continue-session-button")?.click();
       await pause();
       const migrated = JSON.parse(localStorage.getItem(storageKey) || "null");
+      const fullComputerCount = window.PPSC_QUIZ_DATA.questions.filter((question) => question.categoryId === "basic-computer-studies").length;
       if (!visible(document.querySelector("#quiz-screen")) || !migrated || migrated.version !== 8
-        || migrated.computerSourceScope !== "all" || migrated.rangeStart !== 1 || migrated.rangeEnd !== 2564
-        || migrated.rangePoolSize !== 2564 || migrated.rangePoolQuestionIds?.length !== 2564
-        || migrated.rangeQuestionIds?.length !== 2564 || migrated.questionIds?.length !== 2564) {
+        || migrated.computerSourceScope !== "all" || migrated.rangeStart !== 1 || migrated.rangeEnd !== fullComputerCount
+        || migrated.rangePoolSize !== fullComputerCount || migrated.rangePoolQuestionIds?.length !== fullComputerCount
+        || migrated.rangeQuestionIds?.length !== fullComputerCount || migrated.questionIds?.length !== fullComputerCount) {
         errors.push("v6 Continue did not migrate to the complete v8 All Basic Computer range.");
       }
       const invalidFixture = ${JSON.stringify(computerSourceFlowResult.resumeSnapshot)};
@@ -3107,7 +3119,7 @@ async function main() {
     await delay(500);
     const screenshot = await client.send("Page.captureScreenshot", { format: "png" });
     fs.writeFileSync(
-      path.join(projectDirectory, "work", "site-home-mobile-smoke.png"),
+      path.join(os.tmpdir(), "ppsc-site-home-mobile-smoke.png"),
       Buffer.from(screenshot.data, "base64")
     );
 
@@ -3186,14 +3198,19 @@ async function main() {
       };
       const data = window.PPSC_QUIZ_DATA;
       if (!data || data.categories.length !== 11) errors.push("Expected 11 categories.");
-      if (!data || data.questions.length !== 11952) errors.push("Expected the current 11,952-question release bank.");
+      const newQuestionIds = window.PPSC_NEW_QUESTION_IDS || [];
+      if (!data || data.questions.length !== 11952 + newQuestionIds.length
+        || newQuestionIds.some((id) => !data.questions.some((question) => question.id === id))) {
+        errors.push("The release bank did not retain its 11,952-question baseline plus every registered new MCQ.");
+      }
       if (!data || data.version !== 5) errors.push("Expected question-data schema version 5.");
       const importantQuestions = data ? data.questions.filter((question) => question.isImportant === true) : [];
       if (importantQuestions.length !== 1197) errors.push("Expected 1,197 evidence-based important questions.");
       if (importantQuestions.some((question) => !Number.isInteger(question.repeatCount) || question.repeatCount < 2)) errors.push("Important repeat metadata is invalid.");
       if (data && data.questions.some((question) => !/[\u0600-\u06ff]/u.test(String(question.questionUrdu || "")))) errors.push("A question is missing its Urdu translation.");
       const urduQuestions = data ? data.questions.filter((question) => question.categoryId === "urdu") : [];
-      if (urduQuestions.length !== 882) errors.push("Expected 882 Urdu-category questions.");
+      const appendedUrduQuestions = data.questions.slice(11952).filter((question) => question.categoryId === "urdu");
+      if (urduQuestions.length !== 882 + appendedUrduQuestions.length) errors.push("Urdu-category question count lost its 882-question baseline or appended MCQs.");
       if (urduQuestions.some((question) => {
         const text = String(question.questionUrdu || "").trim();
         return !text || !/[\u0600-\u06ff]/u.test(text) || /[A-Za-z]/.test(text);
@@ -3214,7 +3231,10 @@ async function main() {
       if (data && data.questions.some((question) => question.categoryId !== "urdu" && Object.prototype.hasOwnProperty.call(question, "optionsUrdu"))) {
         errors.push("A non-Urdu category question unexpectedly defines Urdu-only options.");
       }
-      if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("Category cards did not render.");
+      if (document.querySelectorAll("#category-grid .category-card").length !== 12
+        || !document.querySelector('#category-grid .category-card[data-category="new-mcqs"]')) {
+        errors.push("The 11 category cards plus the New MCQs card did not render.");
+      }
       if (visible(document.querySelector("#continue-session-card"))) errors.push("A fresh profile incorrectly showed Continue.");
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Mobile layout has horizontal overflow.");
       if (data.questions.some((question) => !/^https?:\\/\\//.test(question.source.referenceUrl))) errors.push("A research URL is missing.");
@@ -3242,8 +3262,10 @@ async function main() {
       const categoryCards = [...document.querySelectorAll("#category-grid .category-card[data-category]")];
       const detailedLearningData = window.PPSC_DETAILED_LEARNING_DATA;
 
-      if (categoryCards.length !== data.categories.length || new Set(categoryCards.map((card) => card.dataset.category)).size !== data.categories.length) {
-        errors.push("The homepage did not keep exactly one category card for each of the 11 categories.");
+      if (categoryCards.length !== data.categories.length + 1
+        || new Set(categoryCards.map((card) => card.dataset.category)).size !== data.categories.length + 1
+        || data.categories.some((category) => !categoryCards.some((card) => card.dataset.category === category.id))) {
+        errors.push("The homepage did not keep one card for each category plus New MCQs.");
       }
       if (!detailedLearningData || !Array.isArray(detailedLearningData.categories)
         || detailedLearningData.categories.length !== data.categories.length) {
@@ -3500,15 +3522,18 @@ async function main() {
 
       const notesData = window.PPSC_GK_STUDY_NOTES_DATA;
       const notesEntry = document.querySelector("#gk-study-notes-card");
-      if (!notesData || notesData.schemaVersion !== 1 || !Array.isArray(notesData.notes) || notesData.notes.length !== 776) {
-        errors.push("Expected the schema-v1 776-card GK Study Notes dataset.");
+      const expectedNotesCount = 776 + data.questions.slice(11952).filter((question) =>
+        question.categoryId === "general-knowledge" && question.kind === "source").length;
+      if (!notesData || notesData.schemaVersion !== 1 || !Array.isArray(notesData.notes)
+        || notesData.notes.length !== expectedNotesCount) {
+        errors.push("GK Study Notes did not retain its 776-card baseline plus new General Knowledge pairs.");
       }
       if (!Array.isArray(window.PPSC_GK_STUDY_NOTES) || window.PPSC_GK_STUDY_NOTES !== notesData.notes) {
         errors.push("GK Study Notes convenience global did not expose the notes array.");
       }
       if (!notesEntry || !notesEntry.closest("#quick-notes-screen") || visible(notesEntry)) errors.push("Detailed GK Stories was not confined to the hidden Quick Notes screen on the homepage.");
-      if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("GK Study Notes changed the 11 subject categories.");
-        if (document.querySelectorAll("#gk-notes-list .gk-note-card").length !== 0) errors.push("GK Study Notes eagerly built its 776-card DOM before the library was opened.");
+      if (document.querySelectorAll("#category-grid .category-card").length !== 12) errors.push("GK Study Notes changed the 11 subject categories plus New MCQs.");
+        if (document.querySelectorAll("#gk-notes-list .gk-note-card").length !== 0) errors.push("GK Study Notes eagerly built its entire DOM before the library was opened.");
 
       if (notesEntry) {
         document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
@@ -3532,7 +3557,7 @@ async function main() {
         if (!visible(notesScreen) || visible(document.querySelector("#category-screen"))) errors.push("GK Study Notes screen did not replace the category screen.");
         if (document.documentElement.scrollWidth > window.innerWidth) errors.push("GK Study Notes has horizontal overflow on mobile.");
         if (!notesList || allNoteCards().length !== 40 || visibleNoteCards().length !== 40) errors.push("GK Study Notes did not render the first 40-card page.");
-        if (!resultsStatus || !resultsStatus.textContent.includes("40 of 776")) errors.push("GK Study Notes result status did not report its progressive 40-of-776 page.");
+        if (!resultsStatus || !resultsStatus.textContent.includes("40 of " + expectedNotesCount)) errors.push("GK Study Notes result status did not report its progressive first page.");
         if (!notesLoadMore || !visible(notesLoadMore)) errors.push("GK Study Notes Load more control was not available for the first page.");
         if (visible(emptyState)) errors.push("GK Study Notes empty state was visible before filtering.");
         const topicButtons = [...document.querySelectorAll("#gk-notes-topic-filters .gk-notes-topic-button[data-gk-notes-topic]")];
@@ -3590,7 +3615,7 @@ async function main() {
         if (notesLoadMore) {
           notesLoadMore.click();
           await pause();
-        if (allNoteCards().length !== 80 || visibleNoteCards().length !== 80 || !resultsStatus.textContent.includes("80 of 776")) {
+        if (allNoteCards().length !== 80 || visibleNoteCards().length !== 80 || !resultsStatus.textContent.includes("80 of " + expectedNotesCount)) {
             errors.push("GK Study Notes Load more did not append the next 40-card page.");
           }
         }
@@ -3608,7 +3633,7 @@ async function main() {
           }
           notesClear.click();
           await pause();
-        if (notesSearch.value || visibleNoteCards().length !== 40 || !resultsStatus.textContent.includes("40 of 776")) errors.push("GK Study Notes Clear did not restore the first full-list page after search.");
+        if (notesSearch.value || visibleNoteCards().length !== 40 || !resultsStatus.textContent.includes("40 of " + expectedNotesCount)) errors.push("GK Study Notes Clear did not restore the first full-list page after search.");
         }
 
         const datedNote = notesData.notes.find((note) => note.facts.some((fact) => ["as-of", "version"].includes(fact.temporalScope?.type)));
@@ -3701,18 +3726,18 @@ async function main() {
         errors.push("An ADV2E102 question is missing its Urdu translation.");
       }
 
-      // Render one deterministic IBES item through a one-question range without
-      // traversing the Basic Computer bank or depending on shuffled run order.
+      // Render one deterministic IBES item through a one-question range in the
+      // topic-ordered Basic Computer bank, without mutating the question data.
       const ibesRenderTarget = ibesQuestions.find((question) => question.kind === "source");
-      const firstComputerIndex = data.questions.findIndex((question) => question.categoryId === "basic-computer-studies");
-      const ibesTargetIndex = data.questions.indexOf(ibesRenderTarget);
-      if (!ibesRenderTarget || firstComputerIndex < 0 || ibesTargetIndex < 0) {
+      const orderedComputerQuestions = window.PPSC_TOPIC_DATA.sortQuestions(
+        data.questions.filter((question) => question.categoryId === "basic-computer-studies")
+      );
+      const ibesTargetIndex = orderedComputerQuestions.findIndex((question) => question.id === ibesRenderTarget?.id);
+      if (!ibesRenderTarget || ibesTargetIndex < 0) {
         errors.push("Could not locate a Basic Computer IBES render target.");
       } else {
-        data.questions.splice(ibesTargetIndex, 1);
-        data.questions.splice(firstComputerIndex, 0, ibesRenderTarget);
         document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]').click();
-        await startModeWithRange("#learn-mode-button", 1, 1);
+        await startModeWithRange("#learn-mode-button", ibesTargetIndex + 1, ibesTargetIndex + 1);
         const renderedIbesId = document.querySelector("#question-text").dataset.questionId;
         if (renderedIbesId !== ibesRenderTarget.id) errors.push("The deterministic IBES question did not render in Basic Computer Learn mode.");
         if (document.querySelector("#question-text-urdu").textContent !== ibesRenderTarget.questionUrdu) errors.push("The rendered IBES Urdu translation did not match its data.");
@@ -3721,13 +3746,16 @@ async function main() {
       }
 
       const categoryButton = [...document.querySelectorAll("#category-grid .category-card:not([disabled])")]
+        .filter((button) => data.categories.some((category) => category.id === (button.dataset.category || button.dataset.categoryId)))
         .reduce((smallest, button) => {
           const categoryId = button.dataset.category || button.dataset.categoryId;
           const count = data.questions.filter((question) => question.categoryId === categoryId).length;
           return !smallest || count < smallest.count ? { button, count } : smallest;
         }, null).button;
       const activeCategory = categoryButton.dataset.category || categoryButton.dataset.categoryId;
-      const allCategoryQuestions = data.questions.filter((question) => question.categoryId === activeCategory);
+      const allCategoryQuestions = window.PPSC_TOPIC_DATA.sortQuestions(
+        data.questions.filter((question) => question.categoryId === activeCategory)
+      );
       const categoryQuestions = allCategoryQuestions;
       const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
       const displayOptions = (question) => question.categoryId === "urdu" && Array.isArray(question.optionsUrdu)
@@ -3785,7 +3813,7 @@ async function main() {
         ? document.querySelector('#category-grid .category-card[data-category="' + rangeCategory.id + '"]')
         : null;
       const rangeQuestions = rangeCategory
-        ? data.questions.filter((question) => question.categoryId === rangeCategory.id)
+        ? window.PPSC_TOPIC_DATA.sortQuestions(data.questions.filter((question) => question.categoryId === rangeCategory.id))
         : [];
       const rangePoolIds = rangeQuestions.map((question) => String(question.id));
 
@@ -3880,9 +3908,8 @@ async function main() {
           || !sameIds(selectedRangeSnapshot.questionIds, expectedRangeIds)) {
           errors.push("Learn range 2–4 did not persist exact v8 range metadata and selected IDs.");
         }
-        if (selectedRangeSnapshot?.questionIds?.length > 1
-          && JSON.stringify(selectedRangeSnapshot.questionIds) === JSON.stringify(expectedRangeIds)) {
-          errors.push("Fresh Learn range 2–4 did not shuffle its selected MCQs.");
+        if (JSON.stringify(selectedRangeSnapshot?.questionIds || []) !== JSON.stringify(expectedRangeIds)) {
+          errors.push("Fresh Learn range 2–4 did not follow topic order.");
         }
         const firstRangeLearnIds = selectedRangeSnapshot?.questionIds || [];
 
@@ -3895,9 +3922,8 @@ async function main() {
           errors.push("Restart did not retain Learn range 2–4.");
         }
         const restartedLearnIds = selectedRangeSnapshot?.questionIds || [];
-        if (restartedLearnIds.length > 1
-          && JSON.stringify(restartedLearnIds) === JSON.stringify(firstRangeLearnIds)) {
-          errors.push("Restarted Learn range repeated its immediately previous MCQ order.");
+        if (JSON.stringify(restartedLearnIds) !== JSON.stringify(firstRangeLearnIds)) {
+          errors.push("Restarted Learn range changed its topic order.");
         }
         for (let learnRangeIndex = 0; learnRangeIndex < restartedLearnIds.length; learnRangeIndex += 1) {
           const expectedId = restartedLearnIds[learnRangeIndex];
@@ -3926,8 +3952,8 @@ async function main() {
           || !sameIds(rangeQuizIds, expectedRangeIds)) {
           errors.push("Start Quiz did not retain the Learn range 2–4 membership.");
         }
-        if (rangeQuizIds.length > 1 && JSON.stringify(rangeQuizIds) === JSON.stringify(expectedRangeIds)) {
-          errors.push("Fresh Quiz range 2–4 did not shuffle its selected MCQs.");
+        if (JSON.stringify(rangeQuizIds) !== JSON.stringify(expectedRangeIds)) {
+          errors.push("Fresh Quiz range 2–4 did not follow topic order.");
         }
         for (let index = 0; index < 3; index += 1) {
           const currentId = document.querySelector("#question-text")?.dataset.questionId;
@@ -4045,9 +4071,8 @@ async function main() {
       if (!sameIds(firstLearnRunIds, categoryQuestions.map((item) => String(item.id)))) {
         errors.push("Learn start did not include every selected category MCQ exactly once.");
       }
-      if (firstLearnRunIds.length > 1
-        && JSON.stringify(firstLearnRunIds) === JSON.stringify(categoryQuestions.map((item) => String(item.id)))) {
-        errors.push("Fresh Learn session did not shuffle its question order.");
+      if (JSON.stringify(firstLearnRunIds) !== JSON.stringify(categoryQuestions.map((item) => String(item.id)))) {
+        errors.push("Fresh Learn session did not follow topic order.");
       }
       const retryQueueSnapshot = () => JSON.parse(
         localStorage.getItem("ppsc-prep:retry-queue:v1") || "null"
@@ -4254,9 +4279,8 @@ async function main() {
       if (!sameIds(restartedLearnIds, categoryQuestions.map((item) => String(item.id)))) {
         errors.push("Learn restart changed the selected category MCQ membership.");
       }
-      if (restartedLearnIds.length > 1
-        && JSON.stringify(restartedLearnIds) === JSON.stringify(firstLearnRunIds)) {
-        errors.push("Learn restart repeated the immediately previous question order.");
+      if (JSON.stringify(restartedLearnIds) !== JSON.stringify(firstLearnRunIds)) {
+        errors.push("Learn restart changed the topic order.");
       }
       const learnOrder = [];
       const markedQuestionIds = [];
@@ -4301,8 +4325,8 @@ async function main() {
       if (document.querySelector("#score-text").textContent !== "Score: 0") errors.push("Start Quiz did not switch from Learn to Quiz mode.");
       const firstQuizQuestionIds = activeSessionSnapshot()?.questionIds || [];
       if (!sameIds(firstQuizQuestionIds, canonicalOrder)) errors.push("Fresh Quiz changed the selected category MCQ membership.");
-      if (firstQuizQuestionIds.length > 1 && JSON.stringify(firstQuizQuestionIds) === JSON.stringify(canonicalOrder)) {
-        errors.push("Fresh Quiz did not shuffle its question order.");
+      if (JSON.stringify(firstQuizQuestionIds) !== JSON.stringify(canonicalOrder)) {
+        errors.push("Fresh Quiz did not follow topic order.");
       }
 
       question = findCurrent();
@@ -4450,9 +4474,8 @@ async function main() {
       await pause();
       const repeatedQuizQuestionIds = activeSessionSnapshot()?.questionIds || [];
       if (!sameIds(repeatedQuizQuestionIds, canonicalOrder)) errors.push("Practice Again changed the selected category MCQ membership.");
-      if (repeatedQuizQuestionIds.length > 1
-        && JSON.stringify(repeatedQuizQuestionIds) === JSON.stringify(firstQuizQuestionIds)) {
-        errors.push("Practice Again repeated the immediately previous Quiz order.");
+      if (JSON.stringify(repeatedQuizQuestionIds) !== JSON.stringify(firstQuizQuestionIds)) {
+        errors.push("Practice Again changed the category topic order.");
       }
       const repeatedQuizOrder = [];
       while (!visible(document.querySelector("#results-screen"))) {
@@ -4761,6 +4784,10 @@ async function main() {
       if (!legacySnapshot || legacySnapshot.version !== 6) {
         errors.push("Could not construct a valid v6 full-session migration fixture.");
       } else {
+        // Isolate the legacy active-slot fixture from a newer archived session
+        // created by the preceding resume checks. Production should prefer
+        // newer archives, but this test specifically exercises v6 migration.
+        localStorage.removeItem("ppsc-prep:category-sessions:v1");
         localStorage.setItem(storageKey, JSON.stringify(legacySnapshot));
       }
       return { errors };
@@ -4785,22 +4812,39 @@ async function main() {
       const errors = [];
       const storageKey = "ppsc-prep:active-session:v1";
       const expected = ${JSON.stringify(normalResult.resumeExpected)};
+      const seeded = ${JSON.stringify(normalResult.legacyV6Snapshot)};
       const visible = (element) => Boolean(
         element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
       );
       if (!visible(document.querySelector("#continue-session-card"))) errors.push("A valid v6 full session was rejected instead of offered for migration.");
       const beforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (!beforeContinue || beforeContinue.version !== 6) errors.push("The v6 fixture changed before Continue was used.");
+      const frozenV6Fields = ["questionIds", "optionOrders", "answerHistory", "currentIndex", "selectedIndex",
+        "submitted", "score", "learnVisitedQuestionIds", "learnReviewCountedQuestionIds"];
+      const alteredV6Fields = beforeContinue ? frozenV6Fields.filter((key) =>
+        JSON.stringify(beforeContinue[key]) !== JSON.stringify(seeded[key])) : frozenV6Fields;
+      if (!beforeContinue || ![6, 8].includes(beforeContinue.version)
+        || (beforeContinue.version === 8 && (
+          beforeContinue.computerSourceScope !== "all"
+          || JSON.stringify(beforeContinue.questionIds || []) !== JSON.stringify(expected.questionIds)
+          || JSON.stringify(beforeContinue.rangeQuestionIds || []) !== JSON.stringify(expected.rangeQuestionIds)
+        )) || alteredV6Fields.length) {
+        errors.push("The v6 fixture was lost or changed frozen state before Continue: version="
+          + beforeContinue?.version + ", altered=" + alteredV6Fields.join(",")
+          + ", poolLength=" + beforeContinue?.rangeQuestionIds?.length + ".");
+      }
       document.querySelector("#continue-session-button")?.click();
       await pause();
       const migrated = JSON.parse(localStorage.getItem(storageKey) || "null");
+      const expectedLegacyPoolIds = window.PPSC_QUIZ_DATA.questions
+        .filter((question) => question.categoryId === expected.categoryId)
+        .map((question) => String(question.id));
       if (!visible(document.querySelector("#quiz-screen")) || !migrated || migrated.version !== 8 || migrated.computerSourceScope !== "all") errors.push("Continue did not migrate the valid v6 full session to v8/all source scope.");
       if (!migrated || migrated.rangeStart !== 1 || migrated.rangeEnd !== expected.questionCount
         || migrated.rangePoolSize !== expected.questionCount
-        || JSON.stringify(migrated.rangePoolQuestionIds || []) !== JSON.stringify(expected.rangePoolQuestionIds)
-        || JSON.stringify(migrated.rangeQuestionIds || []) !== JSON.stringify(expected.rangeQuestionIds)
-        || JSON.stringify(migrated.questionIds || []) !== JSON.stringify(expected.questionIds)) {
-        errors.push("The migrated v6 session did not retain its frozen shuffled Quiz order and complete range metadata.");
+        || JSON.stringify(migrated.rangePoolQuestionIds || []) !== JSON.stringify(expectedLegacyPoolIds)
+        || JSON.stringify(migrated.rangeQuestionIds || []) !== JSON.stringify(expectedLegacyPoolIds)
+        || frozenV6Fields.some((key) => JSON.stringify(migrated[key]) !== JSON.stringify(seeded[key]))) {
+        errors.push("The migrated v6 session did not preserve the legacy bank-order pool and frozen Quiz answers/position.");
       }
       document.querySelector("#back-button")?.click();
       await pause();
@@ -5665,7 +5709,7 @@ async function main() {
       }
       localStorage.removeItem(storageKey);
       const urduCategoryButton = document.querySelector('#category-grid .category-card[data-category="urdu"]');
-      if (!urduCategoryButton || urduQuestions.length !== 882) {
+      if (!urduCategoryButton || urduQuestions.length !== 882 + data.questions.slice(11952).filter((question) => question.categoryId === "urdu").length) {
         errors.push("Could not start the dedicated Urdu display test.");
         return { errors, expected: {} };
       }
@@ -5749,6 +5793,11 @@ async function main() {
       document.querySelector("#action-button").click();
       await pause();
       const secondQuestion = questionById.get(String(document.querySelector("#question-text").dataset.questionId));
+      if (!secondQuestion) {
+        errors.push("Urdu Quiz did not advance to its second question after the first answer; active screen="
+          + (document.querySelector(".screen:not([hidden])")?.id || "unknown")
+          + ", popup=" + Boolean(document.querySelector("#retry-dialog")?.open) + ".");
+      }
       const afterAdvanceSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
       const secondOrder = afterAdvanceSnapshot && Array.isArray(afterAdvanceSnapshot.optionOrders)
         ? afterAdvanceSnapshot.optionOrders[1]
@@ -5825,6 +5874,10 @@ async function main() {
       const renderedOptionTexts = () => [...document.querySelectorAll("#options-container .option-text")]
         .map((element) => element.textContent);
       const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!expected.pending?.id || !questionById.has(expected.pending.id)) {
+        errors.push("Urdu Continue fixture has no second question to restore.");
+        return { errors };
+      }
       if (!visible(document.querySelector("#continue-session-card")) || !document.querySelector("#continue-session-title").textContent.includes("Urdu")) errors.push("Reload did not offer Continue for the Urdu Quiz.");
       if (!storedBeforeContinue || storedBeforeContinue.version !== 8 || storedBeforeContinue.computerSourceScope !== "all" || storedBeforeContinue.categoryId !== "urdu" || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds) || JSON.stringify(storedBeforeContinue.optionOrders) !== JSON.stringify(expected.optionOrders) || JSON.stringify(storedBeforeContinue.answerHistory) !== JSON.stringify(expected.answerHistory)) {
         errors.push("Reload changed the saved Urdu Quiz IDs, option order, or answer states.");
@@ -6773,7 +6826,7 @@ async function main() {
       if (!paperCard || !visible(paperCard)) errors.push("Start Paper Here card was not visible on the category screen.");
       if (paperCard && paperCard.closest("#study-tools-box") !== studyTools) errors.push("Start Paper Here card was outside Study Tools.");
       if (paperCard && paperCard.closest("#category-grid")) errors.push("Start Paper Here card was incorrectly rendered inside the subject category grid.");
-      if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("The paper card changed the 11 subject-category cards.");
+      if (document.querySelectorAll("#category-grid .category-card").length !== 12) errors.push("The paper card changed the 11 subject-category cards plus New MCQs.");
       if (paperCard) paperCard.click();
       await pause();
 
@@ -8736,11 +8789,33 @@ async function main() {
         if (heldQueueSpaceAccepted !== false || JSON.stringify(queue()) !== beforeHeldQueueContinue) {
           errors.push("Held Space applied a Queue review outcome.");
         }
+        const reviewedQuestionId = retry?.activeAttempt?.questionId;
+        const reviewedBefore = retry?.items?.find((item) => item.questionId === reviewedQuestionId)?.remaining || 0;
+        const totalBeforeSpace = (retry?.items || []).reduce((total, item) => total + item.remaining, 0);
         await press(document.querySelector("#retry-action-button"), " ", "Space");
         retry = queue();
-        if (!queueScreenOpen() || retry?.items?.[0]?.remaining !== 1
-          || retry?.activeAttempt?.submitted !== false || retry.activeAttempt.kind !== "queue") {
-          errors.push("Space did not continue a submitted Queue review exactly once.");
+        const reviewedAfter = retry?.items?.find((item) => item.questionId === reviewedQuestionId)?.remaining || 0;
+        const totalAfterSpace = (retry?.items || []).reduce((total, item) => total + item.remaining, 0);
+        if (!queueScreenOpen() || !reviewedQuestionId || reviewedAfter !== reviewedBefore - 1
+          || totalAfterSpace !== totalBeforeSpace - 1
+          || retry?.activeAttempt?.submitted !== false || retry?.activeAttempt?.kind !== "queue") {
+          errors.push("Space did not continue a submitted Queue review exactly once: " + JSON.stringify({
+            queueScreenOpen: queueScreenOpen(),
+            reviewedQuestionId,
+            reviewedBefore,
+            reviewedAfter,
+            totalBeforeSpace,
+            totalAfterSpace,
+            items: retry?.items?.map((item) => [item.questionId, item.remaining]),
+            attempt: retry?.activeAttempt && {
+              questionId: retry.activeAttempt.questionId,
+              kind: retry.activeAttempt.kind,
+              submitted: retry.activeAttempt.submitted,
+              context: retry.activeAttempt.context
+            },
+            focus: document.activeElement?.id || "",
+            actionLabel: document.querySelector("#retry-action-button")?.textContent?.trim() || ""
+          }));
         }
 
         await selectRetryIndex(retryCorrectIndex());
@@ -9721,7 +9796,9 @@ async function main() {
           errors.push(id + " does not preserve its source identity/index with the expected direct answer.");
           continue;
         }
-        const categoryQuestions = data.questions.filter((candidate) => candidate.categoryId === question.categoryId);
+        const categoryQuestions = window.PPSC_TOPIC_DATA.sortQuestions(
+          data.questions.filter((candidate) => candidate.categoryId === question.categoryId)
+        );
         const rangeNumber = categoryQuestions.findIndex((candidate) => candidate.id === id) + 1;
         const expectedAnswer = expectedUrduAnswer || expectedCanonicalAnswer;
         if (!await openQuestion(question, rangeNumber, "learn")) continue;

@@ -2,12 +2,14 @@
   "use strict";
 
   var CATEGORY_SESSIONS_KEY = "ppsc-prep:category-sessions:v1";
+  var SEEN_NEW_QUESTION_IDS_KEY = "ppsc-prep:seen-new-question-ids:v1";
   var STORAGE_SLOTS = Object.freeze([
     Object.freeze({ id: "active-session", key: "ppsc-prep:active-session:v1" }),
     Object.freeze({ id: "retry-queue", key: "ppsc-prep:retry-queue:v1" }),
     Object.freeze({ id: "difficult-questions", key: "ppsc-prep:difficult-question-ids:v1" }),
     // Missing only on clients/cloud backups created before per-category resume.
-    Object.freeze({ id: "category-sessions", key: CATEGORY_SESSIONS_KEY, optional: true })
+    Object.freeze({ id: "category-sessions", key: CATEGORY_SESSIONS_KEY, optional: true }),
+    Object.freeze({ id: "seen-new-questions", key: SEEN_NEW_QUESTION_IDS_KEY, optional: true })
   ]);
   var SLOT_BY_KEY = new Map(STORAGE_SLOTS.map(function (slot) { return [slot.key, slot]; }));
   var CLOUD_SCHEMA_VERSION = 1;
@@ -417,22 +419,56 @@
     try { return JSON.parse(rawValue); } catch (error) { return undefined; }
   }
 
+  function seenNewQuestionIds(rawValue) {
+    if (rawValue === null) return [];
+    var parsed = safeJson(rawValue);
+    if (!parsed || parsed.version !== 1 || !Array.isArray(parsed.questionIds)
+      || parsed.questionIds.some(function (id) { return typeof id !== "string"; })) return null;
+    return parsed.questionIds;
+  }
+
+  function mergeSeenNewQuestions(firstRaw, secondRaw) {
+    var first = seenNewQuestionIds(firstRaw);
+    var second = seenNewQuestionIds(secondRaw);
+    // An unknown format must not be silently discarded or overwritten.
+    if (!first || !second) return firstRaw;
+    if (firstRaw === null && secondRaw === null) return null;
+    return JSON.stringify({ version: 1, questionIds: Array.from(new Set(first.concat(second))).sort() });
+  }
+
+  function mergeSeenIntoSnapshot(preferred, other) {
+    var merged = cloneRawSnapshot(preferred);
+    merged[SEEN_NEW_QUESTION_IDS_KEY] = mergeSeenNewQuestions(
+      preferred[SEEN_NEW_QUESTION_IDS_KEY], other[SEEN_NEW_QUESTION_IDS_KEY]
+    );
+    return merged;
+  }
+
+  function snapshotsEqualExceptSeen(first, second) {
+    return STORAGE_SLOTS.every(function (slot) {
+      return slot.key === SEEN_NEW_QUESTION_IDS_KEY || first[slot.key] === second[slot.key];
+    });
+  }
+
   function summarizeSnapshot(snapshot) {
     var sessionRaw = snapshot[STORAGE_SLOTS[0].key];
     var queueRaw = snapshot[STORAGE_SLOTS[1].key];
     var difficultRaw = snapshot[STORAGE_SLOTS[2].key];
     var categorySessionsRaw = snapshot[CATEGORY_SESSIONS_KEY];
+    var seenNewRaw = snapshot[SEEN_NEW_QUESTION_IDS_KEY];
     var session = safeJson(sessionRaw);
     var queue = safeJson(queueRaw);
     var difficult = safeJson(difficultRaw);
     var categorySessions = safeJson(categorySessionsRaw);
+    var seenNewIds = seenNewQuestionIds(seenNewRaw);
     var validCategorySessions = categorySessions && categorySessions.version === 1
       && categorySessions.sessions && typeof categorySessions.sessions === "object"
       && !Array.isArray(categorySessions.sessions);
     var categorySessionCount = validCategorySessions ? Object.keys(categorySessions.sessions).length : 0;
     var malformed = [sessionRaw !== null && session === undefined, queueRaw !== null && queue === undefined,
       difficultRaw !== null && difficult === undefined,
-      categorySessionsRaw !== null && !validCategorySessions].some(Boolean);
+      categorySessionsRaw !== null && !validCategorySessions,
+      seenNewRaw !== null && seenNewIds === null].some(Boolean);
     var sessionCount = session && Array.isArray(session.questionIds) ? session.questionIds.length : 0;
     var sessionPosition = sessionCount && Number.isInteger(session.currentIndex)
       ? Math.min(session.currentIndex + 1, sessionCount) : 0;
@@ -453,7 +489,8 @@
         : difficult && Array.isArray(difficult.ids) ? difficult.ids : [];
     var activeReview = Boolean(queue && queue.activeAttempt && queue.activeAttempt.kind !== "sequential");
     var hasProgress = malformed || sessionCount > 0 || retryCount > 0 || wrongCount > 0
-      || importantPractice || activeReview || difficultIds.length > 0 || categorySessionCount > 0;
+      || importantPractice || activeReview || difficultIds.length > 0 || categorySessionCount > 0
+      || (seenNewIds && seenNewIds.length > 0);
     var totalBytes = STORAGE_SLOTS.reduce(function (total, slot) {
       return total + (typeof snapshot[slot.key] === "string" ? utf8Length(snapshot[slot.key]) : 0);
     }, 0);
@@ -470,6 +507,7 @@
       retryReviews: retryReviews,
       importantPractice: importantPractice,
       difficultCount: difficultIds.length,
+      seenNewCount: seenNewIds ? seenNewIds.length : 0,
       totalBytes: totalBytes
     };
   }
@@ -488,6 +526,7 @@
     if (summary.wrongCount) parts.push(summary.wrongCount + " Wrong Quiz questions");
     if (summary.importantPractice) parts.push("category Important practice saved");
     if (summary.difficultCount) parts.push(summary.difficultCount + " difficult questions");
+    if (summary.seenNewCount) parts.push(summary.seenNewCount + " new MCQs already read");
     return parts.length ? parts.join("; ") : "No active session, review queue, Wrong Quiz questions or difficult marks.";
   }
 
@@ -521,10 +560,11 @@
 
   function applySnapshotToLocal(snapshot) {
     var previous = readLocalSnapshot();
+    var combined = mergeSeenIntoSnapshot(snapshot, previous);
     window.PPSC_CLOUD_APPLYING = true;
     try {
       STORAGE_SLOTS.forEach(function (slot) {
-        var rawValue = snapshot[slot.key];
+        var rawValue = combined[slot.key];
         if (typeof rawValue === "string") window.localStorage.setItem(slot.key, rawValue);
         else window.localStorage.removeItem(slot.key);
       });
@@ -563,7 +603,8 @@
   function onlyMissingCategorySessionsDiffer(first, second) {
     return (first[CATEGORY_SESSIONS_KEY] === null || second[CATEGORY_SESSIONS_KEY] === null)
       && STORAGE_SLOTS.every(function (slot) {
-        return slot.key === CATEGORY_SESSIONS_KEY || first[slot.key] === second[slot.key];
+        return slot.key === CATEGORY_SESSIONS_KEY || slot.key === SEEN_NEW_QUESTION_IDS_KEY
+          || first[slot.key] === second[slot.key];
       });
   }
 
@@ -1022,7 +1063,13 @@
     if (onlyMissingCategorySessionsDiffer(local, cloud.raw)) {
       applySnapshotToLocal(preserveCategorySessions(cloud.raw, local));
       finishReady("category-sessions-upgraded", cloud.raw);
-      if (!snapshotsEqual(readLocalSnapshot(), cloud.raw)) notifyLocalChange(CATEGORY_SESSIONS_KEY);
+      if (!snapshotsEqual(readLocalSnapshot(), cloud.raw)) notifyLocalChange(null);
+      return;
+    }
+    if (snapshotsEqualExceptSeen(local, cloud.raw)) {
+      applySnapshotToLocal(cloud.raw);
+      finishReady("new-mcq-reading-merged", cloud.raw);
+      if (!snapshotsEqual(readLocalSnapshot(), cloud.raw)) notifyLocalChange(SEEN_NEW_QUESTION_IDS_KEY);
       return;
     }
     if (!localSummary.hasProgress) {
@@ -1132,9 +1179,13 @@
         message: decision.cloud.exists ? "Replacing cloud progress with this device…" : "Uploading this device's progress…",
         error: ""
       });
-      await uploadSnapshot(currentLocal, STORAGE_SLOTS, decision.cloud.exists ? decision.cloud.revision : null);
-      finishReady(decision.cloud.exists ? "device-replaced-cloud" : "device-imported", currentLocal);
-      if (!snapshotsEqual(readLocalSnapshot(), currentLocal)) notifyLocalChange(null);
+      var mergedLocal = mergeSeenIntoSnapshot(currentLocal, decision.cloud.raw);
+      await uploadSnapshot(mergedLocal, STORAGE_SLOTS, decision.cloud.exists ? decision.cloud.revision : null);
+      if (mergedLocal[SEEN_NEW_QUESTION_IDS_KEY] !== currentLocal[SEEN_NEW_QUESTION_IDS_KEY]) {
+        window.localStorage.setItem(SEEN_NEW_QUESTION_IDS_KEY, mergedLocal[SEEN_NEW_QUESTION_IDS_KEY]);
+      }
+      finishReady(decision.cloud.exists ? "device-replaced-cloud" : "device-imported", mergedLocal);
+      if (!snapshotsEqual(readLocalSnapshot(), mergedLocal)) notifyLocalChange(null);
     } catch (error) {
       if (error && error.code === "ppsc/cloud-conflict"
         && await acceptEquivalentCloudConflict("equivalent-device-upload")) return;
@@ -1160,7 +1211,7 @@
       applySnapshotToLocal(preserveCategorySessions(latestCloud.raw, currentLocal));
       rememberCloudSnapshot(latestCloud);
       finishReady("cloud-chosen", latestCloud.raw);
-      if (!snapshotsEqual(readLocalSnapshot(), latestCloud.raw)) notifyLocalChange(CATEGORY_SESSIONS_KEY);
+      if (!snapshotsEqual(readLocalSnapshot(), latestCloud.raw)) notifyLocalChange(null);
     } catch (error) {
       failBeforeReady(error, "Cloud progress could not be applied. This device's copy was not uploaded.");
     }
@@ -1304,6 +1355,14 @@
           cloudSummary: summarizeSnapshot(cloud.raw),
           revision: cloud.revision
         });
+        return;
+      }
+
+      if (snapshotsEqualExceptSeen(current, cloud.raw)) {
+        applySnapshotToLocal(cloud.raw);
+        rememberCloudSnapshot(cloud);
+        // Reload so the quiz reads the merged seen list before the next answer.
+        window.location.reload();
         return;
       }
 

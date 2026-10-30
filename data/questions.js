@@ -710291,12 +710291,1384 @@
       "version": null,
       "reverifyAfter": null
     }
+  },
+  {
+    "id": "USR-Q0031-SRC",
+    "pairId": "USR-Q0031",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Which article on free and compulsory education was inserted into Pakistan's Constitution by the Eighteenth Amendment in 2010?",
+    "questionUrdu": "2010 کی اٹھارویں آئینی ترمیم کے ذریعے پاکستان کے آئین میں مفت اور لازمی تعلیم کا کون سا آرٹیکل شامل کیا گیا؟",
+    "options": [
+      "Article 19A",
+      "Article 25A",
+      "Article 28",
+      "Article 37"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "اٹھارویں آئینی ترمیم 2010 کی دفعہ 9 نے آئین میں آرٹیکل 25A شامل کیا۔ یہ بچوں کی مفت اور لازمی تعلیم کا حق بیان کرتا ہے؛ آرٹیکل 19A معلومات تک رسائی سے متعلق ہے۔",
+    "relatedHistoryUrdu": "آرٹیکل 25A ریاست کو پانچ سے سولہ سال کی عمر کے تمام بچوں کے لیے مفت اور لازمی تعلیم فراہم کرنے کا پابند کرتا ہے۔ یہ عمر کی حد ترمیم کے متن میں واضح ہے۔ موجودہ سوال کے جواب ”Article 25A“ کو اس متعلقہ مستند حقیقت ”5 to 16 years“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://pakistancode.gov.pk/pdffiles/administrator7f0dbe8685623b719ab97d92804b108b.pdf",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "user",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://pakistancode.gov.pk/pdffiles/administrator7f0dbe8685623b719ab97d92804b108b.pdf",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:constitution-articles"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator7f0dbe8685623b719ab97d92804b108b.pdf",
+        "label": "Constitution (Eighteenth Amendment) Act, 2010, section 9",
+        "publisher": "Pakistan Code, Ministry of Law and Justice",
+        "authorityId": "pakistan-code",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The 2010 amendment inserted Article 25A and states the five-to-sixteen-year education guarantee."
+      },
+      {
+        "url": "https://www.unicef.org/pakistan/media/5301/file/Situation%20Analysis%20Update%202020%3A%20Children%20in%20Pakistan.pdf",
+        "label": "Situation Analysis Update: Children in Pakistan (2020)",
+        "publisher": "UNICEF Pakistan",
+        "authorityId": "unicef-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Identifies Article 25A as introduced by the 18th Amendment and the ages five to sixteen."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2010-04-20",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0031-SIM",
+    "pairId": "USR-Q0031",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Under Article 25A as inserted in 2010, which age group must receive free and compulsory education in Pakistan?",
+    "questionUrdu": "2010 میں شامل کیے گئے آرٹیکل 25A کے تحت پاکستان میں کس عمر کے بچوں کو مفت اور لازمی تعلیم فراہم کرنا ریاست کی ذمہ داری ہے؟",
+    "options": [
+      "3 to 12 years",
+      "8 to 18 years",
+      "6 to 14 years",
+      "5 to 16 years"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "آرٹیکل 25A ریاست کو پانچ سے سولہ سال کی عمر کے تمام بچوں کے لیے مفت اور لازمی تعلیم فراہم کرنے کا پابند کرتا ہے۔ یہ عمر کی حد ترمیم کے متن میں واضح ہے۔",
+    "relatedHistoryUrdu": "اٹھارویں آئینی ترمیم 2010 کی دفعہ 9 نے آئین میں آرٹیکل 25A شامل کیا۔ یہ بچوں کی مفت اور لازمی تعلیم کا حق بیان کرتا ہے؛ آرٹیکل 19A معلومات تک رسائی سے متعلق ہے۔ موجودہ سوال کے جواب ”5 to 16 years“ کو اس متعلقہ مستند حقیقت ”Article 25A“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://pakistancode.gov.pk/pdffiles/administrator7f0dbe8685623b719ab97d92804b108b.pdf",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "practice",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://pakistancode.gov.pk/pdffiles/administrator7f0dbe8685623b719ab97d92804b108b.pdf",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:constitution-articles"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator7f0dbe8685623b719ab97d92804b108b.pdf",
+        "label": "Constitution (Eighteenth Amendment) Act, 2010, section 9",
+        "publisher": "Pakistan Code, Ministry of Law and Justice",
+        "authorityId": "pakistan-code",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The 2010 amendment inserted Article 25A and states the five-to-sixteen-year education guarantee."
+      },
+      {
+        "url": "https://www.unicef.org/pakistan/media/5301/file/Situation%20Analysis%20Update%202020%3A%20Children%20in%20Pakistan.pdf",
+        "label": "Situation Analysis Update: Children in Pakistan (2020)",
+        "publisher": "UNICEF Pakistan",
+        "authorityId": "unicef-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Identifies Article 25A as introduced by the 18th Amendment and the ages five to sixteen."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2010-04-20",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0032-SRC",
+    "pairId": "USR-Q0032",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "In which year did UNESCO adopt the World Heritage Convention protecting cultural and natural heritage?",
+    "questionUrdu": "یونیسکو نے ثقافتی اور قدرتی ورثے کے تحفظ کا عالمی ورثہ کنونشن کس سال منظور کیا؟",
+    "options": [
+      "1965",
+      "1972",
+      "1975",
+      "1984"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "یونیسکو کی جنرل کانفرنس نے عالمی ثقافتی اور قدرتی ورثے کے تحفظ کا کنونشن 16 نومبر 1972 کو منظور کیا۔ منظور ہونے اور نافذ ہونے کی تاریخیں الگ ہیں۔",
+    "relatedHistoryUrdu": "یہ کنونشن 16 نومبر 1972 کو منظور ہوا لیکن ضروری توثیق کے بعد 17 دسمبر 1975 کو نافذ ہوا۔ امتحان میں منظوری اور نفاذ کے سال میں فرق یاد رکھیں۔ موجودہ سوال کے جواب ”1972“ کو اس متعلقہ مستند حقیقت ”1975“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.unesco.org/en/legal-affairs/convention-concerning-protection-world-cultural-and-natural-heritage",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "user",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://www.unesco.org/en/legal-affairs/convention-concerning-protection-world-cultural-and-natural-heritage",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:united-nations"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://www.unesco.org/en/legal-affairs/convention-concerning-protection-world-cultural-and-natural-heritage",
+        "label": "World Heritage Convention, legal text",
+        "publisher": "UNESCO",
+        "authorityId": "unesco",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO records adoption on 16 November 1972 and entry into force on 17 December 1975."
+      },
+      {
+        "url": "https://treaties.un.org/pages/showDetails.aspx?objid=08000002800fece0",
+        "label": "UN Treaty Collection: World Heritage Convention",
+        "publisher": "United Nations Treaty Collection",
+        "authorityId": "un-treaty-collection",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UN treaty record gives the 1972 conclusion and 17 December 1975 entry-into-force dates."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0032-SIM",
+    "pairId": "USR-Q0032",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "In which year did the 1972 UNESCO World Heritage Convention enter into force?",
+    "questionUrdu": "1972 کا یونیسکو عالمی ورثہ کنونشن کس سال نافذ ہوا؟",
+    "options": [
+      "1972",
+      "1975",
+      "1978",
+      "1984"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "یہ کنونشن 16 نومبر 1972 کو منظور ہوا لیکن ضروری توثیق کے بعد 17 دسمبر 1975 کو نافذ ہوا۔ امتحان میں منظوری اور نفاذ کے سال میں فرق یاد رکھیں۔",
+    "relatedHistoryUrdu": "یونیسکو کی جنرل کانفرنس نے عالمی ثقافتی اور قدرتی ورثے کے تحفظ کا کنونشن 16 نومبر 1972 کو منظور کیا۔ منظور ہونے اور نافذ ہونے کی تاریخیں الگ ہیں۔ موجودہ سوال کے جواب ”1975“ کو اس متعلقہ مستند حقیقت ”1972“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.unesco.org/en/legal-affairs/convention-concerning-protection-world-cultural-and-natural-heritage",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "practice",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://www.unesco.org/en/legal-affairs/convention-concerning-protection-world-cultural-and-natural-heritage",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:united-nations"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://www.unesco.org/en/legal-affairs/convention-concerning-protection-world-cultural-and-natural-heritage",
+        "label": "World Heritage Convention, legal text",
+        "publisher": "UNESCO",
+        "authorityId": "unesco",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO records adoption on 16 November 1972 and entry into force on 17 December 1975."
+      },
+      {
+        "url": "https://treaties.un.org/pages/showDetails.aspx?objid=08000002800fece0",
+        "label": "UN Treaty Collection: World Heritage Convention",
+        "publisher": "United Nations Treaty Collection",
+        "authorityId": "un-treaty-collection",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UN treaty record gives the 1972 conclusion and 17 December 1975 entry-into-force dates."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0033-SRC",
+    "pairId": "USR-Q0033",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "In the sense of a hopeful outlook, which word is the closest synonym of 'sanguine'?",
+    "questionUrdu": "امید بھرا نقطۂ نظر بیان کرتے وقت 'sanguine' کا قریب ترین مترادف کون سا ہے؟",
+    "options": [
+      "Pessimistic",
+      "Optimistic",
+      "Indifferent",
+      "Suspicious"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "اس سیاق میں sanguine کا مطلب پُرامید یا optimistic ہے۔ لفظ کے دوسرے معنی سرخی سے متعلق بھی ہو سکتے ہیں، اس لیے سوال میں hopeful outlook کی وضاحت دی گئی ہے۔",
+    "relatedHistoryUrdu": "Laconic ایسے انداز کو کہتے ہیں جس میں بہت کم الفاظ استعمال ہوں۔ Terse اسی معنی میں اس کا قریب ترین مترادف ہے؛ باقی الفاظ زیادہ بولنے یا غیر ضروری طوالت کو ظاہر کرتے ہیں۔ موجودہ سوال کے جواب ”Optimistic“ کو اس متعلقہ مستند حقیقت ”Terse“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://dictionary.cambridge.org/us/dictionary/english/laconic",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "user",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/sanguine",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:synonyms"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/sanguine",
+        "label": "Cambridge Dictionary: sanguine",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "In the hopeful sense, sanguine means positive and hoping for good things."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/sanguine",
+        "label": "Merriam-Webster Dictionary: sanguine",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The first adjective sense is confidently optimistic."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0033-SIM",
+    "pairId": "USR-Q0033",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is the closest synonym of 'laconic' when it describes a person's speech?",
+    "questionUrdu": "جب 'laconic' کسی شخص کے بولنے کے انداز کو بیان کرے تو اس کا قریب ترین مترادف کون سا لفظ ہے؟",
+    "options": [
+      "Wordy",
+      "Verbose",
+      "Terse",
+      "Rambling"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "Laconic ایسے انداز کو کہتے ہیں جس میں بہت کم الفاظ استعمال ہوں۔ Terse اسی معنی میں اس کا قریب ترین مترادف ہے؛ باقی الفاظ زیادہ بولنے یا غیر ضروری طوالت کو ظاہر کرتے ہیں۔",
+    "relatedHistoryUrdu": "اس سیاق میں sanguine کا مطلب پُرامید یا optimistic ہے۔ لفظ کے دوسرے معنی سرخی سے متعلق بھی ہو سکتے ہیں، اس لیے سوال میں hopeful outlook کی وضاحت دی گئی ہے۔ موجودہ سوال کے جواب ”Terse“ کو اس متعلقہ مستند حقیقت ”Optimistic“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://dictionary.cambridge.org/dictionary/english/sanguine",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "practice",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/laconic",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:synonyms"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/laconic",
+        "label": "Cambridge Dictionary: laconic",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge lists terse as a synonym of laconic in the few-words sense."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/laconic",
+        "label": "Merriam-Webster Dictionary: laconic",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster describes laconic as terse or concise in speech."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0034-SRC",
+    "pairId": "USR-Q0034",
+    "kind": "source",
+    "categoryId": "geography",
+    "question": "The International Date Line roughly follows which meridian of longitude?",
+    "questionUrdu": "بین الاقوامی خطِ تاریخ تقریباً کس طول البلد کے خط کے ساتھ چلتا ہے؟",
+    "options": [
+      "0 degrees",
+      "90 degrees east",
+      "180 degrees",
+      "23.5 degrees south"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "بین الاقوامی خطِ تاریخ عموماً 180 درجے طول البلد کے قریب بحرالکاہل سے گزرتا ہے، مگر سیاسی سرحدوں اور جزیروں کے گرد مڑتا ہے؛ یہ پوری طرح سیدھی لکیر نہیں۔",
+    "relatedHistoryUrdu": "خطِ تاریخ کو مغرب کی طرف عبور کرنے پر کیلنڈر میں ایک دن بڑھ جاتا ہے؛ مشرق کی طرف عبور کرنے پر ایک دن کم ہوتا ہے۔ موجودہ سوال کے جواب ”180 degrees“ کو اس متعلقہ مستند حقیقت ”It moves forward one day“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://oceanservice.noaa.gov/facts/international-date-line.html",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "user",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://oceanservice.noaa.gov/facts/international-date-line.html",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:climate-earth"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/international-date-line.html",
+        "label": "NOAA: International Date Line",
+        "publisher": "National Oceanic and Atmospheric Administration",
+        "authorityId": "noaa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The date line roughly follows 180 degrees longitude; crossing west advances the calendar by one day."
+      },
+      {
+        "url": "https://education.nationalgeographic.org/resource/date-line/",
+        "label": "National Geographic Education: Date Line",
+        "publisher": "National Geographic Society",
+        "authorityId": "national-geographic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The date line is near 180 degrees longitude; west is one calendar day ahead of east."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0034-SIM",
+    "pairId": "USR-Q0034",
+    "kind": "similar",
+    "categoryId": "geography",
+    "question": "If a traveller crosses the International Date Line westward, what happens to the calendar date?",
+    "questionUrdu": "اگر کوئی مسافر بین الاقوامی خطِ تاریخ کو مغرب کی طرف عبور کرے تو کیلنڈر کی تاریخ میں کیا تبدیلی آتی ہے؟",
+    "options": [
+      "It moves forward one day",
+      "It moves back one day",
+      "It stays unchanged",
+      "It moves forward one month"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "خطِ تاریخ کو مغرب کی طرف عبور کرنے پر کیلنڈر میں ایک دن بڑھ جاتا ہے؛ مشرق کی طرف عبور کرنے پر ایک دن کم ہوتا ہے۔",
+    "relatedHistoryUrdu": "بین الاقوامی خطِ تاریخ عموماً 180 درجے طول البلد کے قریب بحرالکاہل سے گزرتا ہے، مگر سیاسی سرحدوں اور جزیروں کے گرد مڑتا ہے؛ یہ پوری طرح سیدھی لکیر نہیں۔ موجودہ سوال کے جواب ”It moves forward one day“ کو اس متعلقہ مستند حقیقت ”180 degrees“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://oceanservice.noaa.gov/facts/international-date-line.html",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "practice",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://oceanservice.noaa.gov/facts/international-date-line.html",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:climate-earth"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/international-date-line.html",
+        "label": "NOAA: International Date Line",
+        "publisher": "National Oceanic and Atmospheric Administration",
+        "authorityId": "noaa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The date line roughly follows 180 degrees longitude; crossing west advances the calendar by one day."
+      },
+      {
+        "url": "https://education.nationalgeographic.org/resource/date-line/",
+        "label": "National Geographic Education: Date Line",
+        "publisher": "National Geographic Society",
+        "authorityId": "national-geographic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The date line is near 180 degrees longitude; west is one calendar day ahead of east."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0035-SRC",
+    "pairId": "USR-Q0035",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "In a class, 22 students study science, 18 study mathematics and 7 study both. How many study at least one of the two subjects?",
+    "questionUrdu": "ایک جماعت میں 22 طلبہ سائنس، 18 ریاضی اور 7 دونوں مضامین پڑھتے ہیں۔ کم از کم ایک مضمون پڑھنے والے طلبہ کتنے ہیں؟",
+    "options": [
+      "29",
+      "33",
+      "40",
+      "47"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "دونوں مضامین پڑھنے والے 7 طلبہ دو بار گنے گئے ہیں، اس لیے ایک بار منہا کریں: 22 + 18 - 7 = 33۔ یہی دو مجموعوں کے اتحاد کا اصول ہے۔",
+    "relatedHistoryUrdu": "کم از کم ایک زبان جاننے والے 50 - 10 = 40 ہیں۔ مشترک حصہ = 30 + 25 - 40 = 15۔ موجودہ سوال کے جواب ”33“ کو اس متعلقہ مستند حقیقت ”15“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "user",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:sets-logic"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets",
+        "label": "OpenStax: Set Operations with Two Sets",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "For overlapping sets, union equals first count plus second count minus the intersection."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Combinatorics_and_Discrete_Mathematics/Combinatorics_%28Morris%29/02%253A_Enumeration/10%253A_Other_Basic_Counting_Techniques/10.02%253A_Inclusion-Exclusion",
+        "label": "LibreTexts: Inclusion-Exclusion",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The two-set inclusion-exclusion formula subtracts members counted in both sets once."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0035-SIM",
+    "pairId": "USR-Q0035",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Of 50 candidates, 30 know English, 25 know Urdu and 10 know neither language. How many know both languages?",
+    "questionUrdu": "50 امیدواروں میں سے 30 انگریزی، 25 اردو جانتے ہیں اور 10 دونوں میں سے کوئی زبان نہیں جانتے۔ دونوں زبانیں جاننے والے کتنے ہیں؟",
+    "options": [
+      "15",
+      "10",
+      "5",
+      "25"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "کم از کم ایک زبان جاننے والے 50 - 10 = 40 ہیں۔ مشترک حصہ = 30 + 25 - 40 = 15۔ پہلے مکمل جماعت میں سے 'کوئی نہیں' والے نکالیں۔",
+    "relatedHistoryUrdu": "دونوں مضامین پڑھنے والے 7 طلبہ دو بار گنے گئے ہیں، اس لیے ایک بار منہا کریں: 22 + 18 - 7 = 33۔ یہی دو مجموعوں کے اتحاد کا اصول ہے۔ موجودہ سوال کے جواب ”15“ کو اس متعلقہ مستند حقیقت ”33“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "practice",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:sets-logic"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets",
+        "label": "OpenStax: Set Operations with Two Sets",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "For overlapping sets, union equals first count plus second count minus the intersection."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Combinatorics_and_Discrete_Mathematics/Combinatorics_%28Morris%29/02%253A_Enumeration/10%253A_Other_Basic_Counting_Techniques/10.02%253A_Inclusion-Exclusion",
+        "label": "LibreTexts: Inclusion-Exclusion",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The two-set inclusion-exclusion formula subtracts members counted in both sets once."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0036-SRC",
+    "pairId": "USR-Q0036",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the main accessibility purpose of adding alt text to an informative image in a document?",
+    "questionUrdu": "کسی دستاویز کی معلوماتی تصویر میں متبادل متن شامل کرنے کا بنیادی مقصد کیا ہے؟",
+    "options": [
+      "To compress the image file",
+      "To help screen-reader users understand the image",
+      "To change the image colours",
+      "To prevent copying"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "متبادل متن تصویر کا ضروری مفہوم بیان کرتا ہے تاکہ اسکرین ریڈر استعمال کرنے والا شخص اس کی معلومات سمجھ سکے۔ یہ تصویر کو کمپریس یا کاپی سے محفوظ نہیں کرتا۔",
+    "relatedHistoryUrdu": "اگر تصویر صرف آرائش کے لیے ہو تو اسے decorative نشان زد کیا جاتا ہے یا ویب میں خالی alt متن دیا جاتا ہے۔ اس طرح اسکرین ریڈر غیرضروری وضاحت نہیں پڑھتا۔ موجودہ سوال کے جواب ”To help screen-reader users understand the image“ کو اس متعلقہ مستند حقیقت ”Mark it as decorative or use empty alt text“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://support.microsoft.com/en-us/accessibility/office-accessibility/add-alternative-text-to-a-shape-picture-chart-smartart-graphic-or-other-object",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "user",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://support.microsoft.com/en-us/accessibility/office-accessibility/add-alternative-text-to-a-shape-picture-chart-smartart-graphic-or-other-object",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:internet-web"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/accessibility/office-accessibility/add-alternative-text-to-a-shape-picture-chart-smartart-graphic-or-other-object",
+        "label": "Microsoft Support: Add alternative text",
+        "publisher": "Microsoft",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Alt text helps screen-reader users understand meaningful pictures; purely decorative visuals can be marked decorative."
+      },
+      {
+        "url": "https://www.w3.org/WAI/tutorials/images/",
+        "label": "W3C WAI: Images Tutorial",
+        "publisher": "World Wide Web Consortium",
+        "authorityId": "w3c",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Text alternatives convey image meaning to screen readers, while decorative images should use a null alternative."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0036-SIM",
+    "pairId": "USR-Q0036",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "For a purely decorative image that conveys no information, what is the recommended accessibility treatment?",
+    "questionUrdu": "ایسی خالص آرائشی تصویر جو کوئی معلومات نہیں دیتی، اس کے لیے رسائی کے لحاظ سے کیا طریقہ بہتر ہے؟",
+    "options": [
+      "Write a long description of its colours",
+      "Mark it as decorative or use empty alt text",
+      "Remove all document text",
+      "Turn it into a password-protected image"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "اگر تصویر صرف آرائش کے لیے ہو تو اسے decorative نشان زد کیا جاتا ہے یا ویب میں خالی alt متن دیا جاتا ہے۔ اس طرح اسکرین ریڈر غیرضروری وضاحت نہیں پڑھتا۔",
+    "relatedHistoryUrdu": "متبادل متن تصویر کا ضروری مفہوم بیان کرتا ہے تاکہ اسکرین ریڈر استعمال کرنے والا شخص اس کی معلومات سمجھ سکے۔ یہ تصویر کو کمپریس یا کاپی سے محفوظ نہیں کرتا۔ موجودہ سوال کے جواب ”Mark it as decorative or use empty alt text“ کو اس متعلقہ مستند حقیقت ”To help screen-reader users understand the image“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://support.microsoft.com/en-us/accessibility/office-accessibility/add-alternative-text-to-a-shape-picture-chart-smartart-graphic-or-other-object",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "practice",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://support.microsoft.com/en-us/accessibility/office-accessibility/add-alternative-text-to-a-shape-picture-chart-smartart-graphic-or-other-object",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:internet-web"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/accessibility/office-accessibility/add-alternative-text-to-a-shape-picture-chart-smartart-graphic-or-other-object",
+        "label": "Microsoft Support: Add alternative text",
+        "publisher": "Microsoft",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Alt text helps screen-reader users understand meaningful pictures; purely decorative visuals can be marked decorative."
+      },
+      {
+        "url": "https://www.w3.org/WAI/tutorials/images/",
+        "label": "W3C WAI: Images Tutorial",
+        "publisher": "World Wide Web Consortium",
+        "authorityId": "w3c",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Text alternatives convey image meaning to screen readers, while decorative images should use a null alternative."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0037-SRC",
+    "pairId": "USR-Q0037",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "When seawater absorbs additional atmospheric carbon dioxide, what generally happens to its pH?",
+    "questionUrdu": "جب سمندری پانی فضا سے مزید کاربن ڈائی آکسائیڈ جذب کرتا ہے تو عموماً اس کے پی ایچ میں کیا تبدیلی آتی ہے؟",
+    "options": [
+      "It decreases",
+      "It increases",
+      "It remains exactly the same",
+      "It becomes zero"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "کاربن ڈائی آکسائیڈ پانی میں شامل ہو کر تیزابی عمل بڑھاتی ہے، لہٰذا سمندری پانی کا پی ایچ کم ہوتا ہے۔ کم پی ایچ کا مطلب یہ نہیں کہ سمندر لازماً پی ایچ 7 سے نیچے آ جاتا ہے۔",
+    "relatedHistoryUrdu": "تیزابیت بڑھنے پر کاربونیٹ آئن کم دستیاب ہوتے ہیں، جبکہ سیپیوں اور مرجان کے خول اور ڈھانچے بنانے کے لیے کیلشیم کاربونیٹ ضروری ہے۔ موجودہ سوال کے جواب ”It decreases“ کو اس متعلقہ مستند حقیقت ”Carbonate ions“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://oceanservice.noaa.gov/facts/acidification.html",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "user",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://oceanservice.noaa.gov/facts/acidification.html",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:earth-atmosphere"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/acidification.html",
+        "label": "NOAA: What is Ocean Acidification?",
+        "publisher": "National Oceanic and Atmospheric Administration",
+        "authorityId": "noaa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CO2 uptake lowers ocean pH and makes carbonate ions less available for shell formation."
+      },
+      {
+        "url": "https://www.whoi.edu/ocean-learning-hub/ocean-topics/how-the-ocean-works/ocean-chemistry/ocean-acidification/",
+        "label": "WHOI: Ocean Acidification",
+        "publisher": "Woods Hole Oceanographic Institution",
+        "authorityId": "whoi",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Absorbed CO2 produces carbonic acid, reduces pH and reduces carbonate ions needed for shells."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0037-SIM",
+    "pairId": "USR-Q0037",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which seawater ions become less available to shell-building organisms as ocean acidification increases?",
+    "questionUrdu": "سمندری تیزابیت بڑھنے پر خول بنانے والے جانداروں کے لیے کون سے آئن کم دستیاب ہوتے ہیں؟",
+    "options": [
+      "Carbonate ions",
+      "Sodium ions",
+      "Chloride ions",
+      "Potassium ions"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "تیزابیت بڑھنے پر کاربونیٹ آئن کم دستیاب ہوتے ہیں، جبکہ سیپیوں اور مرجان کے خول اور ڈھانچے بنانے کے لیے کیلشیم کاربونیٹ ضروری ہے۔",
+    "relatedHistoryUrdu": "کاربن ڈائی آکسائیڈ پانی میں شامل ہو کر تیزابی عمل بڑھاتی ہے، لہٰذا سمندری پانی کا پی ایچ کم ہوتا ہے۔ کم پی ایچ کا مطلب یہ نہیں کہ سمندر لازماً پی ایچ 7 سے نیچے آ جاتا ہے۔ موجودہ سوال کے جواب ”Carbonate ions“ کو اس متعلقہ مستند حقیقت ”It decreases“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://oceanservice.noaa.gov/facts/acidification.html",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "practice",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://oceanservice.noaa.gov/facts/acidification.html",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:earth-atmosphere"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/acidification.html",
+        "label": "NOAA: What is Ocean Acidification?",
+        "publisher": "National Oceanic and Atmospheric Administration",
+        "authorityId": "noaa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CO2 uptake lowers ocean pH and makes carbonate ions less available for shell formation."
+      },
+      {
+        "url": "https://www.whoi.edu/ocean-learning-hub/ocean-topics/how-the-ocean-works/ocean-chemistry/ocean-acidification/",
+        "label": "WHOI: Ocean Acidification",
+        "publisher": "Woods Hole Oceanographic Institution",
+        "authorityId": "whoi",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Absorbed CO2 produces carbonic acid, reduces pH and reduces carbonate ions needed for shells."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0038-SRC",
+    "pairId": "USR-Q0038",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "In Quran 9:60, which group is represented by 'al-gharimin' among Zakat recipients?",
+    "questionUrdu": "قرآن کی سورۂ توبہ 9:60 میں زکوٰۃ کے مستحقین میں 'الغارمین' کس گروہ کو کہا گیا ہے؟",
+    "options": [
+      "Those in debt",
+      "Zakat collectors",
+      "Needy travellers",
+      "The poor"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "سورۂ توبہ کی آیت 9:60 میں الغارمین سے مراد قرض کے بوجھ تلے دبے ہوئے لوگ ہیں۔ یہ زکوٰۃ کے مستحقین کی ایک مستقل قسم ہے۔",
+    "relatedHistoryUrdu": "ابن السبیل کا مطلب راستے میں محتاج یا وسائل سے محروم مسافر ہے۔ سورۂ توبہ 9:60 میں اسے زکوٰۃ کے مستحق گروہوں میں شمار کیا گیا ہے۔ موجودہ سوال کے جواب ”Those in debt“ کو اس متعلقہ مستند حقیقت ”Needy or stranded travellers“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://quran.com/at-tawbah/60",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "user",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://quran.com/at-tawbah/60",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:zakat-charity"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://quran.com/at-tawbah/60",
+        "label": "Quran.com: Surah At-Tawbah 9:60",
+        "publisher": "Quran.com",
+        "authorityId": "quran-com",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Verse 9:60 lists debtors and needy travellers among the Zakat recipient categories."
+      },
+      {
+        "url": "https://corpus.quran.com/translation.jsp?chapter=9&verse=60",
+        "label": "Quranic Arabic Corpus: 9:60 translations",
+        "publisher": "Quranic Arabic Corpus, University of Leeds",
+        "authorityId": "quranic-corpus",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Parallel translations of 9:60 include those burdened by debt and the wayfarer."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0038-SIM",
+    "pairId": "USR-Q0038",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "In Quran 9:60, which Zakat-recipient group is expressed by 'ibn al-sabil'?",
+    "questionUrdu": "قرآن کی سورۂ توبہ 9:60 میں زکوٰۃ کے مستحقین کے لیے 'ابن السبیل' سے کون مراد ہے؟",
+    "options": [
+      "Needy or stranded travellers",
+      "Zakat administrators",
+      "Owners of livestock",
+      "Only orphans"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "ابن السبیل کا مطلب راستے میں محتاج یا وسائل سے محروم مسافر ہے۔ سورۂ توبہ 9:60 میں اسے زکوٰۃ کے مستحق گروہوں میں شمار کیا گیا ہے۔",
+    "relatedHistoryUrdu": "سورۂ توبہ کی آیت 9:60 میں الغارمین سے مراد قرض کے بوجھ تلے دبے ہوئے لوگ ہیں۔ یہ زکوٰۃ کے مستحقین کی ایک مستقل قسم ہے۔ موجودہ سوال کے جواب ”Needy or stranded travellers“ کو اس متعلقہ مستند حقیقت ”Those in debt“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://quran.com/at-tawbah/60",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "practice",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://quran.com/at-tawbah/60",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:zakat-charity"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://quran.com/at-tawbah/60",
+        "label": "Quran.com: Surah At-Tawbah 9:60",
+        "publisher": "Quran.com",
+        "authorityId": "quran-com",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Verse 9:60 lists debtors and needy travellers among the Zakat recipient categories."
+      },
+      {
+        "url": "https://corpus.quran.com/translation.jsp?chapter=9&verse=60",
+        "label": "Quranic Arabic Corpus: 9:60 translations",
+        "publisher": "Quranic Arabic Corpus, University of Leeds",
+        "authorityId": "quranic-corpus",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Parallel translations of 9:60 include those burdened by debt and the wayfarer."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0039-SRC",
+    "pairId": "USR-Q0039",
+    "kind": "source",
+    "categoryId": "job-related-finance-taxation",
+    "question": "As of 2026, under IAS 2 Inventories, at which amount are inventories normally measured?",
+    "questionUrdu": "2026 تک بین الاقوامی حسابداری معیار آئی اے ایس 2 کے تحت عموماً انوینٹری کس رقم پر ناپی جاتی ہے؟",
+    "options": [
+      "The higher of cost and net realisable value",
+      "The lower of cost and net realisable value",
+      "Historical cost plus expected profit",
+      "Estimated selling price without deductions"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "آئی اے ایس 2 کے تحت انوینٹری کو لاگت اور خالص قابلِ وصول قدر میں سے کم رقم پر ظاہر کیا جاتا ہے۔ اس سے متوقع فروخت کی رقم سے زیادہ اثاثہ دکھانے سے بچا جاتا ہے۔",
+    "relatedHistoryUrdu": "خالص قابلِ وصول قدر، معمول کی تجارت میں متوقع فروخت قیمت میں سے تکمیل کے اخراجات اور فروخت کے لیے ضروری اخراجات منہا کرنے سے حاصل ہوتی ہے۔ موجودہ سوال کے جواب ”The lower of cost and net realisable value“ کو اس متعلقہ مستند حقیقت ”Estimated selling price less completion and selling costs“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "user",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:accounting"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/",
+        "label": "IFRS Foundation: IAS 2 Inventories",
+        "publisher": "IFRS Foundation",
+        "authorityId": "ifrs-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IAS 2 measures inventories at lower of cost and net realisable value; NRV deducts completion and sale costs from estimated selling price."
+      },
+      {
+        "url": "https://www.accaglobal.com/gb/en/technical-activities/technical-resources-search/2019/january/costing-property-development-inventories.html",
+        "label": "ACCA: Costing property development inventories under IAS 2",
+        "publisher": "Association of Chartered Certified Accountants",
+        "authorityId": "acca",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The ACCA IAS 2 explanation confirms lower-of-cost-and-NRV measurement and selling price less completion and sale costs."
+      }
+    ],
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": null,
+      "asOf": "2026-10-30",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-04-30"
+    }
+  },
+  {
+    "id": "USR-Q0039-SIM",
+    "pairId": "USR-Q0039",
+    "kind": "similar",
+    "categoryId": "job-related-finance-taxation",
+    "question": "As of 2026, under IAS 2, how is an inventory item's net realisable value calculated?",
+    "questionUrdu": "2026 تک آئی اے ایس 2 کے تحت انوینٹری کی خالص قابلِ وصول قدر کیسے نکالی جاتی ہے؟",
+    "options": [
+      "Cost plus expected profit",
+      "Estimated selling price less completion and selling costs",
+      "Selling price plus selling costs",
+      "Purchase price less tax only"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "خالص قابلِ وصول قدر، معمول کی تجارت میں متوقع فروخت قیمت میں سے تکمیل کے اخراجات اور فروخت کے لیے ضروری اخراجات منہا کرنے سے حاصل ہوتی ہے۔",
+    "relatedHistoryUrdu": "آئی اے ایس 2 کے تحت انوینٹری کو لاگت اور خالص قابلِ وصول قدر میں سے کم رقم پر ظاہر کیا جاتا ہے۔ اس سے متوقع فروخت کی رقم سے زیادہ اثاثہ دکھانے سے بچا جاتا ہے۔ موجودہ سوال کے جواب ”Estimated selling price less completion and selling costs“ کو اس متعلقہ مستند حقیقت ”The lower of cost and net realisable value“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "practice",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:accounting"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/",
+        "label": "IFRS Foundation: IAS 2 Inventories",
+        "publisher": "IFRS Foundation",
+        "authorityId": "ifrs-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IAS 2 measures inventories at lower of cost and net realisable value; NRV deducts completion and sale costs from estimated selling price."
+      },
+      {
+        "url": "https://www.accaglobal.com/gb/en/technical-activities/technical-resources-search/2019/january/costing-property-development-inventories.html",
+        "label": "ACCA: Costing property development inventories under IAS 2",
+        "publisher": "Association of Chartered Certified Accountants",
+        "authorityId": "acca",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The ACCA IAS 2 explanation confirms lower-of-cost-and-NRV measurement and selling price less completion and sale costs."
+      }
+    ],
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": null,
+      "asOf": "2026-10-30",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-04-30"
+    }
+  },
+  {
+    "id": "USR-Q0040-SRC",
+    "pairId": "USR-Q0040",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "In Urdu rhetoric, which figure of speech uses 'بادل برس رہا ہے' to mean that rain is falling?",
+    "questionUrdu": "علمِ بیان میں 'بادل برس رہا ہے' سے بارش مراد لی جائے تو یہ کس صنعت کی مثال ہے؟",
+    "options": [
+      "استعارہ",
+      "مجازِ مرسل",
+      "تشبیہ",
+      "کنایہ"
+    ],
+    "optionsUrdu": [
+      "استعارہ",
+      "مجازِ مرسل",
+      "تشبیہ",
+      "کنایہ"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "اس مثال میں بادل سبب اور بارش نتیجہ ہے۔ بادل کہہ کر بارش مراد لینا سبب اور مسبب کا تعلق ہے، تشبیہ کا نہیں؛ اس لیے یہ مجازِ مرسل ہے۔",
+    "relatedHistoryUrdu": "مجازِ مرسل میں لفظ اپنے حقیقی معنی کے بجائے مجازی معنی میں استعمال ہوتا ہے، مگر دونوں معنوں کا رشتہ تشبیہ نہیں ہوتا۔ یہ سبب و نتیجہ، کل و جزو یا ظرف و مظروف کا رشتہ ہو سکتا ہے۔ موجودہ سوال کے جواب ”مجازِ مرسل“ کو اس متعلقہ مستند حقیقت ”تشبیہ کے علاوہ کوئی معنوی تعلق“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.rekhtadictionary.com/meaning-of-majaaz-e-mursal?lang=ur",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "user",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-majaaz-e-mursal?lang=ur",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:urdu-rhetoric"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-majaaz-e-mursal?lang=ur",
+        "label": "Rekhta Dictionary: مجازِ مرسل",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Defines مجازِ مرسل as figurative usage linked by something other than resemblance, with cloud for rain as an example."
+      },
+      {
+        "url": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/ma-urdu-2nd-sem-1st-draft/11-Jul-2023/Paper-6-Urdu-Ghazal.pdf",
+        "label": "Maulana Azad National Urdu University, MA Urdu self-learning material: مجازِ مرسل",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "manuu",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university's MA Urdu material, section 2.3.2.3, defines مجازِ مرسل by a figurative connection other than resemblance and explains its types."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0040-SIM",
+    "pairId": "USR-Q0040",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "In Urdu rhetoric, what relationship between literal and figurative meanings defines مجازِ مرسل?",
+    "questionUrdu": "مجازِ مرسل میں لفظ کے حقیقی اور مجازی معنوں کے درمیان کون سا تعلق ہوتا ہے؟",
+    "options": [
+      "ہم آواز الفاظ کا تعلق",
+      "واضح تشبیہ کا تعلق",
+      "صرف ردیف کا تعلق",
+      "تشبیہ کے علاوہ کوئی معنوی تعلق"
+    ],
+    "optionsUrdu": [
+      "ہم آواز الفاظ کا تعلق",
+      "واضح تشبیہ کا تعلق",
+      "صرف ردیف کا تعلق",
+      "تشبیہ کے علاوہ کوئی معنوی تعلق"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "مجازِ مرسل میں لفظ اپنے حقیقی معنی کے بجائے مجازی معنی میں استعمال ہوتا ہے، مگر دونوں معنوں کا رشتہ تشبیہ نہیں ہوتا۔ یہ سبب و نتیجہ، کل و جزو یا ظرف و مظروف کا رشتہ ہو سکتا ہے۔",
+    "relatedHistoryUrdu": "اس مثال میں بادل سبب اور بارش نتیجہ ہے۔ بادل کہہ کر بارش مراد لینا سبب اور مسبب کا تعلق ہے، تشبیہ کا نہیں؛ اس لیے یہ مجازِ مرسل ہے۔ موجودہ سوال کے جواب ”تشبیہ کے علاوہ کوئی معنوی تعلق“ کو اس متعلقہ مستند حقیقت ”مجازِ مرسل“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.rekhtadictionary.com/meaning-of-majaaz-e-mursal?lang=ur",
+    "relatedHistoryAccessedOn": "2026-10-30",
+    "source": {
+      "type": "practice",
+      "file": "topic-expansion-20261030.js",
+      "label": "User-requested verified topic coverage, 30 October 2026",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-majaaz-e-mursal?lang=ur",
+      "accessedOn": "2026-10-30"
+    },
+    "tags": [
+      "topic-expansion-20261030",
+      "topic:urdu-rhetoric"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim.",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-majaaz-e-mursal?lang=ur",
+        "label": "Rekhta Dictionary: مجازِ مرسل",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Defines مجازِ مرسل as figurative usage linked by something other than resemblance, with cloud for rain as an example."
+      },
+      {
+        "url": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/ma-urdu-2nd-sem-1st-draft/11-Jul-2023/Paper-6-Urdu-Ghazal.pdf",
+        "label": "Maulana Azad National Urdu University, MA Urdu self-learning material: مجازِ مرسل",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "manuu",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university's MA Urdu material, section 2.3.2.3, defines مجازِ مرسل by a figurative connection other than resemblance and explains its types."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    }
   }
 ];
 
   window.PPSC_QUIZ_DATA = {
     version: 5,
-    generatedOn: "2026-10-21",
+    generatedOn: "2026-10-30",
     categories: categories,
     questions: questions
   };

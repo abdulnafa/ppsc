@@ -13,6 +13,14 @@
   var SESSION_STORAGE_KEY = "ppsc-prep:active-session:v1";
   var CATEGORY_SESSIONS_STORAGE_KEY = "ppsc-prep:category-sessions:v1";
   var RETRY_QUEUE_STORAGE_KEY = "ppsc-prep:retry-queue:v1";
+  var SEEN_NEW_QUESTION_IDS_STORAGE_KEY = "ppsc-prep:seen-new-question-ids:v1";
+  var NEW_CATEGORY_ID = "new-mcqs";
+  var newCategory = Object.freeze({
+    id: NEW_CATEGORY_ID,
+    name: "New MCQs",
+    shortLabel: "NEW",
+    description: "Unread additions from every category. A question leaves this list after its answer is checked or revealed."
+  });
   var SESSION_STORAGE_VERSION = 8;
   var RANGE_SESSION_STORAGE_VERSION = 7;
   var LEGACY_SESSION_STORAGE_VERSION = 6;
@@ -44,6 +52,8 @@
   var APPROVED_ANSWER_TEXT_UPDATED_SIGNATURE = "v1:11892:57530f77";
   var APPROVED_CURRENT_AFFAIRS_BANK_SIGNATURE = "v1:11932:27bcab12";
   var APPROVED_CURRENT_AFFAIRS_BANK_QUESTION_COUNT = 11932;
+  var APPROVED_TOPIC_RELEASE_BANK_SIGNATURE = "v1:11952:b657229a";
+  var APPROVED_TOPIC_RELEASE_BANK_QUESTION_COUNT = 11952;
   // Exact ordered Important pools from the approved 11,412-question release.
   // Later duplicate evidence promoted more questions without changing the
   // bank's content fingerprint, so frozen Important sessions need these too.
@@ -69,6 +79,7 @@
   var data = window.PPSC_QUIZ_DATA || {};
   var categories = Array.isArray(data.categories) ? data.categories : [];
   var allQuestions = Array.isArray(data.questions) ? data.questions : [];
+  var topicData = window.PPSC_TOPIC_DATA || null;
   var gkNotesData = window.PPSC_GK_STUDY_NOTES_DATA || {};
   var gkNoteTopics = Array.isArray(gkNotesData.topics) ? gkNotesData.topics : [];
   var gkStudyNotes = Array.isArray(gkNotesData.notes) ? gkNotesData.notes : [];
@@ -82,6 +93,14 @@
   var questionsById = new Map(allQuestions.map(function (question) {
     return [String(question.id), question];
   }));
+  var newQuestionIds = Array.isArray(window.PPSC_NEW_QUESTION_IDS)
+    ? Array.from(new Set(window.PPSC_NEW_QUESTION_IDS.map(String))).filter(function (id) {
+        return questionsById.has(id);
+      })
+    : [];
+  var newQuestionIdSet = new Set(newQuestionIds);
+  var seenNewQuestionIds = new Set();
+  var seenNewQuestionIdsWritable = true;
   var allQuestionIndexes = new Map(allQuestions.map(function (question, index) {
     return [String(question.id), index];
   }));
@@ -139,6 +158,7 @@
     query: ""
   };
   var pendingRangeChoice = null;
+  var lastTopicPickerQuestions = null;
   var gkNotesReturnTarget = "quick-notes";
   var appInitialized = false;
 
@@ -164,6 +184,56 @@
         value: value
       }
     }));
+  }
+
+  function isNewCategory(categoryId) {
+    return String(categoryId || "") === NEW_CATEGORY_ID;
+  }
+
+  function loadSeenNewQuestionIds() {
+    try {
+      var raw = progressStorage().getItem(SEEN_NEW_QUESTION_IDS_STORAGE_KEY);
+      if (!raw) return;
+      var saved = JSON.parse(raw);
+      if (!saved || saved.version !== 1 || !Array.isArray(saved.questionIds)
+        || saved.questionIds.some(function (id) { return typeof id !== "string"; })) {
+        seenNewQuestionIdsWritable = false;
+        return;
+      }
+      seenNewQuestionIds = new Set(saved.questionIds.filter(function (id) {
+        return newQuestionIdSet.has(id);
+      }));
+    } catch (error) {
+      // Never replace an unknown or damaged saved state with an empty list.
+      seenNewQuestionIdsWritable = false;
+    }
+  }
+
+  function markNewQuestionSeen(questionId) {
+    var id = String(questionId || "");
+    if (!newQuestionIdSet.has(id) || seenNewQuestionIds.has(id)) return;
+    seenNewQuestionIds.add(id);
+    if (seenNewQuestionIdsWritable) {
+      try {
+        progressStorage().setItem(SEEN_NEW_QUESTION_IDS_STORAGE_KEY, JSON.stringify({
+          version: 1,
+          questionIds: newQuestionIds.filter(function (knownId) {
+            return seenNewQuestionIds.has(knownId);
+          })
+        }));
+        notifyLocalStateChanged(SEEN_NEW_QUESTION_IDS_STORAGE_KEY, "set");
+      } catch (error) {
+        // Keep this visit's state in memory; do not remove existing storage.
+      }
+    }
+    updateNewCategoryCard();
+  }
+
+  function unreadNewQuestions() {
+    return allQuestions.filter(function (question) {
+      var id = String(question.id);
+      return newQuestionIdSet.has(id) && !seenNewQuestionIds.has(id);
+    });
   }
 
   var state = {
@@ -282,6 +352,7 @@
     elements.studyScopePanel = firstElement(["#study-scope-panel", "[data-study-scope-panel]"]);
     elements.learnModeButton = firstElement(["#learn-mode-button", "[data-start-learn]"]);
     elements.quizModeButton = firstElement(["#quiz-mode-button", "[data-start-quiz]"]);
+    elements.quizModeDescription = firstElement(["#quiz-mode-button .mode-option-copy small"]);
     elements.wrongQuizModeButton = firstElement(["#wrong-quiz-mode-button"]);
     elements.wrongQuizModeMeta = firstElement(["#wrong-quiz-mode-meta"]);
     elements.resultWrongQuizButton = firstElement(["#result-wrong-quiz-button"]);
@@ -303,6 +374,11 @@
     elements.questionRangeTitle = firstElement(["#question-range-title", "[data-question-range-title]"]);
     elements.questionRangeContext = firstElement(["#question-range-context", "[data-question-range-context]"]);
     elements.questionRangeForm = firstElement(["#question-range-form", "[data-question-range-form]"]);
+    elements.questionRangeTopicPicker = firstElement(["#question-range-topic-picker"]);
+    elements.questionRangeTopicSelect = firstElement(["#question-range-topic-select"]);
+    elements.quizTopicPicker = firstElement(["#quiz-topic-picker"]);
+    elements.quizTopicSelect = firstElement(["#quiz-topic-select"]);
+    elements.quizTopicMeta = firstElement(["#quiz-topic-meta"]);
     elements.questionRangeStartInput = firstElement(["#question-range-start-input", "#question-range-start", "[data-question-range-start]"]);
     elements.questionRangeEndInput = firstElement(["#question-range-end-input", "#question-range-end", "[data-question-range-end]"]);
     elements.questionRangeHelp = firstElement(["#question-range-help", "[data-question-range-help]"]);
@@ -424,6 +500,15 @@
   }
 
   function approvedAdditiveBankQuestionCount(savedSignature) {
+    // The 11,952-question release is a frozen prefix. New researched pairs
+    // are append-only, so sessions and queue entries from that release keep
+    // their exact saved IDs, order and position after this update.
+    if (savedSignature === APPROVED_TOPIC_RELEASE_BANK_SIGNATURE) {
+      return allQuestions.length > APPROVED_TOPIC_RELEASE_BANK_QUESTION_COUNT
+        && buildQuestionBankSignature(APPROVED_TOPIC_RELEASE_BANK_QUESTION_COUNT)
+          === APPROVED_TOPIC_RELEASE_BANK_SIGNATURE
+        ? APPROVED_TOPIC_RELEASE_BANK_QUESTION_COUNT : null;
+    }
     // Preserve sessions from the audited first Current Affairs supplement.
     // Accept this one known release only when its entire ordered fingerprint
     // is still the exact prefix of a larger, append-only question bank.
@@ -472,6 +557,24 @@
     return selectedQuestionIds.filter(function (questionId) {
       return allQuestionIndexes.get(questionId) < approvedQuestionCount;
     });
+  }
+
+  function isKnownPoolOrder(poolIds, selectedQuestionIds) {
+    var poolSet = new Set(poolIds);
+    var currentOrder = selectedQuestionIds.filter(function (questionId) {
+      return poolSet.has(questionId);
+    });
+    var oldBankOrder = currentOrder.slice().sort(function (left, right) {
+      return allQuestionIndexes.get(left) - allQuestionIndexes.get(right);
+    });
+    var savedOrder = orderKey(poolIds, String);
+    if (savedOrder === orderKey(currentOrder, String)
+      || savedOrder === orderKey(oldBankOrder, String)) return true;
+    if (!topicData || typeof topicData.sortQuestions !== "function") return false;
+    var topicOrder = topicData.sortQuestions(currentOrder.map(function (questionId) {
+      return questionsById.get(questionId);
+    })).map(function (question) { return String(question.id); });
+    return savedOrder === orderKey(topicOrder, String);
   }
 
   function isApprovedHistoricalImportantPool(originSignature, categoryId, computerSourceScope, questionIds) {
@@ -574,7 +677,8 @@
     computerSourceScope,
     categoryId
   ) {
-    var filterLabel = importantOnly ? "All Important Questions" : "All Questions";
+    var filterLabel = isNewCategory(categoryId) ? "Unread New MCQs"
+      : importantOnly ? "All Important Questions" : "All Questions";
     var rangeLabel = sessionRangeLabel(rangeStart, rangeEnd, rangePoolSize);
     var labels = [];
     if (isBasicComputerCategory(categoryId)) {
@@ -662,6 +766,86 @@
       snapshot.computerSourceScope, snapshot.importantOnly ? "important" : "all"].join(":");
   }
 
+  function reconcileSeenNewSession(normalized) {
+    if (!normalized) return null;
+    var snapshot = normalized.snapshot;
+    if (!isNewCategory(snapshot.categoryId) || snapshot.scope !== "all") {
+      return { normalized: normalized, changed: false, completed: false };
+    }
+    var remainingIds = snapshot.questionIds.filter(function (id) {
+      return !seenNewQuestionIds.has(id);
+    });
+    if (remainingIds.length === snapshot.questionIds.length) {
+      return { normalized: normalized, changed: false, completed: false };
+    }
+    if (remainingIds.length === 0) {
+      return { normalized: null, changed: true, completed: true };
+    }
+
+    var remainingSet = new Set(remainingIds);
+    var oldIndexById = new Map(snapshot.questionIds.map(function (id, index) {
+      return [id, index];
+    }));
+    var currentId = snapshot.questionIds[snapshot.currentIndex];
+    var nextCurrentId = remainingSet.has(currentId) ? currentId : remainingIds.find(function (id) {
+      return oldIndexById.get(id) > snapshot.currentIndex;
+    }) || remainingIds[0];
+    var nextIndex = remainingIds.indexOf(nextCurrentId);
+    var remainingRangeIds = snapshot.rangeQuestionIds.filter(function (id) {
+      return remainingSet.has(id);
+    });
+    var rewritten = Object.assign({}, snapshot, {
+      rangeStart: 1,
+      rangeEnd: remainingRangeIds.length,
+      rangePoolSize: remainingRangeIds.length,
+      rangePoolQuestionIds: remainingRangeIds.slice(),
+      rangeQuestionIds: remainingRangeIds,
+      questionIds: remainingIds,
+      optionOrders: snapshot.optionOrders ? remainingIds.map(function (id) {
+        return snapshot.optionOrders[oldIndexById.get(id)];
+      }) : null,
+      answerHistory: snapshot.answerHistory ? remainingIds.map(function (id) {
+        return snapshot.answerHistory[oldIndexById.get(id)];
+      }) : null,
+      learnVisitedQuestionIds: snapshot.learnVisitedQuestionIds
+        ? snapshot.learnVisitedQuestionIds.filter(function (id) { return remainingSet.has(id); }) : null,
+      learnReviewCountedQuestionIds: snapshot.learnReviewCountedQuestionIds
+        ? snapshot.learnReviewCountedQuestionIds.filter(function (id) { return remainingSet.has(id); }) : null,
+      currentIndex: nextIndex
+    });
+    if (rewritten.mode === "quiz") {
+      var currentAnswer = rewritten.answerHistory[nextIndex];
+      rewritten.selectedIndex = currentAnswer ? currentAnswer[0] : null;
+      rewritten.submitted = currentAnswer ? currentAnswer[1] : false;
+      rewritten.score = scoreForResponses(rewritten.answerHistory.map(function (answer) {
+        return answer ? { selectedIndex: answer[0], submitted: answer[1] } : null;
+      }), remainingIds.map(function (id, index) {
+        return quizQuestionWithOrder(questionsById.get(id), rewritten.optionOrders[index]);
+      }));
+    } else {
+      rewritten.submitted = rewritten.learnVisitedQuestionIds.includes(nextCurrentId);
+      rewritten.selectedIndex = rewritten.submitted
+        ? questionsById.get(nextCurrentId).correctOptionIndex : null;
+      rewritten.score = 0;
+    }
+    var checked = normalizeStoredSession(rewritten);
+    return checked ? { normalized: checked, changed: true, completed: false } : null;
+  }
+
+  function reconcileArchivedNewSessions() {
+    var changed = false;
+    Object.keys(categorySessions).forEach(function (key) {
+      var snapshot = categorySessions[key];
+      if (!isNewCategory(snapshot.categoryId) || snapshot.scope !== "all") return;
+      var reconciled = reconcileSeenNewSession(normalizeStoredSession(snapshot));
+      if (!reconciled) return;
+      if (reconciled.completed) delete categorySessions[key];
+      else if (reconciled.changed) categorySessions[key] = reconciled.normalized.snapshot;
+      changed = changed || reconciled.changed;
+    });
+    if (changed) persistCategorySessions();
+  }
+
   function loadCategorySessions() {
     if (categorySessionsLoaded) return;
     categorySessionsLoaded = true;
@@ -674,12 +858,17 @@
         categorySessionsPersisted = categorySessionsWritable = false;
         return;
       }
+      var reconciledAny = false;
       Object.keys(saved.sessions).forEach(function (key) {
         var normalized = normalizeStoredSession(saved.sessions[key]);
-        if (normalized && categorySessionKey(normalized.snapshot) === key) {
-          categorySessions[key] = normalized.snapshot;
+        var reconciled = reconcileSeenNewSession(normalized);
+        if (reconciled && (reconciled.completed
+          || categorySessionKey(reconciled.normalized.snapshot) === key)) {
+          if (!reconciled.completed) categorySessions[key] = reconciled.normalized.snapshot;
+          reconciledAny = reconciledAny || reconciled.changed;
         } else categorySessionsPersisted = categorySessionsWritable = false;
       });
+      if (reconciledAny) persistCategorySessions();
     } catch (error) {
       // Do not clear a damaged/unavailable stored archive during startup.
       categorySessionsPersisted = categorySessionsWritable = false;
@@ -720,6 +909,7 @@
 
   function renderCategorySessions() {
     if (!elements.categorySessionsPanel || !elements.categorySessionsList) return;
+    if (state.category && isNewCategory(state.category.id)) reconcileArchivedNewSessions();
     var snapshots = state.category ? savedCategorySessions(state.category.id) : [];
     elements.categorySessionsList.textContent = "";
     setHidden(elements.categorySessionsPanel, snapshots.length === 0);
@@ -771,7 +961,20 @@
   }
 
   function restoreCategorySession(key) {
-    var normalized = normalizeStoredSession(categorySessions[key]);
+    var reconciled = reconcileSeenNewSession(normalizeStoredSession(categorySessions[key]));
+    if (!reconciled) return false;
+    if (reconciled.completed) {
+      delete categorySessions[key];
+      persistCategorySessions();
+      if (categorySessionKey(activeSessionSnapshot) === key) removeStoredActiveSession();
+      renderCategorySessions();
+      return false;
+    }
+    var normalized = reconciled.normalized;
+    if (reconciled.changed) {
+      categorySessions[key] = normalized.snapshot;
+      persistCategorySessions();
+    }
     if (!normalized || !state.category || normalized.snapshot.categoryId !== state.category.id) return false;
     // A pending review belongs to the previously active main session. Settle it
     // once using the existing queue logic before switching to another session.
@@ -834,6 +1037,8 @@
     if (typeof savedValue.importantOnly !== "boolean") return null;
     var importantOnly = savedValue.importantOnly;
     if (paperSession && importantOnly) return null;
+    if (category && isNewCategory(category.id)
+      && (importantOnly || savedValue.scope === "difficult")) return null;
 
     var paperCategoryIds = null;
     if (paperSession) {
@@ -841,7 +1046,7 @@
       paperCategoryIds = savedValue.paperCategoryIds.map(String);
       if (new Set(paperCategoryIds).size !== paperCategoryIds.length) return null;
       if (paperCategoryIds.some(function (categoryId) {
-        return !findCategory(categoryId) || questionCount(categoryId) === 0;
+        return isNewCategory(categoryId) || !findCategory(categoryId) || questionCount(categoryId) === 0;
       })) return null;
       var availablePaperQuestionCount = paperCategoryIds.reduce(function (count, categoryId) {
         return count + questionCount(categoryId);
@@ -872,6 +1077,7 @@
     if (savedPoolBankSignature !== null && (
       typeof savedPoolBankSignature !== "string"
       || paperSession
+      || isNewCategory(savedValue.categoryId)
       || savedValue.scope !== "all"
     )) return null;
     var rangeQuestionIds = null;
@@ -891,16 +1097,23 @@
       })) return null;
     } else {
       if (canonicalQuestions.some(function (question) {
-        return question.categoryId !== category.id;
+        return isNewCategory(category.id)
+          ? !newQuestionIdSet.has(String(question.id))
+          : question.categoryId !== category.id;
       })) return null;
-      selectedQuestionIds = questionsForSelection(
-        category.id,
-        partIndex,
-        importantOnly,
-        computerSourceScope
-      ).map(function (question) {
-        return String(question.id);
-      });
+      selectedQuestionIds = isNewCategory(category.id)
+        ? allQuestions.filter(function (question) {
+            return newQuestionIdSet.has(String(question.id));
+          }).map(function (question) { return String(question.id); })
+        : questionsForSelection(
+            category.id,
+            partIndex,
+            importantOnly,
+            computerSourceScope
+          ).map(function (question) {
+            return String(question.id);
+          });
+      var selectedQuestionIdSet = new Set(selectedQuestionIds);
       var questionIdSet = new Set(questionIds);
 
       if (legacySession) {
@@ -917,7 +1130,7 @@
           questionIds.length !== legacyPoolIds.length
           || legacyPoolIds.some(function (questionId) { return !questionIdSet.has(questionId); })
         )) return null;
-        if (questionIds.some(function (questionId) { return !selectedQuestionIds.includes(questionId); })) return null;
+        if (questionIds.some(function (questionId) { return !selectedQuestionIdSet.has(questionId); })) return null;
 
         rangeQuestionIds = selectedQuestionIds.filter(function (questionId) {
           return questionIdSet.has(questionId);
@@ -938,24 +1151,24 @@
         if (
           rangePoolQuestionIds.length !== rangePoolSize
           || new Set(rangePoolQuestionIds).size !== rangePoolQuestionIds.length
-          || rangePoolQuestionIds.some(function (questionId) { return !selectedQuestionIds.includes(questionId); })
+          || rangePoolQuestionIds.some(function (questionId) { return !selectedQuestionIdSet.has(questionId); })
           ||
           rangeQuestionIds.length !== rangeEnd - rangeStart + 1
           || rangeQuestionIds.length !== questionIds.length
           || new Set(rangeQuestionIds).size !== rangeQuestionIds.length
         ) return null;
+        var rangeQuestionIdSet = new Set(rangeQuestionIds);
         if (rangeQuestionIds.some(function (questionId) {
-          return !selectedQuestionIds.includes(questionId) || !questionIdSet.has(questionId);
+          return !selectedQuestionIdSet.has(questionId) || !questionIdSet.has(questionId);
         })) return null;
         if (questionIds.some(function (questionId) {
-          return !rangeQuestionIds.includes(questionId);
+          return !rangeQuestionIdSet.has(questionId);
         })) return null;
 
-        var canonicalPoolOrder = selectedQuestionIds.filter(function (questionId) {
-          return rangePoolQuestionIds.includes(questionId);
-        });
-        if (orderKey(rangePoolQuestionIds, function (questionId) { return questionId; })
-          !== orderKey(canonicalPoolOrder, function (questionId) { return questionId; })) return null;
+        // Earlier releases stored category pools in bank order. New sessions
+        // use topic order; both validated orders must remain resumable without
+        // rewriting a saved question sequence or discarding a queued answer.
+        if (!isKnownPoolOrder(rangePoolQuestionIds, selectedQuestionIds)) return null;
 
         var expectedRangeIds = rangePoolQuestionIds.slice(rangeStart - 1, rangeEnd);
         if (orderKey(rangeQuestionIds, function (questionId) { return questionId; })
@@ -965,12 +1178,13 @@
         // cleared Wrong Quiz answers may no longer exist in the live list;
         // stable category/source membership above still validates their save.
         if (savedValue.scope === "all") {
-          var expectedPoolIds = selectedQuestionIds;
+          var expectedPoolIds = isNewCategory(category.id)
+            ? rangePoolQuestionIds : selectedQuestionIds;
           if (savedPoolBankSignature !== null) {
             expectedPoolIds = approvedSessionPoolForOrigin(savedPoolBankSignature, selectedQuestionIds);
             if (!expectedPoolIds) return null;
             rangePoolBankSignature = savedPoolBankSignature;
-          } else if (rangePoolSize !== selectedQuestionIds.length) {
+          } else if (!isNewCategory(category.id) && rangePoolSize !== selectedQuestionIds.length) {
             // Older additive migrations rewrote the bank signature without
             // retaining the frozen pool's origin. Recover only an exact known
             // prefix pool, never an arbitrary subset or an unknown signature.
@@ -983,9 +1197,7 @@
             if (!expectedPoolIds) return null;
             rangePoolBankSignature = poolOrigin;
           }
-          var exactCurrentOriginPool = rangePoolSize === expectedPoolIds.length
-            && orderKey(rangePoolQuestionIds, function (questionId) { return questionId; })
-              === orderKey(expectedPoolIds, function (questionId) { return questionId; });
+          var exactCurrentOriginPool = sameQuestionIdSet(rangePoolQuestionIds, expectedPoolIds);
           if (!exactCurrentOriginPool && !(importantOnly
             && isApprovedHistoricalImportantPool(
               rangePoolBankSignature, category.id, computerSourceScope, rangePoolQuestionIds
@@ -1132,19 +1344,26 @@
         return null;
       }
       var savedValue = JSON.parse(rawValue);
-      var normalized = normalizeStoredSession(savedValue);
-      if (!normalized) {
+      var storedNormalized = normalizeStoredSession(savedValue);
+      if (!storedNormalized) {
         removeStoredActiveSession();
         return null;
       }
       // The archive is written first. If a browser quota/error interrupted the
       // active-slot write, Continue must not rewind the newer same-profile save.
-      var archived = categorySessions[categorySessionKey(normalized.snapshot)];
-      var recoveredNewerArchive = Boolean(archived && archived.savedAt > normalized.snapshot.savedAt);
-      if (recoveredNewerArchive) normalized = normalizeStoredSession(archived) || normalized;
+      var archived = categorySessions[categorySessionKey(storedNormalized.snapshot)];
+      var recoveredNewerArchive = Boolean(archived && archived.savedAt > storedNormalized.snapshot.savedAt);
+      var selectedNormalized = recoveredNewerArchive
+        ? normalizeStoredSession(archived) || storedNormalized : storedNormalized;
+      var reconciled = reconcileSeenNewSession(selectedNormalized);
+      if (!reconciled || reconciled.completed) {
+        removeStoredActiveSession();
+        return null;
+      }
+      var normalized = reconciled.normalized;
       activeSessionSnapshot = normalized.snapshot;
       archiveCategorySession(activeSessionSnapshot, true);
-      if (recoveredNewerArchive || savedValue.bankSignature !== questionBankSignature
+      if (reconciled.changed || recoveredNewerArchive || savedValue.bankSignature !== questionBankSignature
         || (savedValue.rangePoolBankSignature || null) !== (activeSessionSnapshot.rangePoolBankSignature || null)) {
         try {
           progressStorage().setItem(SESSION_STORAGE_KEY, JSON.stringify(activeSessionSnapshot));
@@ -1997,7 +2216,9 @@
       || !elements.quizScreen
       || elements.quizScreen.hidden
     ) return "";
-    return String(state.category.id);
+    var question = currentQuestion();
+    return isNewCategory(state.category.id) && question
+      ? String(question.categoryId) : String(state.category.id);
   }
 
   function retryQuestionMatchesCategory(questionId, categoryId) {
@@ -2334,11 +2555,11 @@
     if (
       !question
       || !isRetryEligibleStudySession()
-      || !questionMatchesComputerSourceScope(
+      || (!isNewCategory(state.category.id) && !questionMatchesComputerSourceScope(
         question,
         state.category.id,
         state.computerSourceScope
-      )
+      ))
     ) return null;
     retryQueueState.practiceStep += 1;
     if (!embeddedPopupsEnabled()) {
@@ -3222,6 +3443,7 @@
     }
     attempt.submitted = true;
     attempt.outcome = attempt.selectedIndex === question.correctOptionIndex ? "correct" : "wrong";
+    markNewQuestionSeen(question.id);
     attempt.wrongIncrement = !importantPractice && !sequentialPractice && attempt.outcome === "wrong"
       ? RETRY_QUEUE_INCREMENT
       : null;
@@ -3634,12 +3856,14 @@
   }
 
   function categoryQuestions(categoryId) {
+    if (isNewCategory(categoryId)) return unreadNewQuestions();
     return allQuestions.filter(function (question) {
       return question.categoryId === categoryId;
     });
   }
 
   function baseQuestionsForSelection(categoryId, partIndex, computerSourceScope) {
+    if (isNewCategory(categoryId)) return unreadNewQuestions();
     var selectedComputerSourceScope = computerSourceScopeForCategory(categoryId, computerSourceScope);
     return categoryQuestions(categoryId).filter(function (question) {
       return questionMatchesComputerSourceScope(question, categoryId, selectedComputerSourceScope);
@@ -3660,6 +3884,12 @@
 
   function wrongQuestionsForCategory(categoryId, computerSourceScope) {
     var wrongIds = new Set(retryQueueState.wrongQuestionIds || []);
+    if (isNewCategory(categoryId)) {
+      return allQuestions.filter(function (question) {
+        var id = String(question.id);
+        return newQuestionIdSet.has(id) && wrongIds.has(id);
+      });
+    }
     // All wrong answers in the chosen source, regardless of the Important
     // filter. Build the eligible pool in canonical order; a new Wrong Quiz
     // session then shuffles it independently of Queue counts or mistake order.
@@ -3670,8 +3900,8 @@
 
   function recordWrongQuizAnswer(questionId, wrongAnswer) {
     if (state.mode !== "quiz" || !isRetryEligibleStudySession()
-      || !questionMatchesComputerSourceScope(questionsById.get(questionId),
-        state.category.id, state.computerSourceScope)) return;
+      || (!isNewCategory(state.category.id) && !questionMatchesComputerSourceScope(
+        questionsById.get(questionId), state.category.id, state.computerSourceScope))) return;
     if (wrongAnswer) {
       if (!retryQueueState.wrongQuestionIds.includes(questionId)) {
         retryQueueState.wrongQuestionIds.push(questionId);
@@ -5213,9 +5443,103 @@
 
   function eligibleQuestionsForRange(categoryId, importantOnly, scope, computerSourceScope) {
     if (scope === "wrong") return wrongQuestionsForCategory(categoryId, computerSourceScope);
-    return questionsForSelection(categoryId, null, importantOnly, computerSourceScope).filter(function (question) {
+    var selected = questionsForSelection(categoryId, null, importantOnly, computerSourceScope).filter(function (question) {
       return scope !== "difficult" || difficultQuestionIds.has(String(question.id));
     });
+    return scope === "all" && !isNewCategory(categoryId)
+      && topicData && typeof topicData.sortQuestions === "function"
+      ? topicData.sortQuestions(selected) : selected;
+  }
+
+  function topicKeyForQuestion(question) {
+    if (!topicData || typeof topicData.getTopic !== "function" || !question) return "";
+    var topic = topicData.getTopic(question);
+    return topic ? topic.id : "";
+  }
+
+  function topicRangesForQuestions(questions) {
+    if (!topicData || typeof topicData.getTopic !== "function") return [];
+    var ranges = [];
+    var byId = new Map();
+    questions.forEach(function (question, index) {
+      var topic = topicData.getTopic(question);
+      if (!topic) return;
+      var range = byId.get(topic.id);
+      if (!range) {
+        range = { id: topic.id, label: topic.label, first: index, last: index, count: 0 };
+        byId.set(topic.id, range);
+        ranges.push(range);
+      }
+      range.last = index;
+      range.count += 1;
+    });
+    return ranges;
+  }
+
+  function populateTopicSelect(select, ranges, allLabel) {
+    if (!select) return;
+    select.textContent = "";
+    var allOption = document.createElement("option");
+    allOption.value = "all";
+    allOption.textContent = allLabel;
+    select.appendChild(allOption);
+    ranges.forEach(function (range) {
+      var option = document.createElement("option");
+      option.value = range.id;
+      option.textContent = range.label + " (" + range.count + ")";
+      select.appendChild(option);
+    });
+  }
+
+  function updateQuizTopicPicker() {
+    var enabled = state.category && state.scope === "all" && !isNewCategory(state.category.id)
+      && !isPaperSession() && topicData && state.questions.length > 0;
+    setHidden(elements.quizTopicPicker, !enabled);
+    if (!enabled || !elements.quizTopicSelect) return;
+    if (lastTopicPickerQuestions !== state.questions) {
+      populateTopicSelect(
+        elements.quizTopicSelect,
+        topicRangesForQuestions(state.questions),
+        "All topics (start)"
+      );
+      lastTopicPickerQuestions = state.questions;
+    }
+    var currentTopic = topicKeyForQuestion(currentQuestion());
+    elements.quizTopicSelect.value = currentTopic || "all";
+    if (elements.quizTopicMeta) {
+      var choices = elements.quizTopicSelect.options;
+      var selected = elements.quizTopicSelect.selectedIndex;
+      elements.quizTopicMeta.textContent = selected > 0
+        ? "Topic " + selected + " of " + (choices.length - 1)
+        : "";
+    }
+  }
+
+  function handleQuizTopicChange() {
+    if (!elements.quizTopicSelect || !state.questions.length) return;
+    var topicId = elements.quizTopicSelect.value;
+    var targetIndex = topicId === "all" ? 0 : state.questions.findIndex(function (question) {
+      return topicKeyForQuestion(question) === topicId;
+    });
+    if (targetIndex < 0) return;
+    storeCurrentResponse();
+    state.currentIndex = targetIndex;
+    renderQuestion();
+  }
+
+  function handleQuestionRangeTopicChange() {
+    if (!pendingRangeChoice || !elements.questionRangeTopicSelect) return;
+    var selectedTopic = elements.questionRangeTopicSelect.value;
+    var range = (pendingRangeChoice.topicRanges || []).find(function (entry) {
+      return entry.id === selectedTopic;
+    });
+    if (elements.questionRangeStartInput) {
+      elements.questionRangeStartInput.value = String(range ? range.first + 1 : 1);
+    }
+    if (elements.questionRangeEndInput) {
+      elements.questionRangeEndInput.value = String(range ? range.last + 1 : pendingRangeChoice.poolQuestionIds.length);
+    }
+    validateQuestionRange(false);
   }
 
   function setRangeInputInvalid(input, invalid, message) {
@@ -5342,6 +5666,10 @@
         ? (selectedMode === "learn" ? elements.difficultLearnButton : elements.difficultQuizButton)
         : (selectedMode === "learn" ? elements.learnModeButton : elements.quizModeButton)
     };
+    pendingRangeChoice.topicRanges = selectedScope === "all" && !isNewCategory(state.category.id)
+      ? topicRangesForQuestions(eligibleQuestions) : [];
+    populateTopicSelect(elements.questionRangeTopicSelect, pendingRangeChoice.topicRanges, "All topics");
+    setHidden(elements.questionRangeTopicPicker, pendingRangeChoice.topicRanges.length < 2);
 
     var poolSize = eligibleQuestions.length;
     if (elements.questionRangeTitle) {
@@ -5362,10 +5690,13 @@
       var mathContextHelp = selectedScope === "all" && !state.importantOnly
         ? "Include a source MCQ in your range when its related question needs context."
         : "A filtered list may omit a related question's source MCQ.";
-      var orderHelp = isBasicMathematicsCategory(state.category.id)
-        ? "Math MCQs stay in their original source-to-similar order. " + mathContextHelp
-          + " Continue keeps the saved order."
-        : "The chosen MCQs shuffle at the start of each new Learn or Quiz run; Continue keeps the saved order.";
+      var orderHelp = selectedScope !== "all"
+        ? "Difficult rounds shuffle their chosen questions; Continue keeps the saved order."
+        : isNewCategory(state.category.id)
+        ? "New MCQs stay in their addition order. Continue keeps the saved order."
+        : "MCQs follow topic order, with related questions beside their source. "
+          + (isBasicMathematicsCategory(state.category.id) ? mathContextHelp + " " : "")
+          + "Continue keeps the saved order.";
       elements.questionRangeHelp.textContent = "Both numbers are included and refer to the current selected list (1 to "
         + poolSize + "). " + orderHelp;
     }
@@ -5476,15 +5807,17 @@
     if (!elements.categoryGrid) return;
     elements.categoryGrid.textContent = "";
 
-    categories.forEach(function (category) {
+    categories.concat([newCategory]).forEach(function (category) {
       var count = questionCount(category.id);
-      var importantCount = importantQuestionCount(category.id);
+      var newCollection = isNewCategory(category.id);
+      var importantCount = newCollection ? 0 : importantQuestionCount(category.id);
       var card = document.createElement("button");
       card.type = "button";
-      card.className = "category-card" + (count === 0 ? " is-empty" : "");
+      card.className = "category-card" + (newCollection ? " category-card-new" : "")
+        + (count === 0 && !newCollection ? " is-empty" : "");
       card.dataset.category = category.id;
       card.dataset.categoryId = category.id;
-      card.disabled = count === 0;
+      card.disabled = newCollection ? newQuestionIds.length === 0 : count === 0;
       card.setAttribute(
         "aria-label",
         category.name + ", " + count + (count === 1 ? " question" : " questions")
@@ -5509,7 +5842,9 @@
 
       var meta = document.createElement("span");
       meta.className = "category-card__count question-count";
-      meta.textContent = count > 0
+      meta.textContent = newCollection
+        ? count + " unread of " + newQuestionIds.length + " new MCQs"
+        : count > 0
         ? count + (count === 1 ? " question" : " questions")
           + (importantCount ? " · " + importantCount + " important" : "")
         : "Coming soon";
@@ -5529,6 +5864,17 @@
       card.appendChild(content);
       elements.categoryGrid.appendChild(card);
     });
+  }
+
+  function updateNewCategoryCard() {
+    if (!elements.categoryGrid) return;
+    var card = elements.categoryGrid.querySelector("[data-category='" + NEW_CATEGORY_ID + "']");
+    if (!card) return;
+    var count = unreadNewQuestions().length;
+    var meta = card.querySelector(".category-card__count");
+    if (meta) meta.textContent = count + " unread of " + newQuestionIds.length + " new MCQs";
+    card.setAttribute("aria-label", "New MCQs, " + count + " unread of "
+      + newQuestionIds.length + " total. Includes Learn, Quiz and Wrong Quiz.");
   }
 
   function updateCategoryProgressBadges() {
@@ -5741,6 +6087,7 @@
   }
 
   function findCategory(categoryId) {
+    if (isNewCategory(categoryId)) return newCategory;
     return categories.find(function (category) {
       return category.id === categoryId;
     }) || null;
@@ -5749,7 +6096,7 @@
   function chooseMode(categoryId) {
     var category = findCategory(categoryId);
     var count = questionCount(categoryId);
-    if (!category || count === 0) return;
+    if (!category || (isNewCategory(categoryId) ? newQuestionIds.length === 0 : count === 0)) return;
 
     state.category = category;
     state.sessionKind = "category";
@@ -5774,6 +6121,13 @@
     state.submitted = false;
     state.score = 0;
     pendingRangeChoice = null;
+
+    if (elements.modeScreen) elements.modeScreen.dataset.newMcqs = isNewCategory(categoryId) ? "true" : "false";
+    if (elements.quizModeDescription) {
+      elements.quizModeDescription.textContent = isNewCategory(categoryId)
+        ? "New MCQs follow addition order. Use arrows to choose, Enter to check, then Space / Enter / Right Arrow to continue."
+        : "Questions follow topic order. Use arrows to choose, Enter to check, then Space / Enter / Right Arrow to continue.";
+    }
 
     updateComputerSourceUI(category.id);
     updateDetailedLearningAvailability(category.id);
@@ -5974,30 +6328,30 @@
     var canonicalRangeQuestions = filteredQuestions.slice(rangeStart - 1, rangeEnd);
     var canonicalRangeIds = canonicalRangeQuestions.map(function (question) { return String(question.id); });
     var selectedImportantOnly = selectedScope === "wrong" ? false : state.importantOnly;
-    var priorOrderKey = null;
-    var currentIds = state.questions.map(function (question) { return String(question.id); });
-    if (sameQuestionIdSet(currentIds, canonicalRangeIds)) {
-      priorOrderKey = orderKey(currentIds, String);
-    } else {
-      loadCategorySessions();
-      var archiveKey = categorySessionKey({
-        sessionKind: "category", categoryId: categoryId, mode: selectedMode,
-        scope: selectedScope, computerSourceScope: selectedComputerSourceScope,
-        importantOnly: selectedImportantOnly
-      });
-      var previousSnapshot = categorySessions[archiveKey];
-      if (previousSnapshot && sameQuestionIdSet(previousSnapshot.questionIds, canonicalRangeIds)) {
-        priorOrderKey = orderKey(previousSnapshot.questionIds, String);
+    var sessionQuestions = canonicalRangeQuestions.slice();
+    if (selectedScope !== "all") {
+      // Dedicated Wrong/Difficult rounds keep their existing shuffle rule.
+      // The regular category Learn/Quiz pool is the topic-ordered path.
+      var priorOrderKey = null;
+      var currentIds = state.questions.map(function (question) { return String(question.id); });
+      if (sameQuestionIdSet(currentIds, canonicalRangeIds)) {
+        priorOrderKey = orderKey(currentIds, String);
+      } else {
+        loadCategorySessions();
+        var archiveKey = categorySessionKey({
+          sessionKind: "category", categoryId: categoryId, mode: selectedMode,
+          scope: selectedScope, computerSourceScope: selectedComputerSourceScope,
+          importantOnly: selectedImportantOnly
+        });
+        var previousSnapshot = categorySessions[archiveKey];
+        if (previousSnapshot && sameQuestionIdSet(previousSnapshot.questionIds, canonicalRangeIds)) {
+          priorOrderKey = orderKey(previousSnapshot.questionIds, String);
+        }
       }
+      sessionQuestions = shuffledOrder(canonicalRangeQuestions, function (question) {
+        return question.id;
+      }, priorOrderKey);
     }
-    // Mathematics related-practice MCQs can refer back to their source MCQ.
-    // Keep their bank order in new category sessions; frozen saved sessions
-    // still restore their exact previous order through the normal resume path.
-    var sessionQuestions = isBasicMathematicsCategory(categoryId)
-      ? canonicalRangeQuestions.slice()
-      : shuffledOrder(canonicalRangeQuestions, function (question) {
-          return question.id;
-        }, priorOrderKey);
     if (selectedMode === "quiz") {
       sessionQuestions = sessionQuestions.map(shuffledQuizQuestion);
     }
@@ -6090,6 +6444,7 @@
       showResults();
       return;
     }
+    updateQuizTopicPicker();
 
     if (state.mode === "quiz") {
       loadCurrentResponse();
@@ -6101,9 +6456,10 @@
     }
 
     if (elements.questionKind) {
-      var paperQuestionCategory = isPaperSession() ? findCategory(question.categoryId) : null;
+      var paperQuestionCategory = isPaperSession() || (state.category && isNewCategory(state.category.id))
+        ? findCategory(question.categoryId) : null;
       var kindLabel = paperQuestionCategory
-        ? "CUSTOM PAPER · " + paperQuestionCategory.name.toUpperCase()
+        ? (isPaperSession() ? "CUSTOM PAPER" : "NEW MCQ") + " · " + paperQuestionCategory.name.toUpperCase()
         : (question.kind === "similar" ? "SIMILAR PRACTICE"
           : (String(question.id).startsWith("USR-") ? "RESEARCHED UPDATE" : "SOURCE PAPER"));
       if (isImportantQuestion(question)) {
@@ -6303,6 +6659,7 @@
       state.learnVisitedQuestionIds = new Set();
     }
     state.learnVisitedQuestionIds.add(String(question.id));
+    markNewQuestionSeen(question.id);
     state.selectedIndex = question.correctOptionIndex;
     state.submitted = true;
     prepareLearnQuestion(question);
@@ -6575,6 +6932,7 @@
     }
 
     state.submitted = true;
+    markNewQuestionSeen(question.id);
     var isCorrect = state.selectedIndex === question.correctOptionIndex;
     storeCurrentResponse();
     var queueUpdate = recordMainPractice(question, !isCorrect);
@@ -6899,7 +7257,8 @@
           state.computerSourceScope
         )
       : total;
-    var canRepeatScope = state.scope !== "difficult" || remainingInScope > 0;
+    var canRepeatScope = (state.scope !== "difficult" || remainingInScope > 0)
+      && (!state.category || !isNewCategory(state.category.id) || unreadNewQuestions().length > 0);
     var completedRangeLabel = sessionRangeLabel(state.rangeStart, state.rangeEnd, state.rangePoolSize);
     var completedScopeLabels = [];
     if (state.category && isBasicComputerCategory(state.category.id)) {
@@ -6991,8 +7350,10 @@
         : (state.scope === "difficult" ? "Difficult practice complete!" : "Practice complete!");
     }
     if (elements.resultSummary && !canRepeatScope) {
-      elements.resultSummary.textContent = completedRangePrefix
-        + "You removed all difficult marks in this category. Mark a question again before starting another difficult session.";
+      elements.resultSummary.textContent = isNewCategory(state.category.id)
+        ? "All new MCQs in this set have been checked or revealed. They remain in their original categories; any wrong answers remain in Wrong Quiz."
+        : completedRangePrefix
+          + "You removed all difficult marks in this category. Mark a question again before starting another difficult session.";
     } else if (elements.resultSummary && state.mode === "learn" && state.scope === "difficult") {
       elements.resultSummary.textContent = completedRangePrefix + "This difficult learning set contains " + total
         + " questions. Start Quiz will reuse this exact range if your marked list is unchanged; otherwise you will choose a new range.";
@@ -7041,7 +7402,7 @@
       state.scope,
       state.computerSourceScope
     ).map(function (question) { return String(question.id); });
-    var difficultPoolChanged = state.scope === "difficult" && (
+    var difficultPoolChanged = (state.scope === "difficult" || isNewCategory(state.category.id)) && (
       !Array.isArray(state.rangePoolQuestionIds)
       || orderKey(currentPoolIds, function (questionId) { return questionId; })
         !== orderKey(state.rangePoolQuestionIds, function (questionId) { return questionId; })
@@ -7401,6 +7762,12 @@
       elements.questionRangeForm.noValidate = true;
       elements.questionRangeForm.addEventListener("submit", submitQuestionRange);
     }
+    if (elements.questionRangeTopicSelect) {
+      elements.questionRangeTopicSelect.addEventListener("change", handleQuestionRangeTopicChange);
+    }
+    if (elements.quizTopicSelect) {
+      elements.quizTopicSelect.addEventListener("change", handleQuizTopicChange);
+    }
     [elements.questionRangeStartInput, elements.questionRangeEndInput].forEach(function (input) {
       if (!input) return;
       input.addEventListener("input", function () {
@@ -7486,6 +7853,7 @@
     collectElements();
     ensureDifficultModeUI();
     ensureDifficultControl();
+    loadSeenNewQuestionIds();
     difficultQuestionIds = loadDifficultQuestionIds();
     loadRetryQueue();
     loadActiveSession();
@@ -7543,7 +7911,8 @@
     activeSession: SESSION_STORAGE_KEY,
     categorySessions: CATEGORY_SESSIONS_STORAGE_KEY,
     retryQueue: RETRY_QUEUE_STORAGE_KEY,
-    difficultQuestions: DIFFICULT_STORAGE_KEY
+    difficultQuestions: DIFFICULT_STORAGE_KEY,
+    seenNewQuestions: SEEN_NEW_QUESTION_IDS_STORAGE_KEY
   });
   window.addEventListener("ppsc:cloud-ready", startAppWhenDocumentIsReady, { once: true });
 

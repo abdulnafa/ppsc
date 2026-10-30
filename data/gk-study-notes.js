@@ -3,13 +3,13 @@
 
   window.PPSC_GK_STUDY_NOTES_DATA = {
   "schemaVersion": 1,
-  "generatedOn": "2026-10-12",
+  "generatedOn": "2026-10-30",
   "sourceBankVersion": 5,
-  "sourceBankGeneratedOn": "2026-10-21",
-  "sourceBankQuestionCount": 11952,
-  "sourceBankSignature": "sha256:9a3f514ee9e27f1b55c7f60adde274348a29301e24fcc95e8a556dc09fe09916",
-  "includedPairCount": 776,
-  "includedQuestionCount": 1552,
+  "sourceBankGeneratedOn": "2026-10-30",
+  "sourceBankQuestionCount": 11972,
+  "sourceBankSignature": "sha256:02f85877a75d2d33cfdc73985d48d6a00ca6b1d38a859d83753a39e9bb5e05b2",
+  "includedPairCount": 777,
+  "includedQuestionCount": 1554,
   "excludedPairCount": 18,
   "excludedQuestionCount": 36,
   "exclusions": [
@@ -84,7 +84,7 @@
       "labelUrdu": "تاریخیں اور زمانی سلسلے",
       "description": "Years, dates, milestones and chronological links.",
       "descriptionUrdu": "سال، تاریخیں، سنگِ میل اور واقعات کا زمانی ربط۔",
-      "noteCount": 439
+      "noteCount": 440
     },
     {
       "id": "people-offices",
@@ -100,7 +100,7 @@
       "labelUrdu": "ادارے اور ایجنسیاں",
       "description": "Organizations, agencies, abbreviations, headquarters and roles.",
       "descriptionUrdu": "ادارے، ایجنسیاں، مخففات، صدر دفاتر اور ان کے فرائض۔",
-      "noteCount": 219
+      "noteCount": 220
     },
     {
       "id": "countries-places",
@@ -132,7 +132,7 @@
       "labelUrdu": "کتابیں، اعزازات اور ثقافت",
       "description": "Books, authors, awards, arts, languages and cultural facts.",
       "descriptionUrdu": "کتابیں، مصنف، اعزازات، فنون، زبانیں اور ثقافتی حقائق۔",
-      "noteCount": 85
+      "noteCount": 86
     },
     {
       "id": "records-firsts",
@@ -99218,6 +99218,135 @@
             "reverifyAfter": null
           },
           "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-USR-Q0032",
+      "pairId": "USR-Q0032",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "books-awards-culture"
+      ],
+      "title": "1972 ↔ 1975",
+      "subtitleUrdu": "یونیسکو کی جنرل کانفرنس نے عالمی ثقافتی اور قدرتی ورثے کے تحفظ کا کنونشن 16 نومبر 1972 کو منظور کیا۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 1972 ↔ 1975",
+      "searchTerms": [
+        "USR-Q0032",
+        "In which year did UNESCO adopt the World Heritage Convention protecting cultural and natural heritage?",
+        "یونیسکو نے ثقافتی اور قدرتی ورثے کے تحفظ کا عالمی ورثہ کنونشن کس سال منظور کیا؟",
+        "In which year did the 1972 UNESCO World Heritage Convention enter into force?",
+        "1972 کا یونیسکو عالمی ورثہ کنونشن کس سال نافذ ہوا؟",
+        "1972",
+        "1975",
+        "topic-expansion-20261030",
+        "topic:united-nations",
+        "topic-expansion-20261030",
+        "topic:united-nations"
+      ],
+      "facts": [
+        {
+          "questionId": "USR-Q0032-SRC",
+          "kind": "source",
+          "textUrdu": "یونیسکو کی جنرل کانفرنس نے عالمی ثقافتی اور قدرتی ورثے کے تحفظ کا کنونشن 16 نومبر 1972 کو منظور کیا۔ منظور ہونے اور نافذ ہونے کی تاریخیں الگ ہیں۔",
+          "answer": "1972",
+          "source": {
+            "type": "user",
+            "file": "topic-expansion-20261030.js",
+            "label": "User-requested verified topic coverage, 30 October 2026",
+            "referenceUrl": "https://www.unesco.org/en/legal-affairs/convention-concerning-protection-world-cultural-and-natural-heritage",
+            "accessedOn": "2026-10-30"
+          },
+          "references": [
+            {
+              "url": "https://www.unesco.org/en/legal-affairs/convention-concerning-protection-world-cultural-and-natural-heritage",
+              "label": "World Heritage Convention, legal text",
+              "publisher": "UNESCO",
+              "authorityId": "unesco",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-30",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UNESCO records adoption on 16 November 1972 and entry into force on 17 December 1975."
+            },
+            {
+              "url": "https://treaties.un.org/pages/showDetails.aspx?objid=08000002800fece0",
+              "label": "UN Treaty Collection: World Heritage Convention",
+              "publisher": "United Nations Treaty Collection",
+              "authorityId": "un-treaty-collection",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-30",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN treaty record gives the 1972 conclusion and 17 December 1975 entry-into-force dates."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim."
+        },
+        {
+          "questionId": "USR-Q0032-SIM",
+          "kind": "similar",
+          "textUrdu": "یہ کنونشن 16 نومبر 1972 کو منظور ہوا لیکن ضروری توثیق کے بعد 17 دسمبر 1975 کو نافذ ہوا۔ امتحان میں منظوری اور نفاذ کے سال میں فرق یاد رکھیں۔",
+          "answer": "1975",
+          "source": {
+            "type": "practice",
+            "file": "topic-expansion-20261030.js",
+            "label": "User-requested verified topic coverage, 30 October 2026",
+            "referenceUrl": "https://www.unesco.org/en/legal-affairs/convention-concerning-protection-world-cultural-and-natural-heritage",
+            "accessedOn": "2026-10-30"
+          },
+          "references": [
+            {
+              "url": "https://www.unesco.org/en/legal-affairs/convention-concerning-protection-world-cultural-and-natural-heritage",
+              "label": "World Heritage Convention, legal text",
+              "publisher": "UNESCO",
+              "authorityId": "unesco",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-30",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UNESCO records adoption on 16 November 1972 and entry into force on 17 December 1975."
+            },
+            {
+              "url": "https://treaties.un.org/pages/showDetails.aspx?objid=08000002800fece0",
+              "label": "UN Treaty Collection: World Heritage Convention",
+              "publisher": "United Nations Treaty Collection",
+              "authorityId": "un-treaty-collection",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-30",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN treaty record gives the 1972 conclusion and 17 December 1975 entry-into-force dates."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Research-based topic coverage; distinct from its paired item. No past-paper repeat claim."
         }
       ]
     }

@@ -38,7 +38,7 @@ for (const review of audit.semanticReview) {
 for (const skipped of audit.skippedCandidates) {
   assert.ok(skipped.existingIds.length > 0 && skipped.existingIds.every((id) => oldQuestionIds.has(id)), "Skipped duplicate must identify an actual original MCQ");
 }
-const octoberAdditions = bank.questions.slice(OCTOBER_BASELINE_COUNT);
+const octoberAdditions = bank.questions.slice(OCTOBER_BASELINE_COUNT, RELEASE_COUNT);
 const octoberSource = OCTOBER_SOURCE_FILES.flatMap(name => JSON.parse(fs.readFileSync(path.join(root, "work", name), "utf8")));
 const octoberAudit = JSON.parse(fs.readFileSync(path.join(root, "work", "current-affairs-october-2026-audit.json"), "utf8"));
 assert.equal(octoberSource.length, OCTOBER_SUPPLEMENT_COUNT);
@@ -112,12 +112,12 @@ const changedCurrent = changedQuestion(OCTOBER_BASELINE_COUNT - 1, {
   explanationUrdu: bank.questions[OCTOBER_BASELINE_COUNT - 1].explanationUrdu + " changed"
 });
 assert.throws(() => validateSupplement(changedCurrent), /current 11932-question/);
-const fabricated = changedQuestion(bank.questions.length - 1, { repeatCount: 5 });
+const fabricated = changedQuestion(RELEASE_COUNT - 1, { repeatCount: 5 });
 assert.throws(() => validateSupplement(fabricated), /fabricate repeat/);
-const duplicate = changedQuestion(bank.questions.length - 1, { question: bank.questions[0].question });
+const duplicate = changedQuestion(RELEASE_COUNT - 1, { question: bank.questions[0].question });
 assert.throws(() => validateSupplement(duplicate), /repeated question wording/);
-const futureEvent = changedQuestion(bank.questions.length - 1, {
-  temporalScope: { ...bank.questions.at(-1).temporalScope, eventDate: "2026-11-01" }
+const futureEvent = changedQuestion(RELEASE_COUNT - 1, {
+  temporalScope: { ...bank.questions[RELEASE_COUNT - 1].temporalScope, eventDate: "2026-11-01" }
 });
 assert.throws(() => validateSupplement(futureEvent), /1-21 October/);
 
@@ -128,7 +128,7 @@ console.log(JSON.stringify({
   baselineSignature: BASELINE_SIGNATURE, releaseSignature: signature(bank.questions),
   addedQuestions: octoberAdditions.length, earlierSupplementQuestionsUnchanged: additions.length,
   currentQuestionsUnchanged: OCTOBER_BASELINE_COUNT, currentPrefixSha256: sha256(bank.questions.slice(0, OCTOBER_BASELINE_COUNT)),
-  totalQuestions: RELEASE_COUNT,
+  totalQuestions: bank.questions.length,
   currentAffairsQuestions: bank.questions.filter((question) => question.categoryId === "current-affairs").length,
   importantQuestionsUnchanged: oldImportantIds.length,
   checks: ["complete original objects/order/answers/repeat counts preserved", "stable append-only IDs", "two answer authorities per MCQ", "explicit temporal scope", "Urdu text", "duplicate stems/options rejected", "deterministic rebuild", "corruption guards reject changes"]

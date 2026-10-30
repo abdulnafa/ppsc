@@ -11,6 +11,7 @@ const ACTIVE_SESSION_KEY = "ppsc-prep:active-session:v1";
 const RETRY_QUEUE_KEY = "ppsc-prep:retry-queue:v1";
 const DIFFICULT_IDS_KEY = "ppsc-prep:difficult-question-ids:v1";
 const CATEGORY_SESSIONS_KEY = "ppsc-prep:category-sessions:v1";
+const SEEN_NEW_QUESTION_IDS_KEY = "ppsc-prep:seen-new-question-ids:v1";
 const CONFLICT_BACKUP_KEY = "ppsc-prep:cloud-conflict-backup:v1";
 const ACCESS_MODE_KEY = "ppsc-prep:access-mode:v1";
 const ALLOWED_EMAIL = "developerabdulnafa@gmail.com";
@@ -1190,6 +1191,7 @@ async function testCategorySessionsRoundTripAndOfflineResume() {
 async function testLegacyThreeSlotCloudUpgradesWithoutLoss(seedStore) {
   const legacyStore = cloneStore(seedStore);
   legacyStore.delete(slotPath("category-sessions"));
+  legacyStore.delete(slotPath("seen-new-questions"));
   assert.equal(legacyStore.size, 4, "legacy fixture must contain only metadata and the original three slot documents");
   const restored = createBrowser({ store: cloneStore(legacyStore) });
   await waitFor(restored, (status) => status.ready, "three-slot cloud remains readable");
@@ -1405,7 +1407,8 @@ function assertGuestReady(browser) {
 }
 
 function assertOwnerValues(browser, original) {
-  for (const key of [ACTIVE_SESSION_KEY, RETRY_QUEUE_KEY, DIFFICULT_IDS_KEY, CATEGORY_SESSIONS_KEY]) {
+  for (const key of [ACTIVE_SESSION_KEY, RETRY_QUEUE_KEY, DIFFICULT_IDS_KEY,
+    CATEGORY_SESSIONS_KEY, SEEN_NEW_QUESTION_IDS_KEY]) {
     assert.equal(browser.localStorage.getItem(key), original[key] || null, `${key} must remain unchanged`);
   }
 }
@@ -1415,7 +1418,8 @@ async function settleGuestCallbacks() {
 }
 
 async function testGuestStorageIsolationAndReconnect() {
-  const original = { ...legacyLocalProgress(), [CATEGORY_SESSIONS_KEY]: SAMPLE_CATEGORY_SESSIONS_RAW };
+  const original = { ...legacyLocalProgress(), [CATEGORY_SESSIONS_KEY]: SAMPLE_CATEGORY_SESSIONS_RAW,
+    [SEEN_NEW_QUESTION_IDS_KEY]: JSON.stringify({ version: 1, questionIds: [SAMPLE_QUESTION_ID] }) };
   const browser = createBrowser({ local: original, user: null });
   await waitFor(browser, (candidate) => candidate.phase === "auth-required", "guest entry from sign-in screen");
   await browser.window.PPSC_CLOUD.continueAsGuest();
@@ -1425,7 +1429,8 @@ async function testGuestStorageIsolationAndReconnect() {
   const storage = browser.window.PPSC_CLOUD.storage;
   assert.ok(storage, "the application must use the owner/guest-isolating storage facade");
 
-  for (const key of [ACTIVE_SESSION_KEY, RETRY_QUEUE_KEY, DIFFICULT_IDS_KEY, CATEGORY_SESSIONS_KEY]) {
+  for (const key of [ACTIVE_SESSION_KEY, RETRY_QUEUE_KEY, DIFFICULT_IDS_KEY,
+    CATEGORY_SESSIONS_KEY, SEEN_NEW_QUESTION_IDS_KEY]) {
     assert.equal(storage.getItem(key), null, "a guest must not inherit the owner's saved progress");
     storage.setItem(key, `guest:${original[key]}`);
     assert.equal(storage.getItem(key), `guest:${original[key]}`);
@@ -1674,6 +1679,32 @@ async function testGuestCannotInterruptOwnerUpload() {
   assert.equal(rawCloudValue(browser.store, "retry-queue"), original[RETRY_QUEUE_KEY]);
 }
 
+async function testNewQuestionSeenIdsMergeAcrossDevices(seedStore) {
+  const store = cloneStore(seedStore);
+  const phoneSeen = JSON.stringify({ version: 1, questionIds: [SAMPLE_QUESTION_ID] });
+  const phone = createBrowser({ store, local: {
+    ...legacyLocalProgress(), [SEEN_NEW_QUESTION_IDS_KEY]: phoneSeen
+  } });
+  await waitFor(phone, (status) => status.ready
+    && rawCloudValue(store, "seen-new-questions") === phoneSeen,
+  "first device uploads read-new-question IDs", 3000);
+
+  const laptopSeen = JSON.stringify({ version: 1, questionIds: [SECOND_QUESTION_ID] });
+  const laptop = createBrowser({ store, local: {
+    ...legacyLocalProgress(), [SEEN_NEW_QUESTION_IDS_KEY]: laptopSeen
+  } });
+  const merged = JSON.stringify({ version: 1,
+    questionIds: [SAMPLE_QUESTION_ID, SECOND_QUESTION_ID].sort() });
+  await waitFor(laptop, (status) => status.ready
+    && rawCloudValue(store, "seen-new-questions") === merged,
+  "second device merges both read-new-question sets", 3000);
+  assert.equal(laptop.localStorage.getItem(SEEN_NEW_QUESTION_IDS_KEY), merged);
+
+  const restored = createBrowser({ store: cloneStore(store), local: {} });
+  await waitFor(restored, (status) => status.ready, "merged read-new-question IDs restore on another device");
+  assert.equal(restored.localStorage.getItem(SEEN_NEW_QUESTION_IDS_KEY), merged);
+}
+
 async function main() {
   assert.ok(fs.existsSync(SYNC_SOURCE_PATH), "firebase-sync.js is required");
   await testDevelopmentBypassNeedsNoSdk();
@@ -1693,6 +1724,7 @@ async function main() {
   await testOfflineChangeSyncsWhenConnectionReturns(seedStore);
   await testReconnectPullsRemoteOnlyChange(seedStore);
   await testCategorySessionsRoundTripAndOfflineResume();
+  await testNewQuestionSeenIdsMergeAcrossDevices(seedStore);
   await testLegacyThreeSlotCloudUpgradesWithoutLoss(seedStore);
   await testCategorySessionsChoicesPreserveMissingButNotExplicitEmpty(seedStore);
   await testCategorySessionsConcurrentConflictAndChunks();
@@ -1729,6 +1761,7 @@ async function main() {
       "offline local changes upload when the connection returns",
       "remote-only reconnect changes pull safely before reload",
       "category Learn/Quiz snapshots round-trip byte-for-byte with answers, option order and position; offline completion uploads and remote-only reconnect reloads without resurrecting completed sessions",
+      "new-MCQ seen IDs merge across devices and restore from cloud without losing either device's read state",
       "legacy three-slot cloud backups remain readable; one-sided category archives upgrade without conflict while missing required manifests still fail closed",
       "explicit local/cloud choice preserves an archive absent from the older side, but existing empty archives and non-null conflicts remain authoritative with safety backups",
       "concurrent offline category-archive changes retain both copies for explicit choice, and large archives use integrity-checked chunks",
