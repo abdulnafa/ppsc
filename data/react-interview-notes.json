@@ -232,6 +232,50 @@
       ]
     },
     {
+      "id": "vite-bundle",
+      "label": "React 1c. Vite & Bundle",
+      "notes": [
+        {
+          "id": "what-is-bundle",
+          "question": "Bundle / bundling kya hai?",
+          "answer": "Aapki kai JS/CSS files, imports, assets ko milakar browser-ready output banana. Production mein aksar chhote optimized files (bundles) bante hain taake app load ho sake. Bundler yeh packaging + transform kaam karta hai."
+        },
+        {
+          "id": "why-bundler-for-react",
+          "question": "React project mein bundler kyun chahiye?",
+          "answer": "Browser seedha JSX, kai modern imports, aur aapke source folders ko production HTML/JS ki tarah nahi chalata. Toolchain JSX transform, module resolve, minify, aur assets handle karti hai — Vite isi role mein common choice hai."
+        },
+        {
+          "id": "what-is-vite",
+          "question": "Vite kya hai?",
+          "answer": "Modern frontend build tool / dev server. React apps ke liye popular starter (npm create vite). Development mein bohat tez start/HMR; production mein optimized build banata hai.",
+          "syntax": "npm create vite@latest my-app -- --template react\ncd my-app\nnpm install\nnpm run dev"
+        },
+        {
+          "id": "vite-dev-vs-build",
+          "question": "Vite mein dev aur build mein farq?",
+          "answer": "dev (npm run dev): local server, tez reload/HMR, source modules serve. build (npm run build): production output (usually dist/) — minify, optimized bundles, deploy ke liye files. Preview se built app locally check kar sakte ho.",
+          "syntax": "npm run dev     # development server\nnpm run build   # production bundle → dist/\nnpm run preview # built files locally dekho"
+        },
+        {
+          "id": "vite-hmr",
+          "question": "HMR (Hot Module Replacement) kya hai?",
+          "answer": "Dev mode mein code change par poori page refresh ki bajaye sirf changed module update. Vite isay fast rakhta hai — React component edit karo to UI jaldi refresh sense milti hai."
+        },
+        {
+          "id": "vite-entry-index",
+          "question": "Vite React app ka short entry flow?",
+          "answer": "index.html → main.jsx/tsx → App component. Vite HTML ko entry point treat karta hai; JS modules import se load hote hain. Build ke baad yahi flow optimized files mein pack ho jata hai.",
+          "syntax": "// index.html\n<script type=\"module\" src=\"/src/main.jsx\"></script>\n\n// main.jsx\nimport { createRoot } from \"react-dom/client\";\nimport App from \"./App\";\ncreateRoot(document.getElementById(\"root\")).render(<App />);"
+        },
+        {
+          "id": "bundle-size-interview",
+          "question": "Interview tip: bundle size kyun matter karti hai?",
+          "answer": "Bari JS download + parse slow first load deti hai. Code splitting, lazy routes, aur unused code hatana bundle halka rakhta hai. Vite/Rollup production build mein tree-shaking se dead code kam karne mein madad karti hai."
+        }
+      ]
+    },
+    {
       "id": "components",
       "label": "React 2. Components",
       "notes": [
