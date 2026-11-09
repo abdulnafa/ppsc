@@ -306,6 +306,22 @@
           "question": "children prop kya hota hai?",
           "answer": "Jo content aap opening aur closing tag ke darmiyan likhte ho, woh children ke through milta hai. Wrappers/layouts ke liye useful hai.",
           "syntax": "function Card({ children }) {\n  return <div className=\"card\">{children}</div>;\n}\n\n<Card>\n  <p>Inside card</p>\n</Card>"
+        },
+        {
+          "id": "what-is-wrapper",
+          "question": "React mein wrapper kya hota hai?",
+          "answer": "Wrapper woh component (ya element) hai jo doosre content/components ko apne andar wrap karta hai — styling, layout, padding, border, auth check, ya shared behavior ke liye. Andar wala content aksar children se aata hai.",
+          "syntax": "function Wrapper({ children }) {\n  return <div className=\"wrapper\">{children}</div>;\n}\n\n<Wrapper>\n  <h1>Title</h1>\n  <p>Content</p>\n</Wrapper>"
+        },
+        {
+          "id": "why-use-wrapper",
+          "question": "Wrapper kyun use karte hain?",
+          "answer": "Common UI shell dubara likhne se bachne ke liye: Card, Modal, Layout, Container. Parent styling/structure ek jagah; andar different children pass kar sakte ho. Yeh composition ka practical use hai."
+        },
+        {
+          "id": "wrapper-vs-hoc",
+          "question": "Wrapper aur HOC mein short farq?",
+          "answer": "Rozmarra wrapper = children wala component jo UI wrap kare (Card/Layout). HOC (Higher-Order Component) = function jo component ley aur naya enhanced component return kare — zyada pattern/advanced. Beginners pehle children wrapper clear karein."
         }
       ]
     },
