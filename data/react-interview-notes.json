@@ -624,7 +624,12 @@
         {
           "id": "what-are-hooks",
           "question": "Hooks kya hain?",
-          "answer": "Hooks functions hain jo functional components ko state aur React features use karne dete hain — jaise useState, useEffect, useRef, useContext."
+          "answer": "Hooks functions hain jo functional components ko state aur React features use karne dete hain. Common set: useState, useEffect, useRef, useContext, useReducer, useMemo, useCallback."
+        },
+        {
+          "id": "why-hooks",
+          "question": "Hooks kyun aaye (class se pehle kya problem thi)?",
+          "answer": "Class components mein state/lifecycle verbose tha (this, lifecycle mix). Hooks se functional components mein hi state, effects aur reuse (custom hooks) possible — code simple aur shareable."
         },
         {
           "id": "rules-of-hooks",
@@ -632,27 +637,82 @@
           "answer": "1) Sirf React function components ya custom hooks ke top level par call karo. 2) Loops, conditions, nested functions ke andar hooks mat call karo. Order stable rehna chahiye."
         },
         {
-          "id": "useeffect-basics",
-          "question": "useEffect kis kaam aata hai?",
-          "answer": "Side effects ke liye: API call, subscription, document title, timers. Render ke baad chalta hai.",
-          "syntax": "import { useEffect, useState } from \"react\";\n\nuseEffect(() => {\n  document.title = `Count: ${count}`;\n}, [count]);"
+          "id": "hooks-list-interview",
+          "question": "Interview mein commonly pooche jane wale hooks?",
+          "answer": "Must-know: useState, useEffect, useRef, useContext. Next level: useReducer, useMemo, useCallback. Custom hooks (useX) bhi poochte hain — khud ke reusable hook functions."
+        }
+      ]
+    },
+    {
+      "id": "hooks-core",
+      "label": "React 8b. Hooks — Core APIs",
+      "notes": [
+        {
+          "id": "hook-usestate",
+          "question": "useState kya karta hai?",
+          "answer": "Component ke andar local state rakhta hai. Value + setter milta hai; setter se update par re-render hota hai. Simple counters, inputs, toggles ke liye pehli choice.",
+          "syntax": "import { useState } from \"react\";\n\nconst [count, setCount] = useState(0);\nsetCount(count + 1);\nsetCount((prev) => prev + 1);"
         },
         {
-          "id": "useeffect-dependency",
-          "question": "Dependency array kya karti hai?",
-          "answer": "Batati hai effect kab dubara chale. [] = mount par ek dafa (plus cleanup on unmount). [a, b] = jab a ya b change ho. Agar array skip karo to har render ke baad chalta hai (usually avoid)."
+          "id": "hook-useeffect",
+          "question": "useEffect kya karta hai?",
+          "answer": "Side effects: API call, subscriptions, timers, document title. Render ke baad chalta hai. Dependencies se control hota hai kab dubara chale; cleanup return se leak roktee hai.",
+          "syntax": "import { useEffect } from \"react\";\n\nuseEffect(() => {\n  document.title = `Count: ${count}`;\n  return () => {\n    /* cleanup */\n  };\n}, [count]);"
         },
         {
-          "id": "useeffect-cleanup",
-          "question": "useEffect cleanup kyun chahiye?",
-          "answer": "Subscriptions, timers, listeners hataane ke liye. Component unmount ya effect re-run se pehle cleanup memory leaks rokta hai.",
-          "syntax": "useEffect(() => {\n  const id = setInterval(() => {\n    console.log(\"tick\");\n  }, 1000);\n  return () => clearInterval(id);\n}, []);"
+          "id": "hook-useeffect-deps",
+          "question": "useEffect dependency array ke 3 cases?",
+          "answer": "1) [ ] — mount par ek dafa (+ cleanup on unmount). 2) [a, b] — jab a ya b change. 3) array skip — har render ke baad (usually avoid). Missing deps bugs ka common source hain."
         },
         {
-          "id": "useref-basics",
-          "question": "useRef kab use karte hain?",
-          "answer": "1) DOM element access ke liye. 2) Aisi value store karne ke liye jo change ho lekin re-render na trigger kare.",
-          "syntax": "const inputRef = useRef(null);\n\n<input ref={inputRef} />\nbutton.onclick -> inputRef.current.focus();"
+          "id": "hook-useref",
+          "question": "useRef kya karta hai?",
+          "answer": "1) DOM node access (input.focus()). 2) Mutable value store jo change pe re-render na kare (previous value, timer id). .current property update hoti hai.",
+          "syntax": "import { useRef } from \"react\";\n\nconst inputRef = useRef(null);\nconst tickId = useRef(null);\n\n<input ref={inputRef} />\ninputRef.current.focus();"
+        },
+        {
+          "id": "hook-useref-vs-usestate",
+          "question": "useRef vs useState — kab kaunsa?",
+          "answer": "UI mein dikhani / change se re-render chahiye → useState. Sirf yaad rakhni hai / DOM handle, re-render nahi → useRef. Interval id aksar ref mein rakhte hain."
+        },
+        {
+          "id": "hook-usecontext",
+          "question": "useContext kya karta hai?",
+          "answer": "Context se value seedha read karta hai — beech ke components ko props pass kiye baghair (prop drilling kam). Theme, auth user, language jaisi shared values ke liye.",
+          "syntax": "import { createContext, useContext } from \"react\";\n\nconst ThemeContext = createContext(\"light\");\n\nfunction Toolbar() {\n  const theme = useContext(ThemeContext);\n  return <div className={theme}>Toolbar</div>;\n}\n\n<ThemeContext.Provider value=\"dark\">\n  <Toolbar />\n</ThemeContext.Provider>"
+        },
+        {
+          "id": "hook-usereducer",
+          "question": "useReducer kya karta hai?",
+          "answer": "State ko actions se update karne ka pattern (reducer function). Complex state / kai related updates / clear next-state rules ke liye useState se structured alternative.",
+          "syntax": "import { useReducer } from \"react\";\n\nfunction reducer(state, action) {\n  switch (action.type) {\n    case \"inc\":\n      return { count: state.count + 1 };\n    default:\n      return state;\n  }\n}\n\nconst [state, dispatch] = useReducer(reducer, { count: 0 });\ndispatch({ type: \"inc\" });"
+        },
+        {
+          "id": "hook-usestate-vs-usereducer",
+          "question": "useState vs useReducer kab choose karein?",
+          "answer": "Simple 1–2 values → useState. State object complex, transitions kai types ki, ya next state purani state + action logic pe depend → useReducer zyada clear."
+        },
+        {
+          "id": "hook-usememo",
+          "question": "useMemo kya karta hai?",
+          "answer": "Expensive calculation ka result cache karta hai. Dependencies same rahain to dubara calculate nahi. Har chhoti cheez pe mat lagao — tab jab measure/profile se cost clear ho.",
+          "syntax": "import { useMemo } from \"react\";\n\nconst total = useMemo(() => {\n  return items.reduce((sum, item) => sum + item.price, 0);\n}, [items]);"
+        },
+        {
+          "id": "hook-usecallback",
+          "question": "useCallback kya karta hai?",
+          "answer": "Function ki identity memoize karta hai (same deps pe same function reference). Child ko stable callback dena ho (React.memo) ya effect deps mein function ho to useful.",
+          "syntax": "import { useCallback } from \"react\";\n\nconst handleSave = useCallback(() => {\n  save(id);\n}, [id]);"
+        },
+        {
+          "id": "hook-usememo-vs-usecallback",
+          "question": "useMemo vs useCallback farq?",
+          "answer": "useMemo → value/result cache. useCallback → function cache. useCallback(fn, deps) ≈ useMemo(() => fn, deps). Dono optimization tools hain, pehle sahi structure; premature memo avoid."
+        },
+        {
+          "id": "hook-custom-hooks-brief",
+          "question": "Custom hook kya hota hai (short)?",
+          "answer": "Aapka function jiska naam use se start ho aur andar doosre hooks call kare — reusable logic (useForm, useFetch). UI share nahi, behavior/logic share."
         }
       ]
     },
