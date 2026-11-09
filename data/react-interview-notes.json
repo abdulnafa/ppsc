@@ -276,6 +276,50 @@
       ]
     },
     {
+      "id": "css-modules",
+      "label": "React 1d. CSS Modules (module.css)",
+      "notes": [
+        {
+          "id": "what-is-css-module",
+          "question": "CSS Module (*.module.css) kya hai?",
+          "answer": "Aisi CSS file jisme class names locally scoped hoti hain — build tool unhein unique names bana deta hai. React + Vite projects mein Button.module.css jaisi files common hain, taake do components ki .title class collide na kare."
+        },
+        {
+          "id": "why-css-modules",
+          "question": "CSS Modules kyun use karte hain?",
+          "answer": "Global CSS mein same class name (jaise .card) kahin bhi clash kar sakti hai. Modules har file ki classes ko unique rakhte hain, styling component ke qareeb rehti hai, aur accidental override kam hota hai."
+        },
+        {
+          "id": "css-module-import-use",
+          "question": "module.css React mein kaise use karte hain?",
+          "answer": "File ko styles (ya koi naam) se import karo, phir className={styles.className}. String \"btn\" ki jagah object property use hoti hai.",
+          "syntax": "/* Button.module.css */\n.btn {\n  padding: 8px 12px;\n  background: blue;\n  color: white;\n}\n\n// Button.jsx\nimport styles from \"./Button.module.css\";\n\nfunction Button({ label }) {\n  return <button className={styles.btn}>{label}</button>;\n}"
+        },
+        {
+          "id": "css-module-naming",
+          "question": "File ka naam *.module.css kyun hona chahiye?",
+          "answer": "Vite/CRA jaisi tools isi naming se pehchanti hain ke yeh CSS Module hai. Agar sirf styles.css likho to aksar global CSS treat hoti hai — classes scoped object mein nahi aatin."
+        },
+        {
+          "id": "css-module-dashed-names",
+          "question": "CSS mein .main-title ho to JS mein kaise likhein?",
+          "answer": "Dashed names ko bracket notation se lo, ya CSS mein camelCase likho. Dono theek; team style follow karo.",
+          "syntax": "/* styles.module.css */\n.main-title { font-size: 20px; }\n.mainTitle { font-size: 20px; }\n\nclassName={styles[\"main-title\"]}\nclassName={styles.mainTitle}"
+        },
+        {
+          "id": "css-module-multiple-classes",
+          "question": "Do module classes ek element pe kaise lagayein?",
+          "answer": "Template string ya join se dono styles combine karo. Libraries (clsx) optional hain; basic tareeqa yeh hai.",
+          "syntax": "<div className={`${styles.card} ${styles.active}`}>\n  Content\n</div>"
+        },
+        {
+          "id": "css-module-vs-global",
+          "question": "CSS Module vs global CSS — short farq?",
+          "answer": "Global CSS: class names poori app mein share / clash possible. Module CSS: import ke through local classes, unique generated names. Reset/theme ke liye thodi global CSS normal hai; component styles ke liye modules behtar."
+        }
+      ]
+    },
+    {
       "id": "components",
       "label": "React 2. Components",
       "notes": [
