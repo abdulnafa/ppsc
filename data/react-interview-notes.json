@@ -1,11 +1,170 @@
 {
   "schemaVersion": 1,
   "title": "React Interview Notes",
-  "description": "Topic-wise React revision: short question, short answer, and syntax when useful.",
+  "description": "JS Essentials + React revision: short question, short answer, and syntax when useful.",
   "groups": [
     {
+      "id": "js-basics",
+      "label": "JS 1. Basics",
+      "notes": [
+        {
+          "id": "js-what-are-variables",
+          "question": "JavaScript mein variable kya hota hai?",
+          "answer": "Variable naam wala box hai jisme value store karte ho — number, string, boolean, array, object, wagaira. React seekhne se pehle variables clear hona zaroori hai.",
+          "syntax": "let name = \"Ali\";\nconst age = 22;\nvar oldStyle = true; // modern code mein avoid"
+        },
+        {
+          "id": "js-if-else",
+          "question": "if / else kab use hota hai?",
+          "answer": "Condition true/false check karke alag code chalane ke liye. React mein bhi conditional rendering isi soch par based hoti hai.",
+          "syntax": "if (score >= 50) {\n  console.log(\"Pass\");\n} else {\n  console.log(\"Fail\");\n}\n\n// short form\nconst result = score >= 50 ? \"Pass\" : \"Fail\";"
+        },
+        {
+          "id": "js-loops",
+          "question": "Loop kis kaam aata hai?",
+          "answer": "Same kaam baar baar chalane ke liye — list print, count, items process. React lists aksar map se banti hain, lekin loops ka idea pehle clear hona chahiye.",
+          "syntax": "for (let i = 0; i < 3; i++) {\n  console.log(i);\n}\n\nconst nums = [10, 20, 30];\nfor (const n of nums) {\n  console.log(n);\n}"
+        }
+      ]
+    },
+    {
+      "id": "js-let-const",
+      "label": "JS 2. let & const (ES6)",
+      "notes": [
+        {
+          "id": "js-let",
+          "question": "let kya hai?",
+          "answer": "Block-scoped variable jo baad mein reassign ho sakta hai. if/for ke { } ke bahar accessible nahi (us block ke andar declare ho to).",
+          "syntax": "let count = 0;\ncount = 1; // OK\n\nif (true) {\n  let msg = \"hi\";\n}\n// msg yahan available nahi"
+        },
+        {
+          "id": "js-const",
+          "question": "const kya hai?",
+          "answer": "Block-scoped binding jisko dubara assign nahi kar sakte. Objects/arrays ke andar ki values change ho sakti hain, lekin variable ko naya value assign nahi karte.",
+          "syntax": "const city = \"Lahore\";\n// city = \"Karachi\"; // Error\n\nconst user = { name: \"Ali\" };\nuser.name = \"Sara\"; // OK (object mutate)\n// user = {}; // Error (reassign)"
+        },
+        {
+          "id": "js-let-vs-const",
+          "question": "Interview tip: let vs const kab choose karein?",
+          "answer": "Default const use karo. Jab value genuinely change honi ho tab let. var almost avoid — function scope + hoisting confusion. React codebases mein yeh common style hai."
+        }
+      ]
+    },
+    {
+      "id": "js-functions",
+      "label": "JS 3. Functions",
+      "notes": [
+        {
+          "id": "js-return",
+          "question": "return kya karta hai?",
+          "answer": "Function se value bahar bhejta hai aur function wahi ruk jata hai. React components bhi JSX return karte hain — yahi concept.",
+          "syntax": "function add(a, b) {\n  return a + b;\n}\n\nconst total = add(2, 3); // 5"
+        },
+        {
+          "id": "js-arrow-function",
+          "question": "Arrow function kya hai?",
+          "answer": "Functions likhne ka short modern syntax (ES6). React event handlers aur map callbacks mein bohat common. Short single-expression form mein return automatic hota hai.",
+          "syntax": "const add = (a, b) => {\n  return a + b;\n};\n\nconst double = (n) => n * 2;\n\nconst greet = () => \"Hello\";"
+        },
+        {
+          "id": "js-arrow-vs-normal",
+          "question": "Arrow aur normal function mein basic farq?",
+          "answer": "Arrow functions ka apna this nahi hota — surrounding scope ka this use hota hai. Beginner level: syntax short + React mein handlers/map ke liye preferred. Class methods / special this cases mein normal function zaroori ho sakti hai."
+        }
+      ]
+    },
+    {
+      "id": "js-arrays",
+      "label": "JS 4. Arrays",
+      "notes": [
+        {
+          "id": "js-array-foreach",
+          "question": "forEach kya karta hai?",
+          "answer": "Array ke har item par function chalata hai. Nayi array return nahi karta — side effect (print, push elsewhere) ke liye. UI list banane ke liye React mein map prefer karo.",
+          "syntax": "const nums = [1, 2, 3];\nnums.forEach((n) => {\n  console.log(n);\n});"
+        },
+        {
+          "id": "js-array-map",
+          "question": "map kya karta hai?",
+          "answer": "Har item ko transform karke NAYI array return karta hai. React lists ka core tool: users.map(user => <li>...</li>).",
+          "syntax": "const nums = [1, 2, 3];\nconst doubled = nums.map((n) => n * 2);\n// [2, 4, 6]"
+        },
+        {
+          "id": "js-array-filter",
+          "question": "filter kya karta hai?",
+          "answer": "Condition true wale items ki NAYI array banata hai. Search, active users, incomplete todos — React UI filters mein common.",
+          "syntax": "const nums = [1, 2, 3, 4];\nconst evens = nums.filter((n) => n % 2 === 0);\n// [2, 4]"
+        },
+        {
+          "id": "js-array-reduce",
+          "question": "reduce kya karta hai?",
+          "answer": "Poori array ko ek value mein fold karta hai — sum, count, object build. Pehle map/filter clear karo, phir reduce.",
+          "syntax": "const nums = [1, 2, 3, 4];\nconst sum = nums.reduce((acc, n) => acc + n, 0);\n// 10"
+        },
+        {
+          "id": "js-array-destructure",
+          "question": "Array destructuring kya hai?",
+          "answer": "Array se values nikal kar alag variables mein rakhna. React mein useState yahi pattern use karta hai: const [count, setCount] = useState(0).",
+          "syntax": "const colors = [\"red\", \"green\", \"blue\"];\nconst [first, second] = colors;\n// first = \"red\", second = \"green\"\n\nconst [count, setCount] = useState(0); // React"
+        }
+      ]
+    },
+    {
+      "id": "js-objects",
+      "label": "JS 5. Objects",
+      "notes": [
+        {
+          "id": "js-what-is-object",
+          "question": "Object kya hota hai?",
+          "answer": "Key-value pairs ka collection. User profile, settings, API response — almost har real app mein objects aate hain. React props/state bhi aksar objects hote hain.",
+          "syntax": "const user = {\n  name: \"Ali\",\n  age: 22,\n  city: \"Lahore\"\n};\n\nconsole.log(user.name);\nconsole.log(user[\"age\"]);"
+        },
+        {
+          "id": "js-object-destructure",
+          "question": "Object destructuring kya hai?",
+          "answer": "Object se properties nikal kar variables banana. React components mein props destructuring bohat common hai.",
+          "syntax": "const user = { name: \"Ali\", age: 22 };\nconst { name, age } = user;\n\nfunction Profile({ name, age }) {\n  return <p>{name} ({age})</p>;\n}"
+        },
+        {
+          "id": "js-spread-object",
+          "question": "Object spread (...) kyun seekhein (React ke liye)?",
+          "answer": "State update mein naya object banana padta hai (mutate avoid). Spread se copy + override asaan hota hai.",
+          "syntax": "const user = { name: \"Ali\", age: 22 };\nconst updated = { ...user, age: 23 };\n// { name: \"Ali\", age: 23 }"
+        }
+      ]
+    },
+    {
+      "id": "js-async",
+      "label": "JS 6. Async — Promises & fetch",
+      "notes": [
+        {
+          "id": "js-promise",
+          "question": "Promise kya hai?",
+          "answer": "Future value ka placeholder — pending, fulfilled (success), ya rejected (error). API calls async hoti hain; Promise unka result baad mein handle karne deta hai.",
+          "syntax": "const p = new Promise((resolve, reject) => {\n  setTimeout(() => resolve(\"done\"), 500);\n});\n\np.then((value) => console.log(value))\n .catch((err) => console.error(err));"
+        },
+        {
+          "id": "js-async-await",
+          "question": "async / await kya hai?",
+          "answer": "Promises ko zyada readable likhne ka tareeqa. await Promise complete hone ka wait karta hai. React data fetching examples mein common.",
+          "syntax": "async function load() {\n  try {\n    const data = await fetch(\"/api/user\").then((r) => r.json());\n    console.log(data);\n  } catch (err) {\n    console.error(err);\n  }\n}"
+        },
+        {
+          "id": "js-fetch",
+          "question": "fetch kya karta hai?",
+          "answer": "Browser API jo server se data mangaati / bhejti hai. Response pehle Response object hoti hai; JSON ke liye .json() call karo. React mein usually useEffect ke andar fetch karte hain.",
+          "syntax": "async function getUsers() {\n  const res = await fetch(\"https://api.example.com/users\");\n  if (!res.ok) throw new Error(\"Request failed\");\n  const data = await res.json();\n  return data;\n}"
+        },
+        {
+          "id": "js-why-async-for-react",
+          "question": "React seekhne se pehle async kyun zaroori?",
+          "answer": "Almost har app API se data lati hai. Loading, success, error states samajhne ke liye Promise/fetch clear hona chahiye — phir useEffect + state se UI update easy lagti hai."
+        }
+      ]
+    },
+    {
       "id": "basics",
-      "label": "1. React Basics",
+      "label": "React 1. Basics",
       "notes": [
         {
           "id": "what-is-react",
@@ -49,7 +208,7 @@
     },
     {
       "id": "components",
-      "label": "2. Components",
+      "label": "React 2. Components",
       "notes": [
         {
           "id": "what-is-component",
@@ -83,7 +242,7 @@
     },
     {
       "id": "props",
-      "label": "3. Props",
+      "label": "React 3. Props",
       "notes": [
         {
           "id": "what-are-props",
@@ -111,7 +270,7 @@
     },
     {
       "id": "state",
-      "label": "4. State & useState",
+      "label": "React 4. State & useState",
       "notes": [
         {
           "id": "what-is-state",
@@ -145,7 +304,7 @@
     },
     {
       "id": "events-forms",
-      "label": "5. Events & Forms",
+      "label": "React 5. Events & Forms",
       "notes": [
         {
           "id": "events-camelcase",
@@ -174,7 +333,7 @@
     },
     {
       "id": "lists-keys",
-      "label": "6. Lists & Keys",
+      "label": "React 6. Lists & Keys",
       "notes": [
         {
           "id": "render-list",
@@ -196,7 +355,7 @@
     },
     {
       "id": "conditional",
-      "label": "7. Conditional Rendering",
+      "label": "React 7. Conditional Rendering",
       "notes": [
         {
           "id": "ternary-render",
@@ -214,7 +373,7 @@
     },
     {
       "id": "hooks",
-      "label": "8. Hooks (Intro)",
+      "label": "React 8. Hooks (Intro)",
       "notes": [
         {
           "id": "what-are-hooks",
@@ -253,7 +412,7 @@
     },
     {
       "id": "data-flow",
-      "label": "9. Data Flow & Lifting State",
+      "label": "React 9. Data Flow & Lifting State",
       "notes": [
         {
           "id": "one-way-data-flow",
@@ -274,7 +433,7 @@
     },
     {
       "id": "interview-traps",
-      "label": "10. Common Interview Points",
+      "label": "React 10. Common Interview Points",
       "notes": [
         {
           "id": "rerender-when",
