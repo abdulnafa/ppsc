@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "title": "React Interview Notes",
+  "description": "Topic-wise React revision: short question, short answer, and syntax when useful.",
+  "groups": [
+    {
+      "id": "basics",
+      "label": "1. React Basics",
+      "notes": [
+        {
+          "id": "what-is-react",
+          "question": "React kya hai?",
+          "answer": "React ek JavaScript library hai jo UI (user interface) banane ke liye use hoti hai. Yeh Facebook/Meta ne banayi. Interview mein usually library kehte hain, full framework nahi."
+        },
+        {
+          "id": "library-vs-framework",
+          "question": "React library hai ya framework?",
+          "answer": "Officially library. Framework poori app structure aur routing/data rules force karta hai; React mainly UI layer deta hai. Routing, state management wagaira aap alag choose karte ho."
+        },
+        {
+          "id": "spa",
+          "question": "SPA (Single Page Application) kya hota hai?",
+          "answer": "Ek hi HTML page load hoti hai, phir content JavaScript se update hota hai bina poori page refresh ke. React apps aksar SPA style mein banti hain."
+        },
+        {
+          "id": "virtual-dom",
+          "question": "Virtual DOM kya hai?",
+          "answer": "Real DOM ka lightweight JavaScript representation. React pehle Virtual DOM mein changes compare (diff) karta hai, phir sirf zaroori real DOM updates apply karta hai — is se UI updates efficient rehti hain."
+        },
+        {
+          "id": "jsx",
+          "question": "JSX kya hai?",
+          "answer": "JSX JavaScript ka syntax extension hai jisme HTML jaisa code JS ke andar likhte ho. Browser JSX seedha nahi samajhta; build tools (Babel/Vite) isay normal JavaScript function calls mein convert karte hain.",
+          "syntax": "const element = <h1>Hello React</h1>;"
+        },
+        {
+          "id": "react-create-element",
+          "question": "JSX ke peeche asal mein kya hota hai?",
+          "answer": "JSX compile hokar React.createElement(...) (ya modern JSX transform) ban jata hai. Yani JSX sirf readable syntax hai; asal output JavaScript objects (React elements) hain.",
+          "syntax": "// JSX:\nconst el = <h1 className=\"title\">Hi</h1>;\n\n// Rough idea (createElement style):\nconst el = React.createElement('h1', { className: 'title' }, 'Hi');"
+        },
+        {
+          "id": "classname-vs-class",
+          "question": "JSX mein class kyun nahi, className kyun likhte hain?",
+          "answer": "HTML mein attribute class hai, lekin JavaScript mein class reserved keyword hai. Is liye JSX mein className use hota hai.",
+          "syntax": "<div className=\"card\">Content</div>"
+        }
+      ]
+    },
+    {
+      "id": "components",
+      "label": "2. Components",
+      "notes": [
+        {
+          "id": "what-is-component",
+          "question": "Component kya hota hai?",
+          "answer": "Component UI ka reusable piece hai — jaise Button, Navbar, Card. Aik component return karta hai JSX, aur aap usay kai jagah use kar sakte ho."
+        },
+        {
+          "id": "functional-component",
+          "question": "Functional component kya hai?",
+          "answer": "Ek normal JavaScript function jo JSX return kare. Aaj ki React mein yahi preferred style hai; hooks bhi inhi ke saath use hote hain.",
+          "syntax": "function Welcome({ name }) {\n  return <h1>Hello, {name}</h1>;\n}"
+        },
+        {
+          "id": "component-naming",
+          "question": "Component ka naam Capital letter se kyun hota hai?",
+          "answer": "React lowercase tags ko HTML elements samajhta hai (div, span). Capital name se React ko pata chalta hai yeh aapka custom component hai.",
+          "syntax": "// Correct\nfunction ProfileCard() { return <div />; }\n\n// Wrong for a component\nfunction profileCard() { return <div />; }"
+        },
+        {
+          "id": "composition",
+          "question": "Component composition kya hai?",
+          "answer": "Badi UI ko chhote components se jodna. Jaise Page = Header + Content + Footer. Inheritance ki jagah React composition prefer karta hai."
+        },
+        {
+          "id": "children-prop",
+          "question": "children prop kya hota hai?",
+          "answer": "Jo content aap opening aur closing tag ke darmiyan likhte ho, woh children ke through milta hai. Wrappers/layouts ke liye useful hai.",
+          "syntax": "function Card({ children }) {\n  return <div className=\"card\">{children}</div>;\n}\n\n<Card>\n  <p>Inside card</p>\n</Card>"
+        }
+      ]
+    },
+    {
+      "id": "props",
+      "label": "3. Props",
+      "notes": [
+        {
+          "id": "what-are-props",
+          "question": "Props kya hain?",
+          "answer": "Props (properties) parent se child component ko data bhejne ka tareeqa hain. Function arguments ki tarah socho.",
+          "syntax": "function User({ name, age }) {\n  return <p>{name} is {age}</p>;\n}\n\n<User name=\"Ali\" age={22} />"
+        },
+        {
+          "id": "props-readonly",
+          "question": "Props change kyun nahi karte?",
+          "answer": "Props read-only hote hain. Child unhein mutate nahi karta. Agar data change karna ho to parent state update karta hai aur nayi props bhejta hai."
+        },
+        {
+          "id": "props-vs-state",
+          "question": "Props aur State mein farq?",
+          "answer": "Props bahar se aati hain (parent → child). State component ke andar ki changing data hoti hai. Props pass hoti hain; state useState (ya similar) se manage hoti hai."
+        },
+        {
+          "id": "default-props-modern",
+          "question": "Default prop value kaise set karein?",
+          "answer": "Modern functional components mein default parameters best aur clear tareeqa hain.",
+          "syntax": "function Button({ label = \"Click\" }) {\n  return <button>{label}</button>;\n}"
+        }
+      ]
+    },
+    {
+      "id": "state",
+      "label": "4. State & useState",
+      "notes": [
+        {
+          "id": "what-is-state",
+          "question": "State kya hai?",
+          "answer": "State woh data hai jo time ke sath change ho sakta hai aur UI ko re-render karta hai — jaise counter, form input, loading flag."
+        },
+        {
+          "id": "usestate-basics",
+          "question": "useState kaise kaam karta hai?",
+          "answer": "useState current value aur updater function return karta hai. setX call karne par React component ko dubara render karta hai.",
+          "syntax": "import { useState } from \"react\";\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n  return (\n    <button onClick={() => setCount(count + 1)}>\n      Count: {count}\n    </button>\n  );\n}"
+        },
+        {
+          "id": "usestate-functional-update",
+          "question": "setState mein previous value kab use karein?",
+          "answer": "Jab naya value purane value par depend kare — especially multiple updates ya async cases mein — functional update safer hai.",
+          "syntax": "setCount((prev) => prev + 1);"
+        },
+        {
+          "id": "dont-mutate-state",
+          "question": "State ko directly mutate kyun nahi karte?",
+          "answer": "Direct mutate se React change detect nahi kar sakta aur re-render miss ho sakti hai. Hamesha naya value / naya object / naya array set karo.",
+          "syntax": "// Bad\nitems.push(newItem);\nsetItems(items);\n\n// Good\nsetItems([...items, newItem]);"
+        },
+        {
+          "id": "when-use-state",
+          "question": "Kab state use karein, kab props kaafi hain?",
+          "answer": "Agar data sirf display ke liye parent se aa raha hai → props. Agar component ke andar user interaction se data change hota hai → state."
+        }
+      ]
+    },
+    {
+      "id": "events-forms",
+      "label": "5. Events & Forms",
+      "notes": [
+        {
+          "id": "events-camelcase",
+          "question": "React events HTML se kaise different hain?",
+          "answer": "React mein events camelCase hote hain (onClick, onChange) aur handler ko function pass karte ho, string nahi.",
+          "syntax": "<button onClick={handleClick}>Save</button>"
+        },
+        {
+          "id": "synthetic-events",
+          "question": "Synthetic event kya hai?",
+          "answer": "React browsers ke native events ko wrap karke cross-browser consistent interface deta hai. Interview mein short jawab: React ka event wrapper for consistency."
+        },
+        {
+          "id": "controlled-input",
+          "question": "Controlled input kya hota hai?",
+          "answer": "Input ki value React state se control hoti hai. User type kare to onChange state update kare, aur value={state} se input sync rahe.",
+          "syntax": "function NameForm() {\n  const [name, setName] = useState(\"\");\n  return (\n    <input\n      value={name}\n      onChange={(e) => setName(e.target.value)}\n    />\n  );\n}"
+        },
+        {
+          "id": "uncontrolled-input",
+          "question": "Uncontrolled input kya hai?",
+          "answer": "Input ki value DOM khud rakhta hai; React usually ref se read karta hai. Simple cases mein theek, lekin forms ke liye controlled pattern zyada common aur predictable hai.",
+          "syntax": "function FileForm() {\n  const inputRef = useRef(null);\n  function submit() {\n    console.log(inputRef.current.value);\n  }\n  return <input ref={inputRef} />;\n}"
+        }
+      ]
+    },
+    {
+      "id": "lists-keys",
+      "label": "6. Lists & Keys",
+      "notes": [
+        {
+          "id": "render-list",
+          "question": "List of items kaise render karte hain?",
+          "answer": "Array.map se har item ka JSX return karte hain.",
+          "syntax": "const users = [\"Ali\", \"Sara\"];\n\n<ul>\n  {users.map((user) => (\n    <li key={user}>{user}</li>\n  ))}\n</ul>"
+        },
+        {
+          "id": "why-keys",
+          "question": "key prop kyun zaroori hai?",
+          "answer": "key se React har list item ko uniquely identify karta hai taake add/remove/reorder par sahi DOM update ho. Bina stable key ke bugs aur performance issues aa sakte hain."
+        },
+        {
+          "id": "index-as-key",
+          "question": "Index ko key banana kab galat hai?",
+          "answer": "Agar list reorder, insert, ya delete hoti hai to index unstable hota hai — galat state mix-up ho sakti hai. Stable unique id best hai. Static list mein index sometimes acceptable, lekin prefer ids."
+        }
+      ]
+    },
+    {
+      "id": "conditional",
+      "label": "7. Conditional Rendering",
+      "notes": [
+        {
+          "id": "ternary-render",
+          "question": "Condition ke hisaab se UI kaise dikhayein?",
+          "answer": "Ternary, &&, ya early return se conditional rendering karte hain.",
+          "syntax": "{isLoggedIn ? <Dashboard /> : <Login />}\n\n{error && <p>{error}</p>}"
+        },
+        {
+          "id": "null-render",
+          "question": "Kuch bhi na dikhana ho to kya return karein?",
+          "answer": "null return karo. React us case mein kuch render nahi karega.",
+          "syntax": "function Banner({ show }) {\n  if (!show) return null;\n  return <div>Sale is live</div>;\n}"
+        }
+      ]
+    },
+    {
+      "id": "hooks",
+      "label": "8. Hooks (Intro)",
+      "notes": [
+        {
+          "id": "what-are-hooks",
+          "question": "Hooks kya hain?",
+          "answer": "Hooks functions hain jo functional components ko state aur React features use karne dete hain — jaise useState, useEffect, useRef, useContext."
+        },
+        {
+          "id": "rules-of-hooks",
+          "question": "Rules of Hooks kya hain?",
+          "answer": "1) Sirf React function components ya custom hooks ke top level par call karo. 2) Loops, conditions, nested functions ke andar hooks mat call karo. Order stable rehna chahiye."
+        },
+        {
+          "id": "useeffect-basics",
+          "question": "useEffect kis kaam aata hai?",
+          "answer": "Side effects ke liye: API call, subscription, document title, timers. Render ke baad chalta hai.",
+          "syntax": "import { useEffect, useState } from \"react\";\n\nuseEffect(() => {\n  document.title = `Count: ${count}`;\n}, [count]);"
+        },
+        {
+          "id": "useeffect-dependency",
+          "question": "Dependency array kya karti hai?",
+          "answer": "Batati hai effect kab dubara chale. [] = mount par ek dafa (plus cleanup on unmount). [a, b] = jab a ya b change ho. Agar array skip karo to har render ke baad chalta hai (usually avoid)."
+        },
+        {
+          "id": "useeffect-cleanup",
+          "question": "useEffect cleanup kyun chahiye?",
+          "answer": "Subscriptions, timers, listeners hataane ke liye. Component unmount ya effect re-run se pehle cleanup memory leaks rokta hai.",
+          "syntax": "useEffect(() => {\n  const id = setInterval(() => {\n    console.log(\"tick\");\n  }, 1000);\n  return () => clearInterval(id);\n}, []);"
+        },
+        {
+          "id": "useref-basics",
+          "question": "useRef kab use karte hain?",
+          "answer": "1) DOM element access ke liye. 2) Aisi value store karne ke liye jo change ho lekin re-render na trigger kare.",
+          "syntax": "const inputRef = useRef(null);\n\n<input ref={inputRef} />\nbutton.onclick -> inputRef.current.focus();"
+        }
+      ]
+    },
+    {
+      "id": "data-flow",
+      "label": "9. Data Flow & Lifting State",
+      "notes": [
+        {
+          "id": "one-way-data-flow",
+          "question": "React mein data flow kaise hota hai?",
+          "answer": "One-way / downward: parent se child ko props milti hain. Child events/callbacks se parent ko inform karta hai ke state update ho."
+        },
+        {
+          "id": "lifting-state",
+          "question": "Lifting state up kya hai?",
+          "answer": "Jab do children ko same data share karna ho, state unke nearest common parent mein rakhte hain aur props/callbacks se share karte hain."
+        },
+        {
+          "id": "prop-drilling",
+          "question": "Prop drilling kya hai?",
+          "answer": "Data ko kai layers ke through sirf pass-through props se bhejna. Deep trees mein Context ya state library se isay reduce kiya jata hai."
+        }
+      ]
+    },
+    {
+      "id": "interview-traps",
+      "label": "10. Common Interview Points",
+      "notes": [
+        {
+          "id": "rerender-when",
+          "question": "Component kab re-render hota hai?",
+          "answer": "Jab uski state change ho, usko mili props change hon, ya parent re-render kare (unless memoized). Re-render ka matlab Virtual DOM compare + zaroori DOM update."
+        },
+        {
+          "id": "keys-and-state",
+          "question": "List item pe wrong key se kya problem hoti hai?",
+          "answer": "React galat component instance reuse kar sakta hai — input values / local state swap dikhai de sakte hain. Stable unique keys important hain."
+        },
+        {
+          "id": "pure-components-idea",
+          "question": "Component ko pure kyun rakhein?",
+          "answer": "Same props/state pe same output. Render ke during side effects (API calls, random writes) mat karo — side effects useEffect mein rakho. Debugging aur predictable UI milti hai."
+        },
+        {
+          "id": "fragments",
+          "question": "React Fragment kis liye use hota hai?",
+          "answer": "Bina extra DOM node (div) add kiye multiple elements return karne ke liye.",
+          "syntax": "return (\n  <>\n    <h1>Title</h1>\n    <p>Text</p>\n  </>\n);"
+        },
+        {
+          "id": "strict-mode",
+          "question": "React Strict Mode kya karta hai?",
+          "answer": "Development mein potential problems highlight karta hai (jaise unsafe lifecycles, missing cleanup). Production UI behavior change nahi karta; extra checks mostly dev-only hain."
+        }
+      ]
+    }
+  ]
+}

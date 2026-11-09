@@ -285,6 +285,7 @@
     elements.organizationsTopicsScreen = firstElement(["#organizations-topics-screen"]);
     elements.pakistanProvincesScreen = firstElement(["#pakistan-provinces-screen"]);
     elements.oceanTopicsScreen = firstElement(["#ocean-topics-screen"]);
+    elements.reactInterviewNotesScreen = firstElement(["#react-interview-notes-screen"]);
     elements.worldMapScreen = firstElement(["#world-map-screen"]);
     elements.paperSetupScreen = firstElement(["#paper-setup-screen", "[data-screen='paper-setup']"]);
     elements.modeScreen = firstElement(["#mode-screen", "[data-screen='mode']"]);
@@ -4164,6 +4165,7 @@
     setHidden(elements.organizationsTopicsScreen, screenName !== "organizations-topics");
     setHidden(elements.pakistanProvincesScreen, screenName !== "pakistan-provinces");
     setHidden(elements.oceanTopicsScreen, screenName !== "ocean-topics");
+    setHidden(elements.reactInterviewNotesScreen, screenName !== "react-interview-notes");
     setHidden(elements.worldMapScreen, screenName !== "world-map");
     setHidden(elements.paperSetupScreen, screenName !== "paper-setup");
     setHidden(elements.modeScreen, screenName !== "mode");
@@ -4194,6 +4196,8 @@
       ? elements.pakistanProvincesScreen
       : screenName === "ocean-topics"
       ? elements.oceanTopicsScreen
+      : screenName === "react-interview-notes"
+      ? elements.reactInterviewNotesScreen
       : screenName === "world-map"
       ? elements.worldMapScreen
       : screenName === "paper-setup"
@@ -7522,6 +7526,15 @@
         categories: categories,
         questions: allQuestions,
         open: function () { showScreen("ocean-topics"); },
+        close: function () {
+          showScreen("categories");
+          updateContinueSessionUI();
+        }
+      });
+    }
+    if (window.PPSC_REACT_INTERVIEW_NOTES && elements.reactInterviewNotesScreen) {
+      window.PPSC_REACT_INTERVIEW_NOTES.init({
+        open: function () { showScreen("react-interview-notes"); },
         close: function () {
           showScreen("categories");
           updateContinueSessionUI();

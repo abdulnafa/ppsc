@@ -871,6 +871,60 @@ h2[tabindex="-1"]:focus {
 @media (max-width: 620px) {
   .ocean-topics-toolbar { align-items: stretch; flex-direction: column; }
 }
+.react-interview-notes-icon {
+  background: #e8f1ff;
+  color: #0b5fff;
+  font-size: .78rem;
+  letter-spacing: .04em;
+}
+.react-notes-header { background: linear-gradient(180deg, #eef5ff 0%, var(--blue-50) 100%); }
+.react-notes-question { line-height: 1.45; }
+.react-notes-answer {
+  margin: 0 0 12px;
+  padding: 12px 14px;
+  background: var(--blue-50);
+  border-left: 3px solid var(--blue-600);
+  border-radius: 0 10px 10px 0;
+  line-height: 1.7;
+}
+.react-notes-syntax-label {
+  margin: 0 0 8px;
+  font-size: .8rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.react-notes-syntax {
+  margin: 0;
+  padding: 14px 16px;
+  overflow-x: auto;
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 12px;
+  font-size: .86rem;
+  line-height: 1.55;
+}
+.react-notes-syntax code {
+  font-family: Consolas, "Cascadia Mono", "Segoe UI Mono", monospace;
+  white-space: pre;
+}
+html[data-theme="dark"] .react-interview-notes-icon,
+:root[data-theme="dark"] .react-interview-notes-icon {
+  background: rgba(11, 95, 255, 0.18);
+  color: #8eb6ff;
+}
+html[data-theme="dark"] .react-notes-header,
+:root[data-theme="dark"] .react-notes-header {
+  background: var(--blue-50);
+}
+html[data-theme="dark"] .react-notes-syntax,
+:root[data-theme="dark"] .react-notes-syntax {
+  background: #020617;
+  color: #f8fafc;
+}
+@media (max-width: 620px) {
+  .react-notes-toolbar { align-items: stretch; flex-direction: column; }
+}
 @media (max-width: 420px) {
   .pakistan-provinces-toolbar { align-items: stretch; flex-direction: column; }
   .pakistan-provinces-item-summary { align-items: flex-start; flex-direction: column; gap: 3px; }

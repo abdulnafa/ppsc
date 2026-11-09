@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
   <script src="theme.js?v=20260923-1"></script>
-  <link rel="stylesheet" href="styles.css?v=20261030-1">
+  <link rel="stylesheet" href="styles.css?v=20261109-1">
   <script src="firebase-config.js?v=20260912-2" defer></script>
   <script src="firebase-sync.js?v=20261030-1" defer></script>
   <script src="data/questions.js?v=20261030-1" defer></script>
@@ -23,6 +23,7 @@
   <script src="world-map.js?v=20261024-2" defer></script>
   <script src="pakistan-provinces.js?v=20261024-1" defer></script>
   <script src="ocean-topics.js?v=20261024-1" defer></script>
+  <script src="react-interview-notes.js?v=20261109-1" defer></script>
   <script src="app.js?v=20261030-1" defer></script>
 </head>
 <body>
@@ -191,7 +192,7 @@
           </span>
           <span class="study-tools-copy">
             <strong>Study Tools</strong>
-            <small lang="ur-Latn">Practice paper, years, dams &amp; rivers, Constitution Articles, Prime Ministers, Presidents aur organizations — options kholein.</small>
+            <small lang="ur-Latn">Practice paper, years, dams &amp; rivers, Constitution Articles, Prime Ministers, Presidents, organizations aur React notes — options kholein.</small>
           </span>
           <span class="study-tools-chevron" aria-hidden="true">&#9662;</span>
         </summary>
@@ -282,6 +283,14 @@
             <span class="category-copy">
               <strong>World MCQ Map</strong>
               <small lang="ur-Latn">Countries explore karein; zoom, search aur related MCQs ke answers dekhein.</small>
+            </span>
+            <span class="card-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+          <button id="react-interview-notes-card" class="category-card water-topics-card" type="button" aria-controls="react-interview-notes-screen">
+            <span class="category-icon react-interview-notes-icon" aria-hidden="true">RX</span>
+            <span class="category-copy">
+              <strong>React Interview Notes</strong>
+              <small lang="ur-Latn">Topic-wise React revision: short question, short answer, aur zarurat par syntax.</small>
             </span>
             <span class="card-arrow" aria-hidden="true">&rarr;</span>
           </button>
@@ -731,6 +740,36 @@
           <button id="ocean-topics-retry" class="secondary-button" type="button" hidden>Try again</button>
           <div id="ocean-topics-list" class="pakistan-provinces-sections"></div>
           <p class="pakistan-provinces-footnote" lang="ur-Latn">Sirf sawal aur correct answers se mutalliq facts ko direct MCQ se link kiya gaya hai; ghalat options ko evidence nahi samjha gaya. Kuch verified topics extra revision hain. Map ke points/areas reference ke liye hain, exact maritime boundary nahi.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="react-interview-notes-screen" class="screen" aria-labelledby="react-interview-notes-title" hidden>
+      <button id="react-interview-notes-back" class="text-button" type="button"><span aria-hidden="true">&larr;</span> Back to Study Tools</button>
+      <article class="pakistan-provinces-shell react-notes-shell">
+        <header class="pakistan-provinces-header react-notes-header">
+          <p class="eyebrow">STUDY TOOLS / DEVELOPMENT</p>
+          <h1 id="react-interview-notes-title">React Interview Notes</h1>
+          <p lang="ur-Latn">Topic kholein, short question parhein, neeche answer dekhein. Syntax wahan hai jahan yaad rakhna asaan ho. Yeh MCQ bank se alag read-only revision list hai.</p>
+          <p id="react-interview-notes-coverage" class="pakistan-provinces-coverage">Topic-wise React notes &middot; Read-only study</p>
+        </header>
+        <div class="pakistan-provinces-toolbar react-notes-toolbar">
+          <label for="react-interview-notes-search">Search question, answer or syntax
+            <input id="react-interview-notes-search" type="search" autocomplete="off" placeholder="e.g. useState, Virtual DOM, key">
+          </label>
+          <label for="react-interview-notes-topic">Topic
+            <select id="react-interview-notes-topic">
+              <option value="all">All topics</option>
+            </select>
+          </label>
+          <button id="react-interview-notes-clear" class="secondary-button" type="button" disabled>Clear filters</button>
+        </div>
+        <div class="pakistan-provinces-body react-notes-body-wrap">
+          <p id="react-interview-notes-status" class="pakistan-provinces-status" role="status" aria-live="polite">React notes load ho rahe hain...</p>
+          <p id="react-interview-notes-error" class="pakistan-provinces-error" role="alert" hidden>React notes load nahi ho sake. Connection check karke dobara koshish karein.</p>
+          <button id="react-interview-notes-retry" class="secondary-button" type="button" hidden>Try again</button>
+          <div id="react-interview-notes-list" class="pakistan-provinces-sections"></div>
+          <p class="pakistan-provinces-footnote" lang="ur-Latn">Yeh personal interview revision notes hain. Naye topics baad mein add kiye ja sakte hain. Is tool se PPSC quiz, queue ya cloud progress change nahi hoti.</p>
         </div>
       </article>
     </section>
