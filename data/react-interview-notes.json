@@ -322,6 +322,34 @@
           "id": "wrapper-vs-hoc",
           "question": "Wrapper aur HOC mein short farq?",
           "answer": "Rozmarra wrapper = children wala component jo UI wrap kare (Card/Layout). HOC (Higher-Order Component) = function jo component ley aur naya enhanced component return kare — zyada pattern/advanced. Beginners pehle children wrapper clear karein."
+        },
+        {
+          "id": "functional-vs-class",
+          "question": "Functional vs Class component — aaj kya prefer karein?",
+          "answer": "Aaj functional + hooks preferred hain (simple, shorter, official direction). Class components purane codebases mein milti hain (extends React.Component, this.state, lifecycle methods). Nayi learning functional se shuru karo.",
+          "syntax": "// Functional (modern)\nfunction Hello({ name }) {\n  return <h1>Hello {name}</h1>;\n}\n\n// Class (legacy style)\nclass HelloClass extends React.Component {\n  render() {\n    return <h1>Hello {this.props.name}</h1>;\n  }\n}"
+        },
+        {
+          "id": "component-vs-element",
+          "question": "Component aur Element mein farq?",
+          "answer": "Component = function/class jo UI describe kare (blueprint). Element = us component/tag ka plain object result (<App /> ya <div />). React elements ko render karke Real DOM update karta hai."
+        },
+        {
+          "id": "reuse-components",
+          "question": "Components reuse kaise karte hain?",
+          "answer": "Ek baar banao, kai jagah import karke use karo. Different data props se pass karo taake same UI alag values ke sath dikhe — Button, Avatar, Card isi liye banate hain.",
+          "syntax": "function Button({ label }) {\n  return <button>{label}</button>;\n}\n\n<Button label=\"Save\" />\n<Button label=\"Cancel\" />"
+        },
+        {
+          "id": "one-component-one-job",
+          "question": "Component chhota / focused kyun rakhein?",
+          "answer": "Ek component ka ek clear kaam (Single Responsibility). Chhote pieces test, reuse aur debug karna asaan hota hai. Bohat bari App file sab logic ke sath maintain mushkil ban jati hai."
+        },
+        {
+          "id": "export-component",
+          "question": "Component export/import kaise hota hai?",
+          "answer": "File se export karo, doosri file mein import. Default ya named export dono common hain; project mein ek style consistent rakho.",
+          "syntax": "// Button.jsx\nexport default function Button({ label }) {\n  return <button>{label}</button>;\n}\n\n// App.jsx\nimport Button from \"./Button\";"
         }
       ]
     },
@@ -336,6 +364,18 @@
           "syntax": "function User({ name, age }) {\n  return <p>{name} is {age}</p>;\n}\n\n<User name=\"Ali\" age={22} />"
         },
         {
+          "id": "how-props-pass",
+          "question": "Props pass kaise karte hain?",
+          "answer": "Parent JSX mein attributes likho; child function unhein object ki tarah receive karta hai. Strings quotes mein, JS values curly braces {} mein.",
+          "syntax": "<Profile\n  name=\"Ali\"\n  age={22}\n  active={true}\n  onSave={handleSave}\n/>"
+        },
+        {
+          "id": "props-object",
+          "question": "Props ek object kyun kehlate hain?",
+          "answer": "React child ko ek props object deta hai jisme saari keys hoti hain. Destructuring se seedha name, age nikalte hain — warna props.name likhte.",
+          "syntax": "function User(props) {\n  return <p>{props.name}</p>;\n}\n\n// same with destructuring\nfunction User({ name }) {\n  return <p>{name}</p>;\n}"
+        },
+        {
           "id": "props-readonly",
           "question": "Props change kyun nahi karte?",
           "answer": "Props read-only hote hain. Child unhein mutate nahi karta. Agar data change karna ho to parent state update karta hai aur nayi props bhejta hai."
@@ -346,10 +386,34 @@
           "answer": "Props bahar se aati hain (parent → child). State component ke andar ki changing data hoti hai. Props pass hoti hain; state useState (ya similar) se manage hoti hai."
         },
         {
+          "id": "props-types-of-values",
+          "question": "Props mein kaunsi values ja sakti hain?",
+          "answer": "String, number, boolean, array, object, function (callback), even JSX/components. Jo bhi JS expression braces mein likhoge woh prop ban sakti hai.",
+          "syntax": "<List items={[1, 2, 3]} />\n<Box style={{ padding: 8 }} />\n<Button onClick={() => save()} />"
+        },
+        {
+          "id": "boolean-props",
+          "question": "Boolean prop ka short syntax?",
+          "answer": "Agar prop true bhejni ho to sirf naam likhna kaafi — React usay true treat karta hai.",
+          "syntax": "<Input disabled />\n// same as\n<Input disabled={true} />"
+        },
+        {
+          "id": "callback-props",
+          "question": "Callback props kyun use hote hain?",
+          "answer": "Child event parent ko bataye (button click, form submit). Parent function prop se bhejta hai; child call karta hai. Data flow parent → child props, events child → parent callbacks.",
+          "syntax": "function Child({ onSave }) {\n  return <button onClick={onSave}>Save</button>;\n}\n\n<Child onSave={() => console.log(\"saved\")} />"
+        },
+        {
           "id": "default-props-modern",
           "question": "Default prop value kaise set karein?",
           "answer": "Modern functional components mein default parameters best aur clear tareeqa hain.",
           "syntax": "function Button({ label = \"Click\" }) {\n  return <button>{label}</button>;\n}"
+        },
+        {
+          "id": "props-spread",
+          "question": "Props spread (...) kab useful hai?",
+          "answer": "Kai props aage forward karne ke liye — wrappers/HOC jaisi jagah. Samajh ke use karo; unnecessary spread debugging mushkil bana sakta hai.",
+          "syntax": "function FancyButton(props) {\n  return <button className=\"fancy\" {...props} />;\n}"
         }
       ]
     },
