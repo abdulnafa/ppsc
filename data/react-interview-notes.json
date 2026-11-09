@@ -462,6 +462,59 @@
       ]
     },
     {
+      "id": "react-functions",
+      "label": "React 3b. Functions in React",
+      "notes": [
+        {
+          "id": "functions-everywhere-react",
+          "question": "React mein functions kahan-kahan use hote hain?",
+          "answer": "Functional component khud ek function hai. Iske andar event handlers, helpers, callbacks (props), aur map/filter callbacks bhi functions hote hain. Short: React UI mostly functions se banti hai."
+        },
+        {
+          "id": "component-is-function",
+          "question": "Functional component asal mein kya return karta hai?",
+          "answer": "Function JSX (React elements) return karta hai. React us return value ko UI banane ke liye use karta hai. Har render pe yeh function dubara chal sakta hai.",
+          "syntax": "function Hello({ name }) {\n  return <h1>Hello {name}</h1>;\n}"
+        },
+        {
+          "id": "event-handler-function",
+          "question": "Event handler function kaise likhte hain?",
+          "answer": "Click/change par chalne wala function banao aur onClick/onChange ko pass karo. Handler ko call mat karo jab tak event na ho — reference do.",
+          "syntax": "function SaveButton() {\n  function handleClick() {\n    console.log(\"saved\");\n  }\n  return <button onClick={handleClick}>Save</button>;\n}\n\n// Arrow style\n<button onClick={() => console.log(\"saved\")}>Save</button>"
+        },
+        {
+          "id": "onclick-call-mistake",
+          "question": "onClick={handleClick()} galat kyun hai?",
+          "answer": "Parentheses se function turant render ke waqt chal jata hai, click ka wait nahi karta. Sahi: onClick={handleClick} ya onClick={() => handleClick()}.",
+          "syntax": "// Bad — render pe chalega\n<button onClick={handleClick()}>Save</button>\n\n// Good\n<button onClick={handleClick}>Save</button>\n<button onClick={() => handleClick(id)}>Save</button>"
+        },
+        {
+          "id": "named-vs-inline-handler",
+          "question": "Named handler vs inline arrow — kab kya?",
+          "answer": "Chhoti ek-line cheez: inline OK. Logic thodi lambi / reuse / readable: named function better. Interviews mein clarity zyada important hai.",
+          "syntax": "// inline\n<button onClick={() => setOpen(true)}>Open</button>\n\n// named\nfunction handleOpen() {\n  setOpen(true);\n}\n<button onClick={handleOpen}>Open</button>"
+        },
+        {
+          "id": "helper-inside-outside",
+          "question": "Helper function component ke andar rakhein ya bahar?",
+          "answer": "Agar helper ko props/state ki zarurat nahi (pure calculation/format) to bahar rakho — har render pe naya create nahi hota, test bhi asaan. Agar state/props use karni hon to andar ya unhein arguments do.",
+          "syntax": "// outside — pure helper\nfunction formatPrice(n) {\n  return `Rs ${n}`;\n}\n\nfunction Product({ price }) {\n  return <p>{formatPrice(price)}</p>;\n}"
+        },
+        {
+          "id": "pass-function-as-prop",
+          "question": "Function ko prop ki tarah kyun bhejte hain?",
+          "answer": "Child UI event uthaye, parent decide kare kya karna hai (state update, API, navigation). Yeh upward communication ka common pattern hai.",
+          "syntax": "function Parent() {\n  function handleDelete(id) {\n    console.log(\"delete\", id);\n  }\n  return <Item id={5} onDelete={handleDelete} />;\n}\n\nfunction Item({ id, onDelete }) {\n  return <button onClick={() => onDelete(id)}>Delete</button>;\n}"
+        },
+        {
+          "id": "function-return-jsx",
+          "question": "Component ke andar chhota function JSX return kar sakta hai?",
+          "answer": "Haan, lekin zyada tar better hai alag component bana lo. Kabhi-kabhi renderHelper() OK hai; agar UI piece reuse/complex ho to separate component clear rehta hai.",
+          "syntax": "function List({ items }) {\n  function renderItem(item) {\n    return <li key={item.id}>{item.name}</li>;\n  }\n  return <ul>{items.map(renderItem)}</ul>;\n}"
+        }
+      ]
+    },
+    {
       "id": "state",
       "label": "React 4. State & useState",
       "notes": [
