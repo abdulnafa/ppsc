@@ -187,6 +187,31 @@
           "answer": "Real DOM ka lightweight JavaScript representation. React pehle Virtual DOM mein changes compare (diff) karta hai, phir sirf zaroori real DOM updates apply karta hai — is se UI updates efficient rehti hain."
         },
         {
+          "id": "real-dom",
+          "question": "Real DOM kya hai?",
+          "answer": "Browser ka actual Document Object Model — webpage ka tree structure (html, body, div, button...). Jab Real DOM change hota hai, browser layout/paint ka kaam karta hai, jo expensive ho sakta hai agar baar baar poora page update ho."
+        },
+        {
+          "id": "real-vs-virtual-dom",
+          "question": "Real DOM aur Virtual DOM mein farq?",
+          "answer": "Real DOM browser ka asli UI tree hai (slow/expensive updates). Virtual DOM memory mein JS objects ka tree hai (tez compare). React changes pehle Virtual DOM par sochta hai, diff nikalta hai, phir Real DOM mein sirf zaroori patches apply karta hai."
+        },
+        {
+          "id": "dom-update-flow",
+          "question": "React UI update ka short flow kya hai?",
+          "answer": "1) State/props change. 2) Component dubara render → naya Virtual DOM (React elements). 3) Purane aur naye Virtual DOM ka diff (reconciliation). 4) Sirf changed parts Real DOM mein update. Isliye poori page rewrite avoid hoti hai."
+        },
+        {
+          "id": "why-virtual-dom",
+          "question": "Virtual DOM se faida kya hai?",
+          "answer": "Direct Real DOM ko baar baar touch karna costly hai. Virtual DOM batching + diffing se unnecessary DOM work kam hoti hai. Note: Virtual DOM magic se hamesha fastest nahi — faida mostly smart minimal updates aur predictable UI model hai."
+        },
+        {
+          "id": "virtual-dom-not-browser",
+          "question": "Virtual DOM browser ka feature hai?",
+          "answer": "Nahi. Yeh React (ya similar libraries) ka concept hai — plain JavaScript objects. Browser sirf Real DOM samajhta hai; React Virtual DOM se decide karke Real DOM update karta hai."
+        },
+        {
           "id": "jsx",
           "question": "JSX kya hai?",
           "answer": "JSX JavaScript ka syntax extension hai jisme HTML jaisa code JS ke andar likhte ho. Browser JSX seedha nahi samajhta; build tools (Babel/Vite) isay normal JavaScript function calls mein convert karte hain.",
