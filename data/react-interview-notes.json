@@ -627,6 +627,27 @@
           "question": "Uncontrolled input kya hai?",
           "answer": "Input ki value DOM khud rakhta hai; React usually ref se read karta hai. Simple cases mein theek, lekin forms ke liye controlled pattern zyada common aur predictable hai.",
           "syntax": "function FileForm() {\n  const inputRef = useRef(null);\n  function submit() {\n    console.log(inputRef.current.value);\n  }\n  return <input ref={inputRef} />;\n}"
+        },
+        {
+          "id": "two-way-binding-what",
+          "question": "Two-way binding kya hai?",
+          "answer": "UI aur data dono taraf sync: data change → UI update, aur user UI change kare → data update. Angular jaisi libraries mein yeh built-in hota hai; React mein officially one-way data flow hai."
+        },
+        {
+          "id": "two-way-binding-react",
+          "question": "React mein two-way binding kaise banate hain?",
+          "answer": "Controlled component se: value={state} (data → UI) + onChange se setState (UI → data). Yeh “manual two-way binding” hai — React khud magic binding nahi karta.",
+          "syntax": "const [email, setEmail] = useState(\"\");\n\n<input\n  value={email}\n  onChange={(e) => setEmail(e.target.value)}\n/>\n// value = state → UI\n// onChange = UI → state"
+        },
+        {
+          "id": "one-way-vs-two-way",
+          "question": "One-way vs two-way — React interview jawab?",
+          "answer": "React data flow one-way (parent → child props). Forms mein two-way feel controlled inputs se milti hai (state ↔ input). Child se parent update callback/props se hota hai, automatic bind nahi."
+        },
+        {
+          "id": "two-way-binding-why-explicit",
+          "question": "React two-way ko explicit kyun rakhta hai?",
+          "answer": "Clear data ownership: state kahan hai, kaun update karta hai. Debugging asaan, unexpected auto-sync kam. Thoda zyada code (value + onChange) lekin predictable behavior."
         }
       ]
     },

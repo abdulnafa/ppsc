@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var DATA_URL = "data/react-interview-notes.json?v=20261110-1";
+  var DATA_URL = "data/react-interview-notes.json?v=20261110-2";
   var state = {
     initialized: false,
     data: null,
