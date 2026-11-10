@@ -134,6 +134,59 @@
       ]
     },
     {
+      "id": "js-destructuring",
+      "label": "JS 5b. Destructuring",
+      "notes": [
+        {
+          "id": "destructuring-what",
+          "question": "Destructuring kya hai?",
+          "answer": "Array ya object se values nikal kar alag variables mein rakhne ka short syntax. React mein props aur useState isi pe heavily depend karte hain.",
+          "syntax": "const user = { name: \"Ali\", age: 22 };\nconst { name, age } = user;\n\nconst colors = [\"red\", \"green\"];\nconst [first, second] = colors;"
+        },
+        {
+          "id": "destructuring-array",
+          "question": "Array destructuring kaise kaam karti hai?",
+          "answer": "Position se values milti hain: pehla variable pehli index, doosra doosri. useState bhi yahi pattern use karta hai.",
+          "syntax": "const nums = [10, 20, 30];\nconst [a, b] = nums; // a=10, b=20\n\nconst [count, setCount] = useState(0); // React"
+        },
+        {
+          "id": "destructuring-object",
+          "question": "Object destructuring kaise kaam karti hai?",
+          "answer": "Key ke naam se value nikalte ho (order matter nahi). React functional components mein props aise hi unpack karte hain.",
+          "syntax": "const product = { title: \"Book\", price: 500 };\nconst { title, price } = product;\n\nfunction Card({ title, price }) {\n  return <p>{title}: {price}</p>;\n}"
+        },
+        {
+          "id": "destructuring-rename",
+          "question": "Destructuring mein rename kaise karein?",
+          "answer": "Object se nikalte waqt naya variable naam colon ke baad likho — jab key ka naam collide kare ya clear naam chahiye.",
+          "syntax": "const user = { name: \"Ali\" };\nconst { name: userName } = user;\n// userName = \"Ali\""
+        },
+        {
+          "id": "destructuring-defaults",
+          "question": "Destructuring mein default value?",
+          "answer": "Agar value undefined ho to default lag jati hai. Props ke missing values handle karne mein useful.",
+          "syntax": "const { city = \"Lahore\" } = {};\n// city = \"Lahore\"\n\nfunction Button({ label = \"Click\" }) {\n  return <button>{label}</button>;\n}"
+        },
+        {
+          "id": "destructuring-rest",
+          "question": "Rest (...) destructuring kya hai?",
+          "answer": "Bachi hui properties/items ek nayi object/array mein ikatthi. Wrappers mein kuch props nikal kar baqi forward karne ke liye common.",
+          "syntax": "const user = { name: \"Ali\", age: 22, city: \"Lahore\" };\nconst { name, ...rest } = user;\n// rest = { age: 22, city: \"Lahore\" }\n\nfunction Box({ className, ...rest }) {\n  return <div className={className} {...rest} />;\n}"
+        },
+        {
+          "id": "destructuring-nested",
+          "question": "Nested destructuring kya hai?",
+          "answer": "Andar wale object/array se seedha value nikalna. API response deep ho to kaam aata hai — pehle structure clear hona chahiye.",
+          "syntax": "const data = {\n  user: { name: \"Ali\", address: { city: \"Lahore\" } }\n};\nconst { user: { name, address: { city } } } = data;\n// name=\"Ali\", city=\"Lahore\""
+        },
+        {
+          "id": "destructuring-react-why",
+          "question": "React mein destructuring kyun zaroori hai?",
+          "answer": "1) Props clean: function User({ name }) . 2) useState: const [x, setX] = useState() . 3) Event/object se fields jaldi nikalna. Interview + daily code dono mein bohat aata hai."
+        }
+      ]
+    },
+    {
       "id": "js-async",
       "label": "JS 6. Async — Promises & fetch",
       "notes": [
