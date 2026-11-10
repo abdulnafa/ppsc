@@ -919,6 +919,74 @@
       ]
     },
     {
+      "id": "react-router-dom",
+      "label": "React 9b. React Router DOM",
+      "notes": [
+        {
+          "id": "what-is-react-router",
+          "question": "React Router DOM kya hai?",
+          "answer": "React apps ke liye routing library (package: react-router-dom). URLs (/home, /about, /users/5) ke hisaab se alag pages/components dikhati hai — bina poori page refresh ke (SPA navigation)."
+        },
+        {
+          "id": "why-react-router",
+          "question": "SPA mein router kyun chahiye?",
+          "answer": "Bina router ke ek hi screen dikhegi. Router se multi-page feel milti hai: back/forward, shareable links, nested layouts. React khud routing built-in nahi deta — is liye react-router-dom common choice hai."
+        },
+        {
+          "id": "router-install-setup",
+          "question": "Setup ka short tareeqa (v6)?",
+          "answer": "Package install karke app ko BrowserRouter se wrap karo, phir Routes/Route se paths define karo.",
+          "syntax": "npm install react-router-dom\n\nimport { BrowserRouter, Routes, Route } from \"react-router-dom\";\nimport Home from \"./Home\";\nimport About from \"./About\";\n\nfunction App() {\n  return (\n    <BrowserRouter>\n      <Routes>\n        <Route path=\"/\" element={<Home />} />\n        <Route path=\"/about\" element={<About />} />\n      </Routes>\n    </BrowserRouter>\n  );\n}"
+        },
+        {
+          "id": "browser-router",
+          "question": "BrowserRouter kya karta hai?",
+          "answer": "HTML5 history API use karke clean URLs rakhta hai (/about). Poori app (ya uska hissa) iske andar hona chahiye taake Link/hooks kaam karein."
+        },
+        {
+          "id": "routes-route",
+          "question": "Routes aur Route ka farq?",
+          "answer": "Routes = route list ka container (best match choose). Route = ek path → component mapping (path + element). v6 mein component/render ki jagah element={<Comp />} use hota hai."
+        },
+        {
+          "id": "link-vs-a",
+          "question": "Link vs normal <a> tag?",
+          "answer": "<a href> poori page reload kara sakta hai. <Link to=\"...\"> client-side navigation — fast, SPA state preserve. NavLink active style ke liye useful.",
+          "syntax": "import { Link, NavLink } from \"react-router-dom\";\n\n<Link to=\"/about\">About</Link>\n<NavLink to=\"/about\" className={({ isActive }) => isActive ? \"active\" : \"\"}>\n  About\n</NavLink>"
+        },
+        {
+          "id": "use-navigate",
+          "question": "useNavigate kya hai?",
+          "answer": "Programmatic navigation — button click, login success, form submit ke baad doosre page pe bhejna.",
+          "syntax": "import { useNavigate } from \"react-router-dom\";\n\nfunction Login() {\n  const navigate = useNavigate();\n  function onSuccess() {\n    navigate(\"/dashboard\");\n    // navigate(-1); // back\n  }\n  return <button onClick={onSuccess}>Login</button>;\n}"
+        },
+        {
+          "id": "use-params",
+          "question": "useParams kab use hota hai?",
+          "answer": "Dynamic URL segments read karne ke liye — jaise /users/:id se id nikalna.",
+          "syntax": "// Route: <Route path=\"/users/:id\" element={<User />} />\n\nimport { useParams } from \"react-router-dom\";\n\nfunction User() {\n  const { id } = useParams();\n  return <h1>User {id}</h1>;\n}"
+        },
+        {
+          "id": "use-location",
+          "question": "useLocation kya deta hai?",
+          "answer": "Current location object: pathname, search (query), hash, state. Conditional UI ya analytics ke liye path dekhne mein kaam aata hai.",
+          "syntax": "import { useLocation } from \"react-router-dom\";\n\nconst location = useLocation();\nconsole.log(location.pathname); // \"/about\""
+        },
+        {
+          "id": "nested-routes-outlet",
+          "question": "Nested routes / Outlet kya hai?",
+          "answer": "Parent layout (Navbar + sidebar) ke andar child pages. Parent Route children define karta hai; <Outlet /> us jagah child render karta hai.",
+          "syntax": "<Route path=\"/dashboard\" element={<DashboardLayout />}>\n  <Route path=\"profile\" element={<Profile />} />\n  <Route path=\"settings\" element={<Settings />} />\n</Route>\n\n// DashboardLayout.jsx\nimport { Outlet } from \"react-router-dom\";\nreturn (\n  <div>\n    <nav>...</nav>\n    <Outlet />\n  </div>\n);"
+        },
+        {
+          "id": "router-404",
+          "question": "Unknown URL pe 404 kaise?",
+          "answer": "Catch-all route path=\"*\" last mein rakho — koi match na ho to NotFound dikhao.",
+          "syntax": "<Routes>\n  <Route path=\"/\" element={<Home />} />\n  <Route path=\"/about\" element={<About />} />\n  <Route path=\"*\" element={<NotFound />} />\n</Routes>"
+        }
+      ]
+    },
+    {
       "id": "interview-traps",
       "label": "React 10. Common Interview Points",
       "notes": [
