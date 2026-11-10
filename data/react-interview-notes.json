@@ -216,6 +216,63 @@
       ]
     },
     {
+      "id": "js-api-fetch-axios",
+      "label": "JS 6b. API, fetch & axios",
+      "notes": [
+        {
+          "id": "what-is-api",
+          "question": "API kya hai?",
+          "answer": "Application Programming Interface — do systems ke darmiyan contract. Frontend (React) backend/server se data mangne/bhejne ke liye HTTP APIs use karta hai. Interview mein aksar REST API + JSON response ki baat hoti hai."
+        },
+        {
+          "id": "rest-http-methods",
+          "question": "Common HTTP methods (REST) kaunsi hain?",
+          "answer": "GET = data lo, POST = naya banao/bhejo, PUT/PATCH = update, DELETE = hatao. Status codes: 200 OK, 201 Created, 400 bad request, 401/403 auth, 404 not found, 500 server error.",
+          "syntax": "GET    /users       // list\nPOST   /users       // create\nGET    /users/5     // one user\nPUT    /users/5     // replace/update\nDELETE /users/5     // delete"
+        },
+        {
+          "id": "json-in-apis",
+          "question": "API mein JSON kyun common hai?",
+          "answer": "Lightweight text format objects/arrays ke liye. Browser/JS asani se parse karta hai. fetch mein response.json(), axios mein aksar data pehle se object milta hai."
+        },
+        {
+          "id": "fetch-basics-api",
+          "question": "fetch se API call kaise karte hain?",
+          "answer": "Built-in browser API — koi library install nahi. Promise return hoti hai. HTTP error (404/500) pe automatically throw nahi hota — res.ok check zaroori.",
+          "syntax": "const res = await fetch(\"https://api.example.com/users\");\nif (!res.ok) throw new Error(`HTTP ${res.status}`);\nconst data = await res.json();\n\n// POST example\nawait fetch(\"/api/users\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({ name: \"Ali\" })\n});"
+        },
+        {
+          "id": "what-is-axios",
+          "question": "axios kya hai?",
+          "answer": "Popular HTTP client library (npm install axios). fetch jaisa kaam, lekin defaults convenient: auto JSON transform, request/response interceptors, timeout, wide browser support patterns. React projects mein bohat use hoti hai.",
+          "syntax": "import axios from \"axios\";\n\nconst { data } = await axios.get(\"https://api.example.com/users\");\n\nawait axios.post(\"/api/users\", { name: \"Ali\" });"
+        },
+        {
+          "id": "fetch-vs-axios",
+          "question": "fetch vs axios — farq?",
+          "answer": "fetch: built-in, chhota, res.ok khud check, body JSON.stringify. axios: library, error on bad status (reject), data auto-parse, interceptors/timeout easy. Dono Promise based; choice project pe depend — basics dono samajhna best.",
+          "syntax": "// fetch — manual ok check\nconst res = await fetch(url);\nif (!res.ok) throw new Error(\"fail\");\nconst data = await res.json();\n\n// axios — data + throws on 4xx/5xx\nconst { data } = await axios.get(url);"
+        },
+        {
+          "id": "api-react-useeffect",
+          "question": "React mein API data kaise load karte hain?",
+          "answer": "useEffect mein fetch/axios, useState se data/loading/error. Mount ya dependency change par call. Cleanup/abort se stale update avoid (advanced but interview mein achha).",
+          "syntax": "const [users, setUsers] = useState([]);\nconst [loading, setLoading] = useState(true);\nconst [error, setError] = useState(null);\n\nuseEffect(() => {\n  let alive = true;\n  async function load() {\n    try {\n      setLoading(true);\n      const res = await fetch(\"/api/users\");\n      if (!res.ok) throw new Error(\"Failed\");\n      const data = await res.json();\n      if (alive) setUsers(data);\n    } catch (err) {\n      if (alive) setError(err.message);\n    } finally {\n      if (alive) setLoading(false);\n    }\n  }\n  load();\n  return () => { alive = false; };\n}, []);"
+        },
+        {
+          "id": "api-headers-auth",
+          "question": "API headers / auth token short tip?",
+          "answer": "JSON bhejne ke liye Content-Type: application/json. Protected APIs pe Authorization: Bearer <token> common. Token localStorage mein rakhna XSS risk rakhta hai — production mein secure auth patterns follow karo.",
+          "syntax": "await fetch(\"/api/profile\", {\n  headers: {\n    Authorization: `Bearer ${token}`,\n    \"Content-Type\": \"application/json\"\n  }\n});\n\naxios.get(\"/api/profile\", {\n  headers: { Authorization: `Bearer ${token}` }\n});"
+        },
+        {
+          "id": "api-cors-brief",
+          "question": "CORS error kab aata hai (short)?",
+          "answer": "Browser alag origin (domain/port) se API call rokta hai agar server CORS allow na kare. Yeh browser security hai. Fix mostly server headers se; frontend proxy (Vite) se bhi develop mein handle hota hai."
+        }
+      ]
+    },
+    {
       "id": "js-web-storage",
       "label": "JS 7. localStorage & sessionStorage",
       "notes": [
