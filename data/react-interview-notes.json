@@ -216,6 +216,56 @@
       ]
     },
     {
+      "id": "js-web-storage",
+      "label": "JS 7. localStorage & sessionStorage",
+      "notes": [
+        {
+          "id": "web-storage-what",
+          "question": "Web Storage kya hai?",
+          "answer": "Browser mein key-value data save karne ka tareeqa — localStorage aur sessionStorage. Server pe nahi jata; same origin (protocol + domain + port) tak limited. Theme, form draft, login token (careful) jaisi client-side cheezein yahan rakhte hain."
+        },
+        {
+          "id": "localstorage-what",
+          "question": "localStorage kya hai?",
+          "answer": "Data tab band / browser restart ke baad bhi rehta hai jab tak aap remove na karo ya user clear na kare. Persistent client storage — jaise dark mode preference ya saved cart draft.",
+          "syntax": "localStorage.setItem(\"theme\", \"dark\");\nconst theme = localStorage.getItem(\"theme\"); // \"dark\"\nlocalStorage.removeItem(\"theme\");\nlocalStorage.clear(); // saari keys"
+        },
+        {
+          "id": "sessionstorage-what",
+          "question": "sessionStorage kya hai?",
+          "answer": "Data sirf us browser tab/window session tak rehta hai. Tab band hote hi clear. Multi-step form ke temporary steps ya tab-only UI state ke liye useful.",
+          "syntax": "sessionStorage.setItem(\"step\", \"2\");\nconst step = sessionStorage.getItem(\"step\");\nsessionStorage.removeItem(\"step\");"
+        },
+        {
+          "id": "local-vs-session",
+          "question": "localStorage vs sessionStorage — farq?",
+          "answer": "localStorage: persistent across tabs/restarts (same origin). sessionStorage: per-tab, tab close pe khatam; doosri tab share nahi karti. API almost same (setItem/getItem/removeItem/clear)."
+        },
+        {
+          "id": "storage-strings-only",
+          "question": "Storage mein object seedha kyun nahi rakhte?",
+          "answer": "Dono sirf strings store karte hain. Object/array ke liye JSON.stringify likhte waqt, JSON.parse padhte waqt. Warna \"[object Object]\" milta hai.",
+          "syntax": "const user = { name: \"Ali\", age: 22 };\nlocalStorage.setItem(\"user\", JSON.stringify(user));\n\nconst saved = JSON.parse(localStorage.getItem(\"user\"));\n// { name: \"Ali\", age: 22 }"
+        },
+        {
+          "id": "storage-react-use",
+          "question": "React mein localStorage kaise use karte hain?",
+          "answer": "Usually useState UI ke liye + useEffect se storage sync. Mount par read, change par write. Render ke during seedha storage mat likho — side effect hai.",
+          "syntax": "const [theme, setTheme] = useState(() => {\n  return localStorage.getItem(\"theme\") || \"light\";\n});\n\nuseEffect(() => {\n  localStorage.setItem(\"theme\", theme);\n}, [theme]);"
+        },
+        {
+          "id": "storage-limits-security",
+          "question": "Storage ki limits / security tip?",
+          "answer": "Size limited (~5MB typical, browser pe depend). Sensitive passwords yahan mat rakho — JS se readable hai (XSS risk). Private data ke liye httpOnly cookies / proper auth better. QuotaExceedError possible."
+        },
+        {
+          "id": "storage-interview-tip",
+          "question": "Interview tip: cookies vs Web Storage?",
+          "answer": "Cookies har request ke sath server ja sakti hain (size chhoti). local/sessionStorage sirf browser JS se access, auto request mein nahi jati. Client-only preferences → storage; server session auth → usually cookies/tokens carefully."
+        }
+      ]
+    },
+    {
       "id": "basics",
       "label": "React 1. Basics",
       "notes": [
